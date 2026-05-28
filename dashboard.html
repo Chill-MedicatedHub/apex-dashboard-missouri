@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Chill Medicated · Missouri · Sales Intelligence</title>
+<title>Chill Medicated · Sales Intelligence</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,21 +17,21 @@
 
 <style>
   :root {
-    /* Chill Medicated · Blue Gradient palette
-       Deep navy base → bright cyan accent. Wellness, medicinal, premium. */
-    --bg: #0a1220;            /* deep navy, slightly darker than slate */
-    --bg-elev: #131c2e;        /* panel — same hue, raised */
-    --bg-elev-2: #1a2540;      /* second-level surface */
-    --border: #243149;
-    --border-soft: #1c2638;
-    --text: #e6ecf5;           /* soft off-white with cool tint */
-    --text-dim: #94a3c0;       /* muted slate-blue */
-    --text-faint: #5c6a85;     /* faint slate */
-    --accent: #4dd4ff;         /* Chill cyan — bright, medicinal */
-    --accent-dim: #2a93c4;     /* darker cyan for borders/lines */
-    --accent-deep: #1857a6;    /* deep blue, gradient endpoint */
-    --warm: #f0a868;           /* soft amber (warnings) */
-    --cool: #8fb8d4;           /* secondary blue */
+    /* Chill Medicated · Logo Green palette
+       Near-black green-tinted base → grass-green accent from the logo. */
+    --bg: #0c1109;            /* near-black with a faint green tint */
+    --bg-elev: #141b10;        /* panel — same hue, raised */
+    --bg-elev-2: #1d2716;      /* second-level surface */
+    --border: #2b3823;
+    --border-soft: #1f2a18;
+    --text: #e9efe3;           /* soft off-white with warm green tint */
+    --text-dim: #9fb091;       /* muted sage */
+    --text-faint: #647258;     /* faint olive */
+    --accent: #8bc34a;         /* Chill grass green — the logo field color */
+    --accent-dim: #5d8a32;     /* darker green for borders/lines */
+    --accent-deep: #3d6b1e;    /* deep leaf green, gradient endpoint */
+    --warm: #e0b15a;           /* soft amber (warnings) */
+    --cool: #a3c98a;           /* secondary sage */
     --rose: #e07594;           /* soft rose (errors / negative) */
   }
 
@@ -49,8 +49,8 @@
 
   body {
     background-image:
-      radial-gradient(ellipse 1200px 600px at 80% -10%, rgba(77,212,255,0.05), transparent 60%),
-      radial-gradient(ellipse 800px 400px at 0% 100%, rgba(24,87,166,0.05), transparent 60%);
+      radial-gradient(ellipse 1200px 600px at 80% -10%, rgba(139,195,74,0.05), transparent 60%),
+      radial-gradient(ellipse 800px 400px at 0% 100%, rgba(61,107,30,0.06), transparent 60%);
   }
 
   /* Typography */
@@ -308,7 +308,7 @@
     border-bottom: 1px solid var(--border-soft);
     color: var(--text);
   }
-  .data-table tr:hover td { background: rgba(196,255,61,0.02); }
+  .data-table tr:hover td { background: rgba(139,195,74,0.03); }
   .data-table .num { font-family: 'JetBrains Mono', monospace; font-variant-numeric: tabular-nums; text-align: right; }
   .data-table .dim { color: var(--text-dim); }
 
@@ -349,8 +349,8 @@
     border-radius: 2px;
     border: 1px solid;
   }
-  .pill-completed { color: var(--accent); border-color: var(--accent-dim); background: rgba(196,255,61,0.06); }
-  .pill-pending { color: var(--warm); border-color: var(--warm); background: rgba(232,138,60,0.06); }
+  .pill-completed { color: var(--accent); border-color: var(--accent-dim); background: rgba(139,195,74,0.08); }
+  .pill-pending { color: var(--warm); border-color: var(--warm); background: rgba(224,177,90,0.08); }
   .pill-overdue { color: var(--rose); border-color: var(--rose); background: rgba(217,112,112,0.06); }
 
   @media (max-width: 1100px) {
@@ -368,15 +368,15 @@ const { useState, useEffect, useMemo } = React;
 // Guard against CDN failure — show a clear message instead of going blank
 if (typeof Recharts === 'undefined') {
   document.getElementById('root').innerHTML = `
-    <div style="max-width:600px;margin:80px auto;padding:32px;background:#161a17;border:1px solid #262c28;border-radius:4px;color:#e8ebe7;font-family:sans-serif">
+    <div style="max-width:600px;margin:80px auto;padding:32px;background:#141b10;border:1px solid #2b3823;border-radius:4px;color:#e9efe3;font-family:sans-serif">
       <h2 style="font-family:Fraunces,serif;font-weight:400;font-style:italic;margin-bottom:12px">Charts library didn't load</h2>
-      <p style="color:#9aa39c;line-height:1.6">The Recharts library failed to load from the CDN. This usually means:</p>
-      <ul style="color:#9aa39c;line-height:1.8;margin-top:8px;padding-left:20px">
+      <p style="color:#9fb091;line-height:1.6">The Recharts library failed to load from the CDN. This usually means:</p>
+      <ul style="color:#9fb091;line-height:1.8;margin-top:8px;padding-left:20px">
         <li>You're offline or behind a firewall blocking CDNs</li>
         <li>An ad blocker / privacy extension is blocking jsdelivr.net or unpkg.com</li>
         <li>Slow network — try refreshing</li>
       </ul>
-      <p style="color:#4dd4ff;margin-top:16px;font-family:monospace;font-size:13px">Try: disable extensions for localhost, or refresh the page.</p>
+      <p style="color:#8bc34a;margin-top:16px;font-family:monospace;font-size:13px">Try: disable extensions for localhost, or refresh the page.</p>
     </div>
   `;
   throw new Error('Recharts failed to load');
@@ -512,9 +512,9 @@ function App() {
 
   useEffect(() => {
     const load = () => {
-      fetch('sales_data_mo.json?t=' + Date.now())
+      fetch('sales_data.json?t=' + Date.now())
         .then(r => {
-          if (!r.ok) throw new Error('Could not load sales_data_mo.json');
+          if (!r.ok) throw new Error('Could not load sales_data.json');
           return r.json();
         })
         .then(setData)
@@ -1113,20 +1113,20 @@ function Dashboard({ data, filters, setFilters }) {
             <AreaChart data={timeSeries} margin={{ top: 12, right: 12, left: 0, bottom: 0 }}>
               <defs>
                 <linearGradient id="revGrad" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="0%" stopColor="#4dd4ff" stopOpacity={0.4} />
-                  <stop offset="100%" stopColor="#4dd4ff" stopOpacity={0} />
+                  <stop offset="0%" stopColor="#8bc34a" stopOpacity={0.4} />
+                  <stop offset="100%" stopColor="#8bc34a" stopOpacity={0} />
                 </linearGradient>
               </defs>
-              <CartesianGrid stroke="#262c28" strokeDasharray="2 2" vertical={false} />
-              <XAxis dataKey="date" stroke="#5d6660" tick={{ fontSize: 11, fontFamily: 'JetBrains Mono' }} tickLine={false} axisLine={{ stroke: '#262c28' }} />
-              <YAxis stroke="#5d6660" tick={{ fontSize: 11, fontFamily: 'JetBrains Mono' }} tickLine={false} axisLine={false} tickFormatter={fmtMoney} />
+              <CartesianGrid stroke="#2b3823" strokeDasharray="2 2" vertical={false} />
+              <XAxis dataKey="date" stroke="#647258" tick={{ fontSize: 11, fontFamily: 'JetBrains Mono' }} tickLine={false} axisLine={{ stroke: '#2b3823' }} />
+              <YAxis stroke="#647258" tick={{ fontSize: 11, fontFamily: 'JetBrains Mono' }} tickLine={false} axisLine={false} tickFormatter={fmtMoney} />
               <Tooltip
-                contentStyle={{ background: '#161a17', border: '1px solid #262c28', borderRadius: 4, fontSize: 12 }}
-                labelStyle={{ color: '#9aa39c', fontFamily: 'JetBrains Mono', fontSize: 11 }}
-                itemStyle={{ color: '#e8ebe7' }}
+                contentStyle={{ background: '#141b10', border: '1px solid #2b3823', borderRadius: 4, fontSize: 12 }}
+                labelStyle={{ color: '#9fb091', fontFamily: 'JetBrains Mono', fontSize: 11 }}
+                itemStyle={{ color: '#e9efe3' }}
                 formatter={(v, n) => n === 'revenue' ? [fmtMoneyFull(v), 'Revenue'] : [fmtNum(v), n]}
               />
-              <Area type="monotone" dataKey="revenue" stroke="#4dd4ff" strokeWidth={2} fill="url(#revGrad)" />
+              <Area type="monotone" dataKey="revenue" stroke="#8bc34a" strokeWidth={2} fill="url(#revGrad)" />
             </AreaChart>
           </ResponsiveContainer>
         </div>
@@ -1151,14 +1151,14 @@ function Dashboard({ data, filters, setFilters }) {
             <div className="card" style={{ height: 360 }}>
               <ResponsiveContainer width="100%" height="100%">
                 <BarChart data={byRep} layout="vertical" margin={{ top: 8, right: 16, left: 8, bottom: 8 }}>
-                  <CartesianGrid stroke="#262c28" strokeDasharray="2 2" horizontal={false} />
-                  <XAxis type="number" stroke="#5d6660" tick={{ fontSize: 11, fontFamily: 'JetBrains Mono' }} tickFormatter={fmtMoney} axisLine={false} tickLine={false} />
-                  <YAxis type="category" dataKey="name" stroke="#5d6660" tick={{ fontSize: 11 }} width={130} axisLine={false} tickLine={false} />
+                  <CartesianGrid stroke="#2b3823" strokeDasharray="2 2" horizontal={false} />
+                  <XAxis type="number" stroke="#647258" tick={{ fontSize: 11, fontFamily: 'JetBrains Mono' }} tickFormatter={fmtMoney} axisLine={false} tickLine={false} />
+                  <YAxis type="category" dataKey="name" stroke="#647258" tick={{ fontSize: 11 }} width={130} axisLine={false} tickLine={false} />
                   <Tooltip
-                    contentStyle={{ background: '#161a17', border: '1px solid #262c28', borderRadius: 4, fontSize: 12 }}
+                    contentStyle={{ background: '#141b10', border: '1px solid #2b3823', borderRadius: 4, fontSize: 12 }}
                     formatter={(v) => [fmtMoneyFull(v), 'Revenue']}
                   />
-                  <Bar dataKey="revenue" fill="#4dd4ff" radius={[0, 2, 2, 0]} />
+                  <Bar dataKey="revenue" fill="#8bc34a" radius={[0, 2, 2, 0]} />
                 </BarChart>
               </ResponsiveContainer>
             </div>
@@ -1180,22 +1180,22 @@ function Dashboard({ data, filters, setFilters }) {
                     innerRadius={60}
                     outerRadius={110}
                     paddingAngle={2}
-                    stroke="#0f1210"
+                    stroke="#0c1109"
                     strokeWidth={2}
                   >
                     {byCategory.map((_, i) => {
-                      const colors = ['#4dd4ff', '#2a93c4', '#8fb8d4', '#f0a868', '#e07594', '#9aa39c', '#5d6660'];
+                      const colors = ['#8bc34a', '#5d8a32', '#a3c98a', '#e0b15a', '#e07594', '#9fb091', '#647258'];
                       return <Cell key={i} fill={colors[i % colors.length]} />;
                     })}
                   </Pie>
                   <Tooltip
-                    contentStyle={{ background: '#161a17', border: '1px solid #262c28', borderRadius: 4, fontSize: 12 }}
+                    contentStyle={{ background: '#141b10', border: '1px solid #2b3823', borderRadius: 4, fontSize: 12 }}
                     formatter={(v) => fmtMoneyFull(v)}
                   />
                   <Legend
                     verticalAlign="bottom"
                     iconType="square"
-                    wrapperStyle={{ fontSize: 11, fontFamily: 'JetBrains Mono', color: '#9aa39c' }}
+                    wrapperStyle={{ fontSize: 11, fontFamily: 'JetBrains Mono', color: '#9fb091' }}
                   />
                 </PieChart>
               </ResponsiveContainer>
@@ -1452,7 +1452,7 @@ function Dashboard({ data, filters, setFilters }) {
       )}
 
       <footer style={{ marginTop: 60, padding: '20px 0', borderTop: '1px solid var(--border)', display: 'flex', justifyContent: 'space-between', fontFamily: 'JetBrains Mono', fontSize: 11, color: 'var(--text-faint)', textTransform: 'uppercase', letterSpacing: '0.12em' }}>
-        <span>Chill Medicated · Missouri · Sales Intelligence</span>
+        <span>Chill Medicated · Sales Intelligence</span>
         <span>Auto-refresh every 60s</span>
       </footer>
     </div>
@@ -1468,11 +1468,11 @@ function Topbar({ fetchedAt, rowCount, totalCount }) {
        <img src="logo.png" alt="Chill Medicated" style={{ height: 48, width: 'auto', flexShrink: 0 }} />
         <div>
           <h1 className="brand-name" style={{ lineHeight: 1, fontSize: 26 }}>
-            <span style={{ background: 'linear-gradient(90deg, #4dd4ff 0%, #1857a6 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>Chill</span>{' '}
+            <span style={{ background: 'linear-gradient(90deg, #8bc34a 0%, #3d6b1e 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>Chill</span>{' '}
             <em style={{ color: 'var(--text-dim)', fontStyle: 'italic', fontWeight: 400 }}>Medicated</em>
           </h1>
           <div className="brand-tag" style={{ marginTop: 4, border: 'none', padding: 0, fontSize: 9 }}>
-            Missouri · Sales Intelligence
+            Massachusetts · Sales Intelligence
           </div>
         </div>
       </div>
