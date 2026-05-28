@@ -1,23 +1,26 @@
 """
-Apex Trading Sales Report Scraper
-----------------------------------
-Pulls the "All Product Sales Report" from Apex Trading using your active
-browser session cookie. Saves the result as sales_data.json for the dashboard.
+Apex Trading — Brand Distributors Order Report Scraper (Missouri / MO)
+----------------------------------------------------------------------
+Pulls the "Brand Distributors Order Report" from Apex Trading using your
+active browser session cookie. Saves the result as sales_data.json for the
+dashboard.
+
+NOTE: This is the MO-style report, which uses a DIFFERENT endpoint and a
+much simpler payload than the MA "All Product Sales Report". It posts a
+{ distributor, status } body to /b-api/brand-company/orders and gets back
+a bare JSON array of order line items.
 
 USAGE:
-    1. Open .env (or edit the constants below) and paste your Cookie value.
+    1. Set APEX_COOKIE in .env (or GitHub Secrets). See README.md.
     2. Run:  python scraper.py
     3. Output: ./sales_data.json  (the dashboard reads this)
-
-To refresh data automatically, schedule this script with cron (macOS/Linux)
-or Task Scheduler (Windows). See README.md for the exact commands.
 """
 
 import json
 import os
 import sys
 import urllib.parse
-from datetime import datetime, timedelta, timezone
+from datetime import datetime, timezone
 from pathlib import Path
 
 import requests
@@ -28,114 +31,50 @@ from dotenv import load_dotenv
 # ----------------------------------------------------------------------------
 load_dotenv()
 
-# Endpoint discovered from the Apex web app's network traffic
-API_URL = "https://app.apextrading.com/b-api/reporting/run-all-product-sales-report"
+# MO report endpoint (discovered from the Apex web app's network traffic)
+API_URL = "https://app.apextrading.com/b-api/brand-company/orders"
 
-# These come from your Apex account (visible in the request payload)
-USER_ID = int(os.getenv("APEX_USER_ID", "10676"))
-COMPANY_ID = int(os.getenv("APEX_COMPANY_ID", "4677"))
+# The distributor whose orders we pull. ID + name come straight from the
+# request payload you captured in the Network tab.
+DISTRIBUTOR_ID = int(os.getenv("APEX_DISTRIBUTOR_ID", "6267"))
+DISTRIBUTOR_NAME = os.getenv(
+    "APEX_DISTRIBUTOR_NAME",
+    "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
+)
+DISTRIBUTOR_SLUG = os.getenv("APEX_DISTRIBUTOR_SLUG", "clovr-cannabis")
+
+# Which order status to pull. The UI default is "Open".
+STATUS = os.getenv("APEX_STATUS", "Open")
 
 # The session cookie from your logged-in browser. NEVER commit this to git.
 COOKIE = os.getenv("APEX_COOKIE", "")
 
-# How many rows to pull per request. Apex's UI defaults to 50; we bump it.
-ROW_LIMIT = int(os.getenv("APEX_ROW_LIMIT", "5000"))
-
-# Brand filter. Missouri is a different Apex account, so the brand id may differ
-# from the Massachusetts one. Override both in .env; MA values kept as defaults.
-BRAND_ID = int(os.getenv("APEX_BRAND_ID", "2500"))
-BRAND_NAME = os.getenv("APEX_BRAND_NAME", "Chill Medicated")
-
-# Date range for the pull.
-# Preferred: set APEX_FROM_DATE to a fixed start date (e.g. "2025-05-01").
-# Fallback: if not set, use rolling APEX_DAYS_BACK window (default 90).
-FROM_DATE_FIXED = os.getenv("APEX_FROM_DATE", "")
-DAYS_BACK = int(os.getenv("APEX_DAYS_BACK", "90"))
-
-OUTPUT_FILE = Path(__file__).parent / "sales_data_mo.json"
+OUTPUT_FILE = Path(__file__).parent / "sales_data.json"
 
 
 # ----------------------------------------------------------------------------
-# Build the request payload (mirrors what the Apex UI sends)
+# Build the request payload (mirrors what the Apex MO UI sends)
 # ----------------------------------------------------------------------------
-def build_payload(from_date: str, to_date: str) -> dict:
-    """Construct the JSON body the report endpoint expects."""
+def build_payload() -> dict:
+    """Construct the JSON body the orders endpoint expects.
+
+    The MO report sends the whole distributor object plus a status string.
+    We only strictly need id/name/slug, but we include the same fields the
+    UI sends to stay close to a real request.
+    """
     return {
-        "name": None,
-        "userId": USER_ID,
-        "companyId": COMPANY_ID,
-        "selectedLimit": str(ROW_LIMIT),
-        "dataExportType": "json",
-        "isNewReportDefault": False,
-        # Enable every product category so nothing is filtered out.
-        "categoriesEnabled": {
-            "flower": True,
-            "plantMaterial": True,
-            "prepack": True,
-            "preroll": True,
-            "seed": True,
-            "clone": True,
-            "concentrate": True,
-            "edible": True,
-            "topical": True,
-            "tincture": True,
-            "vape": True,
-            "accessory": True,
-            "other": True,
+        "distributor": {
+            "id": DISTRIBUTOR_ID,
+            "name": DISTRIBUTOR_NAME,
+            "slug": DISTRIBUTOR_SLUG,
+            "products_count": 0,
+            "out_of_stock": 0,
+            "logoLink": None,
+            "vendorBannerLink": None,
+            "servicesBannerLink": None,
+            "onFleetEnabled": False,
         },
-        # Enable every column we want back in the response.
-        "columnsEnabled": {
-            "industry": True,
-            "product_name": True,
-            "product_category": True,
-            "product_type": True,
-            "operation": True,
-            "brand": True,
-            "batch_name": True,
-            "batch_cost_of_goods": True,
-            "batch_production_date": True,
-            "batch_best_by_date": True,
-            "buyer_name": True,
-            "buyer_license": True,
-            "buyer_state": True,
-            "buyer_city": True,
-            "buyer_group": True,
-            "seller_license": True,
-            "sales_rep": True,
-            "order_id": True,
-            "order_number": True,
-            "order_date": True,
-            "delivery_date": True,
-            "payment_status": True,
-            "payment_date": True,
-            "quantity": True,
-            "unit_price": True,
-            "computed_sale_price": True,
-            "discounts": True,
-            "additional_discounts": True,
-            "tax": True,
-            "total": True,
-        },
-        # The actual filter criteria
-        "reportQuery": {
-            "operations": [],
-            # Filter to a single brand (id + name come from .env; see config above)
-            "brands": [{"id": BRAND_ID, "name": BRAND_NAME}],
-            "salesReps": [],
-            "categories": [],
-            "buyers": [],
-            "paymentStatus": [],
-            "fromDate": from_date,
-            "toDate": to_date,
-            "parentOrderStatuses": [],
-            "paymentReceivedFromDate": None,
-            "paymentReceivedToDate": None,
-            "deliveryFromDate": None,
-            "deliveryToDate": None,
-            "withinLastCount": None,
-            "withinLastType": None,
-            "timeZone": "America/New_York",
-        },
+        "status": STATUS,
     }
 
 
@@ -151,7 +90,6 @@ def extract_xsrf_token(cookie_str: str) -> str:
         part = part.strip()
         if part.startswith("XSRF-TOKEN="):
             raw = part[len("XSRF-TOKEN="):]
-            # The cookie is URL-encoded; Laravel expects it decoded once.
             return urllib.parse.unquote(raw)
     return ""
 
@@ -159,7 +97,7 @@ def extract_xsrf_token(cookie_str: str) -> str:
 def fetch_report() -> dict:
     if not COOKIE:
         print("ERROR: APEX_COOKIE is empty.")
-        print("Open the .env file and paste your session cookie. See README.md.")
+        print("Set your session cookie in .env or GitHub Secrets. See README.md.")
         sys.exit(1)
 
     xsrf = extract_xsrf_token(COOKIE)
@@ -169,22 +107,13 @@ def fetch_report() -> dict:
         print("'XSRF-TOKEN=...' part. Re-grab the cookie and try again.")
         sys.exit(1)
 
-    today = datetime.now()
-    if FROM_DATE_FIXED:
-        # Use the configured fixed start date (e.g. "2025-05-01")
-        from_date = FROM_DATE_FIXED
-    else:
-        # Fall back to rolling window
-        from_date = (today - timedelta(days=DAYS_BACK)).strftime("%Y-%m-%d")
-    to_date = today.strftime("%Y-%m-%d")
-
-    print(f"Pulling sales from {from_date} → {to_date} (limit {ROW_LIMIT} rows)...")
+    print(f"Pulling MO orders for distributor {DISTRIBUTOR_ID} (status: {STATUS})...")
 
     headers = {
         "Accept": "application/json",
         "Content-Type": "application/json",
         "Origin": "https://app.apextrading.com",
-        "Referer": "https://app.apextrading.com/reports/all-product-sales",
+        "Referer": "https://app.apextrading.com/reports/brand-distributors-order-report",
         "User-Agent": (
             "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
             "AppleWebKit/537.36 (KHTML, like Gecko) "
@@ -195,7 +124,7 @@ def fetch_report() -> dict:
         "X-Requested-With": "XMLHttpRequest",
     }
 
-    payload = build_payload(from_date, to_date)
+    payload = build_payload()
 
     try:
         resp = requests.post(API_URL, json=payload, headers=headers, timeout=60)
@@ -211,10 +140,8 @@ def fetch_report() -> dict:
 
     if resp.status_code == 419:
         print("ERROR: CSRF token mismatch (status 419).")
-        print("Your XSRF-TOKEN doesn't match the session. This usually means:")
-        print(" 1. You copied the cookie from one tab and the session shifted, or")
-        print(" 2. You copied an old cookie. Re-grab a fresh Cookie value")
-        print("    from a request you JUST ran in the Apex UI, then re-run.")
+        print("Re-grab a fresh Cookie value from a request you JUST ran in the")
+        print("Apex UI, update it, and re-run.")
         sys.exit(1)
 
     if resp.status_code != 200:
@@ -223,13 +150,27 @@ def fetch_report() -> dict:
         sys.exit(1)
 
     data = resp.json()
-    rows = data.get("data", {}).get("reportData", [])
+
+    # The MO orders endpoint returns a BARE ARRAY of line items.
+    # Be tolerant in case Apex ever wraps it (e.g. {"data": [...]}).
+    if isinstance(data, list):
+        rows = data
+    elif isinstance(data, dict):
+        rows = (
+            data.get("data")
+            or data.get("orders")
+            or data.get("reportData")
+            or []
+        )
+    else:
+        rows = []
+
     print(f"Fetched {len(rows)} rows.")
 
     return {
         "fetched_at": datetime.now(timezone.utc).isoformat(),
-        "from_date": from_date,
-        "to_date": to_date,
+        "distributor_id": DISTRIBUTOR_ID,
+        "status": STATUS,
         "row_count": len(rows),
         "rows": rows,
     }
