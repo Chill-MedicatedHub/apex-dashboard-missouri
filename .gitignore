@@ -5,7 +5,7 @@
 # ── Scraped data — keep private ──────────────────────────────────────────────
 # Real sales figures. Excluded so they don't get published via GitHub Pages.
 sales_data_mo.json
-sales_data.json
+
 
 # ── Python noise ─────────────────────────────────────────────────────────────
 __pycache__/
