@@ -458,6 +458,11 @@ const parseDate = (str) => {
   if (mdyMatch) {
     return new Date(+mdyMatch[3], +mdyMatch[1] - 1, +mdyMatch[2]);
   }
+  // MM-DD-YYYY (MO report format, e.g. "05-21-2026") — dashes, month first
+  const mdyDash = s.match(/^(\d{1,2})-(\d{1,2})-(\d{4})/);
+  if (mdyDash) {
+    return new Date(+mdyDash[3], +mdyDash[1] - 1, +mdyDash[2]);
+  }
   const d = new Date(s);
   return isNaN(d) ? null : d;
 };
@@ -576,41 +581,44 @@ function Dashboard({ data, filters, setFilters }) {
   // Normalize once — maps Apex's real field names into the dashboard's working fields
   const normalized = useMemo(() => rows.map(r => ({
     ...r,
-    // Canonical aliases the dashboard uses everywhere
-    brand: r.product_brand || r.brand || '',
-    sales_rep: extractRep(r),
+    // Canonical aliases the dashboard uses everywhere.
+    // MO report: brand info lives in distributor_name. MA report: product_brand/brand.
+    brand: r.product_brand || r.brand || r.distributor_name || '',
+    sales_rep: extractRep(r),  // MO report has no sales rep — comes back ''
+    // MO sends order_date as "MM-DD-YYYY" (string). MA sends order_date_utc etc.
     order_date: r.order_date_utc || r.order_date_localized || r.order_date || '',
-    order_date_raw: r.order_date_utc_raw || r.order_date_localized_raw || r.order_date_raw || '',
+    order_date_raw: r.order_date_utc_raw || r.order_date_localized_raw || r.order_date_raw || r.order_date || '',
     delivery_date: r.delivery_date || '',
     delivery_date_raw: r.delivery_date_raw || '',
-    buyer_state: normalizeState(r.buyer_state),
-    // Use order_number as the invoice/order identifier — Apex's real data doesn't have order_id at the line level
-    order_id: r.order_id || r.order_number || null,
+    buyer_state: normalizeState(r.buyer_state),  // MO has no buyer_state — comes back ''
+    // Order identifier. MO uses `order` ("43732"); MA uses order_id/order_number.
+    order_id: r.order_id || r.order_number || r.order || null,
+    order_number: r.order_number || r.order || null,
     // Computed fields
     _date: parseDate(r.order_date_utc_raw || r.order_date_localized_raw || r.order_date_raw || r.order_date_utc || r.order_date),
     _delivery: parseDate(r.delivery_date_raw || r.delivery_date),
-    _revenue: (typeof r.line_total_raw === 'number')
-      ? r.line_total_raw / 100
-      : parseMoney(r.line_total || r.computed_sale_price || r.total),
+    // REVENUE — MO report uses `order_price` as an INTEGER in CENTS
+    // (e.g. 50625 = $506.25). MA report used line_total_raw (also cents).
+    // If your revenue totals come out 100x off, flip the /100 below.
+    _revenue: (typeof r.order_price === 'number')
+      ? r.order_price / 100
+      : (typeof r.line_total_raw === 'number')
+        ? r.line_total_raw / 100
+        : parseMoney(r.line_total || r.computed_sale_price || r.total || r.order_price),
+    // MO report has no cost-of-goods field — _cost is 0, so the dashboard
+    // falls back to the modeled COGS ratio automatically.
     _cost: parseMoney(r.batch_cost_of_goods),
     _quantity: parseFloat(r.quantity_raw != null ? r.quantity_raw : r.quantity) || 0,
-    // DISCOUNT FIELD — using `discounts` (per-line) only. Apex also has
-    // `additional_discounts` (invoice-level), but it's not consistently reflected
-    // in the Apex UI, so we don't trust it as real discount activity. Line-level
-    // discounts here match what the CSV export and Apex invoice screens show.
-    // Comes from Apex as integer cents (e.g. 18000 = $180.00). Fallback handles
-    // edge cases where the field might be a string like "$30.00".
+    // MO report has no discount fields — these come back 0.
     _lineDiscount: (typeof r.discounts === 'number' ? r.discounts / 100 : parseMoney(r.discounts)),
     _discount: (typeof r.discounts === 'number' ? r.discounts / 100 : parseMoney(r.discounts)),
     _unitPrice: parseMoney(r.product_listing_price || r.unit_price),
     _isSample: isSampleRow(r),
-    // Credit detection — Apex records "credits applied to payment" inside the
-    // `payment_dates` array, with entries like "Credit of $1,045.22 on 03/17/2026".
-    // We parse those out and also keep the original negative-revenue fallback
-    // (in case Apex ever sends a credit as a negative line item).
+    // MO report has no payments/credits text — these come back empty/0.
     _creditFromPayments: parsePaymentsForCredits(r.payment_dates || r.payments || r.payment_text || r.payment_history || '').total,
     _creditEntries: parsePaymentsForCredits(r.payment_dates || r.payments || r.payment_text || r.payment_history || '').entries,
     _isNegativeLine: (
+      (typeof r.order_price === 'number' && r.order_price < 0) ||
       (typeof r.line_total_raw === 'number' && r.line_total_raw < 0) ||
       parseMoney(r.line_total || r.computed_sale_price || r.total) < 0
     ),
