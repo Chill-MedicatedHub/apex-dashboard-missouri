@@ -18,20 +18,20 @@
 <style>
   :root {
     /* Chill Medicated · Blue Gradient palette
-       Deep navy base → bright cyan accent. Wellness, medicinal, premium. */
-    --bg: #0a1220;            /* deep navy, slightly darker than slate */
-    --bg-elev: #131c2e;        /* panel — same hue, raised */
-    --bg-elev-2: #1a2540;      /* second-level surface */
-    --border: #243149;
-    --border-soft: #1c2638;
-    --text: #e6ecf5;           /* soft off-white with cool tint */
-    --text-dim: #94a3c0;       /* muted slate-blue */
-    --text-faint: #5c6a85;     /* faint slate */
-    --accent: #4dd4ff;         /* Chill cyan — bright, medicinal */
-    --accent-dim: #2a93c4;     /* darker cyan for borders/lines */
-    --accent-deep: #1857a6;    /* deep blue, gradient endpoint */
+       Near-black base → logo green accent, matching the Chill Medicated mark. */
+    --bg: #0d100a;            /* near-black with a faint green cast */
+    --bg-elev: #161a11;        /* panel — same hue, raised */
+    --bg-elev-2: #20281a;      /* second-level surface */
+    --border: #2b3422;
+    --border-soft: #1f271a;
+    --text: #e9ede2;           /* warm off-white */
+    --text-dim: #9ba98e;       /* muted sage */
+    --text-faint: #616d52;     /* faint olive */
+    --accent: #81b340;         /* Chill logo green */
+    --accent-dim: #5d8a2f;     /* darker green for borders/lines */
+    --accent-deep: #34501b;    /* deep green, gradient endpoint */
     --warm: #f0a868;           /* soft amber (warnings) */
-    --cool: #8fb8d4;           /* secondary blue */
+    --cool: #b3d182;           /* secondary light green */
     --rose: #e07594;           /* soft rose (errors / negative) */
   }
 
@@ -49,8 +49,8 @@
 
   body {
     background-image:
-      radial-gradient(ellipse 1200px 600px at 80% -10%, rgba(77,212,255,0.05), transparent 60%),
-      radial-gradient(ellipse 800px 400px at 0% 100%, rgba(24,87,166,0.05), transparent 60%);
+      radial-gradient(ellipse 1200px 600px at 80% -10%, rgba(129,179,64,0.06), transparent 60%),
+      radial-gradient(ellipse 800px 400px at 0% 100%, rgba(52,80,27,0.06), transparent 60%);
   }
 
   /* Typography */
@@ -308,7 +308,7 @@
     border-bottom: 1px solid var(--border-soft);
     color: var(--text);
   }
-  .data-table tr:hover td { background: rgba(196,255,61,0.02); }
+  .data-table tr:hover td { background: rgba(129,179,64,0.03); }
   .data-table .num { font-family: 'JetBrains Mono', monospace; font-variant-numeric: tabular-nums; text-align: right; }
   .data-table .dim { color: var(--text-dim); }
 
@@ -349,7 +349,7 @@
     border-radius: 2px;
     border: 1px solid;
   }
-  .pill-completed { color: var(--accent); border-color: var(--accent-dim); background: rgba(196,255,61,0.06); }
+  .pill-completed { color: var(--accent); border-color: var(--accent-dim); background: rgba(129,179,64,0.08); }
   .pill-pending { color: var(--warm); border-color: var(--warm); background: rgba(232,138,60,0.06); }
   .pill-overdue { color: var(--rose); border-color: var(--rose); background: rgba(217,112,112,0.06); }
 
@@ -368,15 +368,15 @@ const { useState, useEffect, useMemo } = React;
 // Guard against CDN failure — show a clear message instead of going blank
 if (typeof Recharts === 'undefined') {
   document.getElementById('root').innerHTML = `
-    <div style="max-width:600px;margin:80px auto;padding:32px;background:#161a17;border:1px solid #262c28;border-radius:4px;color:#e8ebe7;font-family:sans-serif">
+    <div style="max-width:600px;margin:80px auto;padding:32px;background:#161a11;border:1px solid #2b3422;border-radius:4px;color:#e9ede2;font-family:sans-serif">
       <h2 style="font-family:Fraunces,serif;font-weight:400;font-style:italic;margin-bottom:12px">Charts library didn't load</h2>
-      <p style="color:#9aa39c;line-height:1.6">The Recharts library failed to load from the CDN. This usually means:</p>
-      <ul style="color:#9aa39c;line-height:1.8;margin-top:8px;padding-left:20px">
+      <p style="color:#9ba98e;line-height:1.6">The Recharts library failed to load from the CDN. This usually means:</p>
+      <ul style="color:#9ba98e;line-height:1.8;margin-top:8px;padding-left:20px">
         <li>You're offline or behind a firewall blocking CDNs</li>
         <li>An ad blocker / privacy extension is blocking jsdelivr.net or unpkg.com</li>
         <li>Slow network — try refreshing</li>
       </ul>
-      <p style="color:#4dd4ff;margin-top:16px;font-family:monospace;font-size:13px">Try: disable extensions for localhost, or refresh the page.</p>
+      <p style="color:#81b340;margin-top:16px;font-family:monospace;font-size:13px">Try: disable extensions for localhost, or refresh the page.</p>
     </div>
   `;
   throw new Error('Recharts failed to load');
@@ -506,7 +506,7 @@ function App() {
   const [data, setData] = useState(null);
   const [error, setError] = useState(null);
   const [filters, setFilters] = useState({
-    from: '', to: '', brand: '', buyer: '', rep: '', state: 'MO', status: '', invoice: '',
+    from: '', to: '', brand: '', buyer: '', rep: '', state: '', status: '', invoice: '',
     productLine: '', excludeSamples: false, cogsRatio: 0.45
   });
 
@@ -906,7 +906,7 @@ function Dashboard({ data, filters, setFilters }) {
   }, [filtered]);
 
   const resetFilters = () => setFilters({
-    from: '', to: '', brand: '', buyer: '', rep: '', state: 'MO', status: '', invoice: '',
+    from: '', to: '', brand: '', buyer: '', rep: '', state: '', status: '', invoice: '',
     productLine: '', excludeSamples: false, cogsRatio: 0.45
   });
 
@@ -1113,20 +1113,20 @@ function Dashboard({ data, filters, setFilters }) {
             <AreaChart data={timeSeries} margin={{ top: 12, right: 12, left: 0, bottom: 0 }}>
               <defs>
                 <linearGradient id="revGrad" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="0%" stopColor="#4dd4ff" stopOpacity={0.4} />
-                  <stop offset="100%" stopColor="#4dd4ff" stopOpacity={0} />
+                  <stop offset="0%" stopColor="#81b340" stopOpacity={0.4} />
+                  <stop offset="100%" stopColor="#81b340" stopOpacity={0} />
                 </linearGradient>
               </defs>
-              <CartesianGrid stroke="#262c28" strokeDasharray="2 2" vertical={false} />
-              <XAxis dataKey="date" stroke="#5d6660" tick={{ fontSize: 11, fontFamily: 'JetBrains Mono' }} tickLine={false} axisLine={{ stroke: '#262c28' }} />
-              <YAxis stroke="#5d6660" tick={{ fontSize: 11, fontFamily: 'JetBrains Mono' }} tickLine={false} axisLine={false} tickFormatter={fmtMoney} />
+              <CartesianGrid stroke="#2b3422" strokeDasharray="2 2" vertical={false} />
+              <XAxis dataKey="date" stroke="#616d52" tick={{ fontSize: 11, fontFamily: 'JetBrains Mono' }} tickLine={false} axisLine={{ stroke: '#2b3422' }} />
+              <YAxis stroke="#616d52" tick={{ fontSize: 11, fontFamily: 'JetBrains Mono' }} tickLine={false} axisLine={false} tickFormatter={fmtMoney} />
               <Tooltip
-                contentStyle={{ background: '#161a17', border: '1px solid #262c28', borderRadius: 4, fontSize: 12 }}
-                labelStyle={{ color: '#9aa39c', fontFamily: 'JetBrains Mono', fontSize: 11 }}
-                itemStyle={{ color: '#e8ebe7' }}
+                contentStyle={{ background: '#161a11', border: '1px solid #2b3422', borderRadius: 4, fontSize: 12 }}
+                labelStyle={{ color: '#9ba98e', fontFamily: 'JetBrains Mono', fontSize: 11 }}
+                itemStyle={{ color: '#e9ede2' }}
                 formatter={(v, n) => n === 'revenue' ? [fmtMoneyFull(v), 'Revenue'] : [fmtNum(v), n]}
               />
-              <Area type="monotone" dataKey="revenue" stroke="#4dd4ff" strokeWidth={2} fill="url(#revGrad)" />
+              <Area type="monotone" dataKey="revenue" stroke="#81b340" strokeWidth={2} fill="url(#revGrad)" />
             </AreaChart>
           </ResponsiveContainer>
         </div>
@@ -1151,14 +1151,14 @@ function Dashboard({ data, filters, setFilters }) {
             <div className="card" style={{ height: 360 }}>
               <ResponsiveContainer width="100%" height="100%">
                 <BarChart data={byRep} layout="vertical" margin={{ top: 8, right: 16, left: 8, bottom: 8 }}>
-                  <CartesianGrid stroke="#262c28" strokeDasharray="2 2" horizontal={false} />
-                  <XAxis type="number" stroke="#5d6660" tick={{ fontSize: 11, fontFamily: 'JetBrains Mono' }} tickFormatter={fmtMoney} axisLine={false} tickLine={false} />
-                  <YAxis type="category" dataKey="name" stroke="#5d6660" tick={{ fontSize: 11 }} width={130} axisLine={false} tickLine={false} />
+                  <CartesianGrid stroke="#2b3422" strokeDasharray="2 2" horizontal={false} />
+                  <XAxis type="number" stroke="#616d52" tick={{ fontSize: 11, fontFamily: 'JetBrains Mono' }} tickFormatter={fmtMoney} axisLine={false} tickLine={false} />
+                  <YAxis type="category" dataKey="name" stroke="#616d52" tick={{ fontSize: 11 }} width={130} axisLine={false} tickLine={false} />
                   <Tooltip
-                    contentStyle={{ background: '#161a17', border: '1px solid #262c28', borderRadius: 4, fontSize: 12 }}
+                    contentStyle={{ background: '#161a11', border: '1px solid #2b3422', borderRadius: 4, fontSize: 12 }}
                     formatter={(v) => [fmtMoneyFull(v), 'Revenue']}
                   />
-                  <Bar dataKey="revenue" fill="#4dd4ff" radius={[0, 2, 2, 0]} />
+                  <Bar dataKey="revenue" fill="#81b340" radius={[0, 2, 2, 0]} />
                 </BarChart>
               </ResponsiveContainer>
             </div>
@@ -1180,22 +1180,22 @@ function Dashboard({ data, filters, setFilters }) {
                     innerRadius={60}
                     outerRadius={110}
                     paddingAngle={2}
-                    stroke="#0f1210"
+                    stroke="#0d100a"
                     strokeWidth={2}
                   >
                     {byCategory.map((_, i) => {
-                      const colors = ['#4dd4ff', '#2a93c4', '#8fb8d4', '#f0a868', '#e07594', '#9aa39c', '#5d6660'];
+                      const colors = ['#81b340', '#5d8a2f', '#b3d182', '#f0a868', '#e07594', '#9ba98e', '#616d52'];
                       return <Cell key={i} fill={colors[i % colors.length]} />;
                     })}
                   </Pie>
                   <Tooltip
-                    contentStyle={{ background: '#161a17', border: '1px solid #262c28', borderRadius: 4, fontSize: 12 }}
+                    contentStyle={{ background: '#161a11', border: '1px solid #2b3422', borderRadius: 4, fontSize: 12 }}
                     formatter={(v) => fmtMoneyFull(v)}
                   />
                   <Legend
                     verticalAlign="bottom"
                     iconType="square"
-                    wrapperStyle={{ fontSize: 11, fontFamily: 'JetBrains Mono', color: '#9aa39c' }}
+                    wrapperStyle={{ fontSize: 11, fontFamily: 'JetBrains Mono', color: '#9ba98e' }}
                   />
                 </PieChart>
               </ResponsiveContainer>
@@ -1468,7 +1468,7 @@ function Topbar({ fetchedAt, rowCount, totalCount }) {
        <img src="logo.png" alt="Chill Medicated" style={{ height: 48, width: 'auto', flexShrink: 0 }} />
         <div>
           <h1 className="brand-name" style={{ lineHeight: 1, fontSize: 26 }}>
-            <span style={{ background: 'linear-gradient(90deg, #4dd4ff 0%, #1857a6 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>Chill</span>{' '}
+            <span style={{ background: 'linear-gradient(90deg, #81b340 0%, #34501b 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>Chill</span>{' '}
             <em style={{ color: 'var(--text-dim)', fontStyle: 'italic', fontWeight: 400 }}>Medicated</em>
           </h1>
           <div className="brand-tag" style={{ marginTop: 4, border: 'none', padding: 0, fontSize: 9 }}>
