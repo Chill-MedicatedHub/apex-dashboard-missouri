@@ -458,6 +458,11 @@ const parseDate = (str) => {
   if (mdyMatch) {
     return new Date(+mdyMatch[3], +mdyMatch[1] - 1, +mdyMatch[2]);
   }
+  // MM-DD-YYYY (Apex order_date format, e.g. "05-21-2026")
+  const mdyDashMatch = s.match(/^(\d{1,2})-(\d{1,2})-(\d{4})/);
+  if (mdyDashMatch) {
+    return new Date(+mdyDashMatch[3], +mdyDashMatch[1] - 1, +mdyDashMatch[2]);
+  }
   const d = new Date(s);
   return isNaN(d) ? null : d;
 };
@@ -584,14 +589,19 @@ function Dashboard({ data, filters, setFilters }) {
     delivery_date: r.delivery_date || '',
     delivery_date_raw: r.delivery_date_raw || '',
     buyer_state: normalizeState(r.buyer_state),
-    // Use order_number as the invoice/order identifier — Apex's real data doesn't have order_id at the line level
-    order_id: r.order_id || r.order_number || null,
+    // Order identifier — Apex returns it as `order`; keep older aliases as fallback
+    order_id: r.order_id || r.order_number || r.order || null,
+    order_number: r.order_number || r.order || null,
     // Computed fields
     _date: parseDate(r.order_date_utc_raw || r.order_date_localized_raw || r.order_date_raw || r.order_date_utc || r.order_date),
     _delivery: parseDate(r.delivery_date_raw || r.delivery_date),
+    // Revenue — Apex returns `order_price` as a per-line total in integer cents
+    // (already quantity-multiplied). Older exports used line_total_raw/line_total.
     _revenue: (typeof r.line_total_raw === 'number')
       ? r.line_total_raw / 100
-      : parseMoney(r.line_total || r.computed_sale_price || r.total),
+      : (typeof r.order_price === 'number')
+        ? r.order_price / 100
+        : parseMoney(r.line_total || r.computed_sale_price || r.total),
     _cost: parseMoney(r.batch_cost_of_goods),
     _quantity: parseFloat(r.quantity_raw != null ? r.quantity_raw : r.quantity) || 0,
     // DISCOUNT FIELD — using `discounts` (per-line) only. Apex also has
