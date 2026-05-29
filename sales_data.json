@@ -1,8 +1,8 @@
 {
-  "fetched_at": "2026-05-29T11:00:18.063724+00:00",
+  "fetched_at": "2026-05-29T15:10:52.758684+00:00",
   "distributor_id": 6267,
   "status": "Open",
-  "row_count": 13,
+  "row_count": 10,
   "rows": [
     {
       "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
@@ -186,46 +186,6 @@
     },
     {
       "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
-      "order": "43759",
-      "product_name": "Chill Medicated-Syrup-500mg-1ct-Strawberry",
-      "product_category": "Edibles & Drink",
-      "product_type": "Syrup",
-      "batch_name": "1A40C0300000E12000230438",
-      "potency": "",
-      "predominate_canabinoid": "THC",
-      "quantity": 1,
-      "unit_of_measure": "Case",
-      "unit_size_weight": "500 Mg",
-      "order_price": 47250,
-      "order_status": "Order Approved",
-      "payment_status": "unpaid",
-      "order_date": "05-27-2026",
-      "delivery_date": "05-28-2026",
-      "buyer_name": "GRD Troy-DIS000154",
-      "buyer_license": "DIS000154"
-    },
-    {
-      "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
-      "order": "43759",
-      "product_name": "Chill Medicated-Zero Sugar Sunrise Syrup-250mg-1ct-Orange Cr\u00e8me",
-      "product_category": "Edibles & Drink",
-      "product_type": "Syrup",
-      "batch_name": "1A40C0300000E12000230436",
-      "potency": "",
-      "predominate_canabinoid": "THC",
-      "quantity": 1,
-      "unit_of_measure": "Case",
-      "unit_size_weight": "250 Mg",
-      "order_price": 47250,
-      "order_status": "Order Approved",
-      "payment_status": "unpaid",
-      "order_date": "05-27-2026",
-      "delivery_date": "05-28-2026",
-      "buyer_name": "GRD Troy-DIS000154",
-      "buyer_license": "DIS000154"
-    },
-    {
-      "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
       "order": "43769",
       "product_name": "Chill Medicated-Zero Sugar Sunrise Syrup-250mg-1ct-Orange Cr\u00e8me",
       "product_category": "Edibles & Drink",
@@ -240,29 +200,9 @@
       "order_status": "Order Approved",
       "payment_status": "unpaid",
       "order_date": "05-27-2026",
-      "delivery_date": "05-28-2026",
+      "delivery_date": "05-29-2026",
       "buyer_name": "Proper Cannabis - Bridgeton-DIS000208",
       "buyer_license": "DIS000208"
-    },
-    {
-      "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
-      "order": "43772",
-      "product_name": "Chill Medicated-Zero Sugar Sunrise Syrup-250mg-1ct-Orange Cr\u00e8me",
-      "product_category": "Edibles & Drink",
-      "product_type": "Syrup",
-      "batch_name": "1A40C0300000E12000230436",
-      "potency": "",
-      "predominate_canabinoid": "THC",
-      "quantity": 1,
-      "unit_of_measure": "Case",
-      "unit_size_weight": "250 Mg",
-      "order_price": 47250,
-      "order_status": "Order Approved",
-      "payment_status": "unpaid",
-      "order_date": "05-27-2026",
-      "delivery_date": "05-28-2026",
-      "buyer_name": "Proper Cannabis - Crestwood-DIS000086",
-      "buyer_license": "DIS000086"
     }
   ]
 }
