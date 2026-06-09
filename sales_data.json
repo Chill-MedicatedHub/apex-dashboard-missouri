@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-06-09T14:30:43.504633+00:00",
+  "fetched_at": "2026-06-09T14:45:31.636843+00:00",
   "distributor_id": 6267,
   "status": "Open",
   "row_count": 73,
@@ -1437,10 +1437,10 @@
       "unit_of_measure": "Case",
       "unit_size_weight": "1000 Mg",
       "order_price": 67500,
-      "order_status": "Order Submitted",
+      "order_status": "Order Approved",
       "payment_status": "unpaid",
       "order_date": "06-09-2026",
-      "delivery_date": null,
+      "delivery_date": "06-11-2026",
       "buyer_name": "Nature Med MO - Kansas City-DIS000072",
       "buyer_license": "DIS000072"
     },
@@ -1457,10 +1457,10 @@
       "unit_of_measure": "Case",
       "unit_size_weight": "1000 Mg",
       "order_price": 67500,
-      "order_status": "Order Submitted",
+      "order_status": "Order Approved",
       "payment_status": "unpaid",
       "order_date": "06-09-2026",
-      "delivery_date": null,
+      "delivery_date": "06-11-2026",
       "buyer_name": "Nature Med MO - Gladstone-DIS000056",
       "buyer_license": "DIS000056"
     }
