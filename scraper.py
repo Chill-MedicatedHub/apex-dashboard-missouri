@@ -43,8 +43,11 @@ DISTRIBUTOR_NAME = os.getenv(
 )
 DISTRIBUTOR_SLUG = os.getenv("APEX_DISTRIBUTOR_SLUG", "clovr-cannabis")
 
-# Which order status to pull. The UI default is "Open".
-STATUS = os.getenv("APEX_STATUS", "Open")
+# Which order statuses to pull. The Apex dropdown offers "Open" (in-progress,
+# recent) and "Completed" (finished — the bulk of sales history). Pull both so
+# the dashboard isn't limited to current open orders. Comma-separated; add any
+# other statuses the dropdown shows (e.g. "Cancelled") if you want them too.
+STATUSES = [s.strip() for s in os.getenv("APEX_STATUSES", "Open,Completed").split(",") if s.strip()]
 
 # The session cookie from your logged-in browser. NEVER commit this to git.
 COOKIE = os.getenv("APEX_COOKIE", "")
@@ -55,7 +58,7 @@ OUTPUT_FILE = Path(__file__).parent / "sales_data.json"
 # ----------------------------------------------------------------------------
 # Build the request payload (mirrors what the Apex MO UI sends)
 # ----------------------------------------------------------------------------
-def build_payload() -> dict:
+def build_payload(status: str) -> dict:
     """Construct the JSON body the orders endpoint expects.
 
     The MO report sends the whole distributor object plus a status string.
@@ -74,7 +77,7 @@ def build_payload() -> dict:
             "servicesBannerLink": None,
             "onFleetEnabled": False,
         },
-        "status": STATUS,
+        "status": status,
     }
 
 
@@ -107,7 +110,7 @@ def fetch_report() -> dict:
         print("'XSRF-TOKEN=...' part. Re-grab the cookie and try again.")
         sys.exit(1)
 
-    print(f"Pulling MO orders for distributor {DISTRIBUTOR_ID} (status: {STATUS})...")
+    print(f"Pulling MO orders for distributor {DISTRIBUTOR_ID} (statuses: {', '.join(STATUSES)})...")
 
     headers = {
         "Accept": "application/json",
@@ -124,55 +127,61 @@ def fetch_report() -> dict:
         "X-Requested-With": "XMLHttpRequest",
     }
 
-    payload = build_payload()
+    def _extract_rows(data):
+        if isinstance(data, list):
+            return data
+        if isinstance(data, dict):
+            return data.get("data") or data.get("orders") or data.get("reportData") or []
+        return []
 
-    try:
-        resp = requests.post(API_URL, json=payload, headers=headers, timeout=60)
-    except requests.RequestException as e:
-        print(f"ERROR: network failure — {e}")
-        sys.exit(1)
+    all_rows = []
+    per_status = {}
+    seen = set()
+    for status in STATUSES:
+        try:
+            resp = requests.post(API_URL, json=build_payload(status), headers=headers, timeout=60)
+        except requests.RequestException as e:
+            print(f"ERROR: network failure — {e}")
+            sys.exit(1)
 
-    if resp.status_code in (401, 403):
-        print(f"ERROR: Apex rejected the request (status {resp.status_code}).")
-        print("Your session cookie has likely expired. Log into Apex in your")
-        print("browser, copy a fresh Cookie value into .env, and re-run.")
-        sys.exit(1)
+        if resp.status_code in (401, 403):
+            print(f"ERROR: Apex rejected the request (status {resp.status_code}).")
+            print("Your session cookie has likely expired. Log into Apex in your")
+            print("browser, copy a fresh Cookie value into .env, and re-run.")
+            sys.exit(1)
+        if resp.status_code == 419:
+            print("ERROR: CSRF token mismatch (status 419).")
+            print("Re-grab a fresh Cookie value from a request you JUST ran in the")
+            print("Apex UI, update it, and re-run.")
+            sys.exit(1)
+        if resp.status_code != 200:
+            print(f"ERROR: status {resp.status_code} for status '{status}': {resp.text[:300]}")
+            sys.exit(1)
 
-    if resp.status_code == 419:
-        print("ERROR: CSRF token mismatch (status 419).")
-        print("Re-grab a fresh Cookie value from a request you JUST ran in the")
-        print("Apex UI, update it, and re-run.")
-        sys.exit(1)
+        rows = _extract_rows(resp.json())
+        # Dedupe across statuses by a line-level key (an order is in one status,
+        # but this guards against any overlap).
+        new = 0
+        for r in rows:
+            key = (str(r.get("order")), r.get("product_name"), r.get("batch_name"),
+                   str(r.get("quantity")), str(r.get("order_price")))
+            if key in seen:
+                continue
+            seen.add(key)
+            all_rows.append(r)
+            new += 1
+        per_status[status] = new
+        print(f"  status '{status}': {len(rows)} rows ({new} new) | total {len(all_rows)}")
 
-    if resp.status_code != 200:
-        print(f"ERROR: unexpected status {resp.status_code}")
-        print(resp.text[:500])
-        sys.exit(1)
-
-    data = resp.json()
-
-    # The MO orders endpoint returns a BARE ARRAY of line items.
-    # Be tolerant in case Apex ever wraps it (e.g. {"data": [...]}).
-    if isinstance(data, list):
-        rows = data
-    elif isinstance(data, dict):
-        rows = (
-            data.get("data")
-            or data.get("orders")
-            or data.get("reportData")
-            or []
-        )
-    else:
-        rows = []
-
-    print(f"Fetched {len(rows)} rows.")
+    print(f"Fetched {len(all_rows)} rows across {len(STATUSES)} statuses: {per_status}")
 
     return {
         "fetched_at": datetime.now(timezone.utc).isoformat(),
         "distributor_id": DISTRIBUTOR_ID,
-        "status": STATUS,
-        "row_count": len(rows),
-        "rows": rows,
+        "statuses": STATUSES,
+        "per_status_counts": per_status,
+        "row_count": len(all_rows),
+        "rows": all_rows,
     }
 
 
