@@ -512,7 +512,7 @@ function App() {
   const [error, setError] = useState(null);
   const [filters, setFilters] = useState({
     from: '', to: '', brand: '', buyer: '', rep: '', state: '', status: '', invoice: '',
-    productLine: '', excludeSamples: false, cogsRatio: 0.45
+    productLine: '', orderPhase: '', excludeSamples: false, cogsRatio: 0.45
   });
 
   useEffect(() => {
@@ -588,7 +588,10 @@ function Dashboard({ data, filters, setFilters }) {
     order_date_raw: r.order_date_utc_raw || r.order_date_localized_raw || r.order_date_raw || '',
     delivery_date: r.delivery_date || '',
     delivery_date_raw: r.delivery_date_raw || '',
-    buyer_state: normalizeState(r.buyer_state),
+    buyer_state: normalizeState(r.buyer_state) || 'MO',
+    // Lifecycle phase: "Complete" status = Completed, everything else = Open
+    // (mirrors how the scraper pulls Open vs Completed from Apex).
+    order_phase: String(r.order_status || '').trim().toLowerCase() === 'complete' ? 'Completed' : 'Open',
     // Order identifier — Apex returns it as `order`; keep older aliases as fallback
     order_id: r.order_id || r.order_number || r.order || null,
     order_number: r.order_number || r.order || null,
@@ -651,6 +654,7 @@ function Dashboard({ data, filters, setFilters }) {
     if (filters.state && r.buyer_state !== filters.state) return false;
     if (filters.status && r.payment_status !== filters.status) return false;
     if (filters.productLine && r.product_type !== filters.productLine) return false;
+    if (filters.orderPhase && r.order_phase !== filters.orderPhase) return false;
     if (filters.excludeSamples && r._isSample) return false;
     if (filters.invoice) {
       const q = filters.invoice.toLowerCase();
@@ -815,7 +819,7 @@ function Dashboard({ data, filters, setFilters }) {
 
   const topProducts = useMemo(() => groupSum('product_name'), [filtered]);
   const topBuyers = useMemo(() => groupSum('buyer_name'), [filtered]);
-  const byRep = useMemo(() => groupSum('sales_rep', 20), [filtered]);
+  const byDistributor = useMemo(() => groupSum('distributor_name', 20), [filtered]);
   const byCategory = useMemo(() => groupSum('product_category'), [filtered]);
   const byState = useMemo(() => groupSum('buyer_state', 15), [filtered]);
 
@@ -917,7 +921,7 @@ function Dashboard({ data, filters, setFilters }) {
 
   const resetFilters = () => setFilters({
     from: '', to: '', brand: '', buyer: '', rep: '', state: '', status: '', invoice: '',
-    productLine: '', excludeSamples: false, cogsRatio: 0.45
+    productLine: '', orderPhase: '', excludeSamples: false, cogsRatio: 0.45
   });
 
   const fetchedAt = new Date(data.fetched_at);
@@ -1155,12 +1159,12 @@ function Dashboard({ data, filters, setFilters }) {
         <div className="grid-2">
           <div>
             <div className="section-header">
-              <h2 className="section-title">Sales <em>by rep</em></h2>
-              <span className="section-meta">{byRep.length} reps</span>
+              <h2 className="section-title">Sales <em>by distributor</em></h2>
+              <span className="section-meta">{byDistributor.length} distributors</span>
             </div>
             <div className="card" style={{ height: 360 }}>
               <ResponsiveContainer width="100%" height="100%">
-                <BarChart data={byRep} layout="vertical" margin={{ top: 8, right: 16, left: 8, bottom: 8 }}>
+                <BarChart data={byDistributor} layout="vertical" margin={{ top: 8, right: 16, left: 8, bottom: 8 }}>
                   <CartesianGrid stroke="#2b3422" strokeDasharray="2 2" horizontal={false} />
                   <XAxis type="number" stroke="#616d52" tick={{ fontSize: 11, fontFamily: 'JetBrains Mono' }} tickFormatter={fmtMoney} axisLine={false} tickLine={false} />
                   <YAxis type="category" dataKey="name" stroke="#616d52" tick={{ fontSize: 11 }} width={130} axisLine={false} tickLine={false} />
@@ -1541,6 +1545,14 @@ function FilterBar({ filters, setFilters, distinct, onReset }) {
         <select className="filter-select" value={filters.status} onChange={e => upd('status', e.target.value)}>
           <option value="">All</option>
           {distinct.statuses.map(b => <option key={b}>{b}</option>)}
+        </select>
+      </div>
+      <div className="filter-group">
+        <label className="filter-label">Order Status</label>
+        <select className="filter-select" value={filters.orderPhase} onChange={e => upd('orderPhase', e.target.value)}>
+          <option value="">All</option>
+          <option value="Open">Open</option>
+          <option value="Completed">Completed</option>
         </select>
       </div>
       <div className="filter-group">
