@@ -1,8 +1,8 @@
 {
-  "fetched_at": "2026-06-10T13:15:31.525927+00:00",
+  "fetched_at": "2026-06-10T13:30:36.573497+00:00",
   "distributor_id": 6267,
   "status": "Open",
-  "row_count": 73,
+  "row_count": 71,
   "rows": [
     {
       "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
@@ -1403,46 +1403,6 @@
       "delivery_date": "06-11-2026",
       "buyer_name": "Shangri-La Columbia, LLC-DIS000167",
       "buyer_license": "DIS000167"
-    },
-    {
-      "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
-      "order": "43868",
-      "product_name": "Chill Medicated-Maxx-2000mg-THC Body Rub 1000mg THC|1000mg CBD-1ct",
-      "product_category": "Topicals & Wellness",
-      "product_type": "Lotion",
-      "batch_name": "1A40C0300000E12000242839",
-      "potency": "",
-      "predominate_canabinoid": "THC",
-      "quantity": 1,
-      "unit_of_measure": "Case",
-      "unit_size_weight": "1000 Mg",
-      "order_price": 67500,
-      "order_status": "Order Approved",
-      "payment_status": "unpaid",
-      "order_date": "06-09-2026",
-      "delivery_date": "06-11-2026",
-      "buyer_name": "Nature Med MO - Kansas City-DIS000072",
-      "buyer_license": "DIS000072"
-    },
-    {
-      "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
-      "order": "43870",
-      "product_name": "Chill Medicated-Maxx-2000mg-THC Body Rub 1000mg THC|1000mg CBD-1ct",
-      "product_category": "Topicals & Wellness",
-      "product_type": "Lotion",
-      "batch_name": "1A40C0300000E12000242839",
-      "potency": "",
-      "predominate_canabinoid": "THC",
-      "quantity": 1,
-      "unit_of_measure": "Case",
-      "unit_size_weight": "1000 Mg",
-      "order_price": 67500,
-      "order_status": "Order Approved",
-      "payment_status": "unpaid",
-      "order_date": "06-09-2026",
-      "delivery_date": "06-11-2026",
-      "buyer_name": "Nature Med MO - Gladstone-DIS000056",
-      "buyer_license": "DIS000056"
     },
     {
       "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
