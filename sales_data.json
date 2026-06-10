@@ -1,8 +1,8 @@
 {
-  "fetched_at": "2026-06-10T12:45:25.564955+00:00",
+  "fetched_at": "2026-06-10T13:00:46.339718+00:00",
   "distributor_id": 6267,
   "status": "Open",
-  "row_count": 74,
+  "row_count": 73,
   "rows": [
     {
       "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
@@ -177,26 +177,6 @@
       "unit_of_measure": "Case",
       "unit_size_weight": "500 Mg",
       "order_price": 47250,
-      "order_status": "Order Approved",
-      "payment_status": "unpaid",
-      "order_date": "06-08-2026",
-      "delivery_date": "06-11-2026",
-      "buyer_name": "Clovr Dispensary - Kansas City - Wornall-DIS000057",
-      "buyer_license": "DIS000057"
-    },
-    {
-      "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
-      "order": "43844",
-      "product_name": "Chill Medicated-Maxx-2000mg-THC Body Rub 1000mg THC|1000mg CBD-1ct",
-      "product_category": "Topicals & Wellness",
-      "product_type": "Lotion",
-      "batch_name": "1A40C0300000E12000242839",
-      "potency": "",
-      "predominate_canabinoid": "THC",
-      "quantity": 1,
-      "unit_of_measure": "Case",
-      "unit_size_weight": "1000 Mg",
-      "order_price": 1,
       "order_status": "Order Approved",
       "payment_status": "unpaid",
       "order_date": "06-08-2026",
