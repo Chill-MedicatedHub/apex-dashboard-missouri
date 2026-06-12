@@ -1106,13 +1106,13 @@ function Dashboard({ data, filters, setFilters }) {
           sub={kpis.momLabel}
         />
         <Kpi label="Orders" value={fmtNum(kpis.orders)} sub={`${fmtMoney(kpis.avgOrder)} avg order`} />
-        <Kpi label="Units Sold" value={fmtNum(Math.round(kpis.units))} sub={`${fmtNum(kpis.lineItems)} line items`} />
+        <Kpi label="Cases Sold" value={fmtNum(Math.round(kpis.units))} sub={`${fmtNum(kpis.lineItems)} line items`} />
       </div>
 
       {/* KPI Row 2 */}
       <div className="kpi-grid">
-        <Kpi label="Avg Unit Price" value={fmtMoneyFull(kpis.avgUnitPrice)} sub="revenue ÷ units" />
-        <Kpi label="Avg Units / Invoice" value={kpis.avgUnitsPerInvoice.toFixed(1)} sub={`across ${fmtNum(kpis.orders)} invoices`} />
+        <Kpi label="Avg Case Price" value={fmtMoneyFull(kpis.avgUnitPrice)} sub="revenue ÷ cases" />
+        <Kpi label="Avg Cases / Invoice" value={kpis.avgUnitsPerInvoice.toFixed(1)} sub={`across ${fmtNum(kpis.orders)} invoices`} />
         <Kpi label="Active Buyers" value={fmtNum(kpis.buyers)} sub="unique accounts" />
         <Kpi label="Markets" value={fmtNum(distinct.states.filter(s => filtered.some(r => r.buyer_state === s)).length)} sub="states with sales" />
       </div>
@@ -1167,7 +1167,7 @@ function Dashboard({ data, filters, setFilters }) {
       {/* Invoices — one row per order, with units per invoice */}
       <section className="section">
         <div className="section-header">
-          <h2 className="section-title">Invoices <em>· units &amp; revenue per order</em></h2>
+          <h2 className="section-title">Invoices <em>· cases &amp; revenue per order</em></h2>
           <span className="section-meta">{fmtNum(invoices.length)} invoices</span>
         </div>
         <div className="card" style={{ padding: 0, overflow: 'hidden' }}>
@@ -1180,7 +1180,7 @@ function Dashboard({ data, filters, setFilters }) {
                   <th>Buyer</th>
                   <th>Rep</th>
                   <th className="num">Line Items</th>
-                  <th className="num">Total Units</th>
+                  <th className="num">Total Cases</th>
                   <th className="num">Revenue</th>
                   <th className="num">Credit Applied</th>
                   <th>Payment</th>
@@ -1237,11 +1237,11 @@ function Dashboard({ data, filters, setFilters }) {
                 <tr>
                   <th>Product</th>
                   <th>Line</th>
-                  <th className="num">Units Sold</th>
+                  <th className="num">Cases Sold</th>
                   <th className="num">Gross Sales</th>
                   <th className="num">Discounts</th>
                   <th className="num">Net Sales</th>
-                  <th className="num">Avg Unit $</th>
+                  <th className="num">Avg Case $</th>
                   <th className="num">Listed $</th>
                   <th className="num">Current Inv.</th>
                 </tr>
@@ -1308,7 +1308,7 @@ function Dashboard({ data, filters, setFilters }) {
                       <th>Product</th>
                       <th>Line</th>
                       <th>SKU</th>
-                      <th className="num">Units Sold</th>
+                      <th className="num">Cases Sold</th>
                       <th className="num">On Hand</th>
                       <th className="num">Batches</th>
                       <th>Status</th>
@@ -1439,7 +1439,6 @@ function Dashboard({ data, filters, setFilters }) {
               <thead>
                 <tr>
                   <th>Month</th>
-                  <th className="num">Units</th>
                   <th className="num">Cases</th>
                   <th className="num">Gross Sales</th>
                   <th className="num">Discounts</th>
@@ -1452,7 +1451,6 @@ function Dashboard({ data, filters, setFilters }) {
                   <tr key={i}>
                     <td>{m.monthName}</td>
                     <td className="num">{fmtNum(Math.round(m.units))}</td>
-                    <td className="num dim">{m.cases.toFixed(1)}</td>
                     <td className="num">{fmtMoneyFull(m.gross)}</td>
                     <td className="num dim">{fmtMoneyFull(m.discounts)}</td>
                     <td className="num"><strong>{fmtMoneyFull(m.netSales)}</strong></td>
@@ -1465,7 +1463,6 @@ function Dashboard({ data, filters, setFilters }) {
                   <tr style={{ background: 'var(--bg-elev-2)', fontWeight: 600 }}>
                     <td>TOTAL</td>
                     <td className="num">{fmtNum(Math.round(monthlyBreakdown.reduce((s, m) => s + m.units, 0)))}</td>
-                    <td className="num dim">{monthlyBreakdown.reduce((s, m) => s + m.cases, 0).toFixed(1)}</td>
                     <td className="num">{fmtMoneyFull(monthlyBreakdown.reduce((s, m) => s + m.gross, 0))}</td>
                     <td className="num dim">{fmtMoneyFull(monthlyBreakdown.reduce((s, m) => s + m.discounts, 0))}</td>
                     <td className="num"><strong>{fmtMoneyFull(monthlyBreakdown.reduce((s, m) => s + m.netSales, 0))}</strong></td>
