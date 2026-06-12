@@ -31,12 +31,24 @@ from dotenv import load_dotenv
 # ----------------------------------------------------------------------------
 load_dotenv()
 
+
+def _int_env(name: str, default: int) -> int:
+    """Read an int from the environment, tolerating missing OR blank values.
+    GitHub Actions injects unset secrets as '', which int('') would crash on."""
+    raw = os.getenv(name, "")
+    raw = raw.strip() if isinstance(raw, str) else raw
+    try:
+        return int(raw)
+    except (TypeError, ValueError):
+        return default
+
+
 # MO report endpoint (discovered from the Apex web app's network traffic)
 API_URL = "https://app.apextrading.com/b-api/brand-company/orders"
 
 # The distributor whose orders we pull. ID + name come straight from the
 # request payload you captured in the Network tab.
-DISTRIBUTOR_ID = int(os.getenv("APEX_DISTRIBUTOR_ID", "6267"))
+DISTRIBUTOR_ID = _int_env("APEX_DISTRIBUTOR_ID", 6267)
 DISTRIBUTOR_NAME = os.getenv(
     "APEX_DISTRIBUTOR_NAME",
     "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
@@ -62,8 +74,8 @@ OUTPUT_FILE = Path(__file__).parent / "sales_data.json"
 INVENTORY_URL = f"https://app.apextrading.com/b-api/brand-company/inventory/{DISTRIBUTOR_ID}"
 PULL_INVENTORY = os.getenv("APEX_PULL_INVENTORY", "1") == "1"
 # MO's Apex company (from the captured current-company-id header). Overridable.
-COMPANY_ID = int(os.getenv("APEX_COMPANY_ID", "7663"))
-BRAND_ID = int(os.getenv("APEX_BRAND_ID", "2500"))
+COMPANY_ID = _int_env("APEX_COMPANY_ID", 7663)
+BRAND_ID = _int_env("APEX_BRAND_ID", 2500)
 BRAND_NAME = os.getenv("APEX_BRAND_NAME", "Chill Medicated")
 # Candidate quantity fields (locked on first run from the debug sample).
 INV_QTY_FIELDS = [f.strip() for f in os.getenv(
