@@ -923,6 +923,31 @@ function Dashboard({ data, filters, setFilters }) {
     return Object.entries(map).map(([name, value]) => ({ name, value }));
   }, [filtered]);
 
+  // Current inventory — on-hand stock from Apex's inventory endpoint
+  // (data.inventory), filtered to Chill Medicated. Built from the unfiltered
+  // snapshot. Sold totals join by name (MO sales rows carry no SKU).
+  const inventory = useMemo(() => {
+    const soldByName = {};
+    normalized.forEach(r => {
+      const u = r._quantity || 0;
+      if (r.product_name) soldByName[r.product_name] = (soldByName[r.product_name] || 0) + u;
+    });
+    const cat = Array.isArray(data.inventory) ? data.inventory : [];
+    const list = cat.map(p => ({
+      name: p.name || '—', line: p.line || '—', sku: p.sku || '',
+      qty: (p.qty != null ? p.qty : null),
+      batches: p.batches || 0,
+      listed: !!p.listed,
+      sold: (soldByName[p.name] || 0),
+      neverSold: (soldByName[p.name] || 0) <= 0,
+    })).sort((a, b) => (b.qty || 0) - (a.qty || 0));
+    const withQty = list.filter(p => p.qty != null);
+    const onHandTotal = withQty.reduce((s, p) => s + p.qty, 0);
+    const listedN = list.filter(p => p.listed).length;
+    const out = withQty.filter(p => p.qty <= 0).length;
+    return { list, onHandTotal, listedN, skus: list.length, out };
+  }, [normalized, data.inventory]);
+
   const resetFilters = () => setFilters({
     from: '', to: '', brand: '', buyer: '', rep: '', state: '', status: '', invoice: '',
     productLine: '', orderPhase: '', excludeSamples: false, cogsRatio: 0.45
@@ -1255,6 +1280,68 @@ function Dashboard({ data, filters, setFilters }) {
         <div className="card">
           <RankList data={paymentMix.map(p => ({ name: p.name, revenue: p.value }))} />
         </div>
+      </section>
+
+      {/* Current inventory — on-hand stock from Apex's inventory endpoint */}
+      <section className="section">
+        <div className="section-header">
+          <h2 className="section-title">Current <em>inventory</em></h2>
+          <span className="section-meta">
+            {inventory.skus > 0
+              ? `${fmtNum(inventory.skus)} products · live from Apex inventory`
+              : 'awaiting scraper inventory pull'}
+          </span>
+        </div>
+        {inventory.skus > 0 ? (
+          <React.Fragment>
+            <div className="kpi-grid" style={{ marginBottom: 24 }}>
+              <Kpi label="On Hand" value={fmtNum(Math.round(inventory.onHandTotal))} sub="total units in stock" accent />
+              <Kpi label="Listed" value={fmtNum(inventory.listedN)} sub="visible to buyers" />
+              <Kpi label="Products" value={fmtNum(inventory.skus)} sub="in catalog" />
+              <Kpi label="Out Of Stock" value={fmtNum(inventory.out)} sub={`of ${fmtNum(inventory.skus)} products`} />
+            </div>
+            <div className="card" style={{ padding: 0, overflow: 'hidden' }}>
+              <div style={{ overflowX: 'auto', maxHeight: 520 }}>
+                <table className="data-table">
+                  <thead>
+                    <tr>
+                      <th>Product</th>
+                      <th>Line</th>
+                      <th>SKU</th>
+                      <th className="num">Units Sold</th>
+                      <th className="num">On Hand</th>
+                      <th className="num">Batches</th>
+                      <th>Status</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {inventory.list.map((p, i) => (
+                      <tr key={i}>
+                        <td>{p.name}</td>
+                        <td className="dim">{p.line}</td>
+                        <td className="dim font-mono" style={{ fontSize: 11 }}>{p.sku || '—'}</td>
+                        <td className="num dim">{fmtNum(Math.round(p.sold))}</td>
+                        <td className="num"><strong style={{ color: p.qty == null ? 'var(--text-faint)' : p.qty <= 0 ? 'var(--rose)' : 'var(--accent)' }}>{p.qty == null ? '—' : fmtNum(Math.round(p.qty))}</strong></td>
+                        <td className="num dim">{p.batches || '—'}</td>
+                        <td>{!p.listed
+                          ? <span style={{ fontFamily: 'JetBrains Mono', fontSize: 10, textTransform: 'uppercase', letterSpacing: '0.08em', color: 'var(--text-faint)', border: '1px solid var(--border)', borderRadius: 2, padding: '2px 6px', whiteSpace: 'nowrap' }}>Unlisted</span>
+                          : p.neverSold
+                            ? <span style={{ fontFamily: 'JetBrains Mono', fontSize: 10, textTransform: 'uppercase', letterSpacing: '0.08em', color: 'var(--warm)', border: '1px solid var(--warm)', borderRadius: 2, padding: '2px 6px', whiteSpace: 'nowrap' }}>Never sold</span>
+                            : <span style={{ color: 'var(--text-faint)' }}>—</span>}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </React.Fragment>
+        ) : (
+          <div className="card" style={{ padding: '24px', color: 'var(--text-dim)', fontFamily: 'JetBrains Mono', fontSize: 12, lineHeight: 1.7 }}>
+            No inventory in the data yet. Deploy the latest <code style={{ color: 'var(--accent)' }}>scraper.py</code> with
+            {' '}<code style={{ color: 'var(--accent)' }}>APEX_PULL_INVENTORY=1</code> and run it once — the
+            Apex inventory endpoint will populate this section automatically.
+          </div>
+        )}
       </section>
 
       {/* Top products + buyers */}
