@@ -54,6 +54,25 @@ COOKIE = os.getenv("APEX_COOKIE", "")
 
 OUTPUT_FILE = Path(__file__).parent / "sales_data.json"
 
+# --- Current inventory pull -------------------------------------------------
+# MO uses a distributor-scoped inventory endpoint (different from MA's):
+#   GET /b-api/brand-company/inventory/{distributor_id}   (company header 7663)
+# It's the "brand-distributor inventory" report. Response shape is captured on
+# the first run (_inventory_debug) so the quantity fields can be confirmed.
+INVENTORY_URL = f"https://app.apextrading.com/b-api/brand-company/inventory/{DISTRIBUTOR_ID}"
+PULL_INVENTORY = os.getenv("APEX_PULL_INVENTORY", "1") == "1"
+# MO's Apex company (from the captured current-company-id header). Overridable.
+COMPANY_ID = int(os.getenv("APEX_COMPANY_ID", "7663"))
+BRAND_ID = int(os.getenv("APEX_BRAND_ID", "2500"))
+BRAND_NAME = os.getenv("APEX_BRAND_NAME", "Chill Medicated")
+# Candidate quantity fields (locked on first run from the debug sample).
+INV_QTY_FIELDS = [f.strip() for f in os.getenv(
+    "APEX_INV_QTY_FIELDS",
+    "total_batch_quantity,available,available_quantity,quantity,on_hand,on_hand_quantity,inventory_quantity,total_quantity,stock"
+).split(",") if f.strip()]
+# First run writes a small _inventory_debug blob so the shape can be confirmed.
+INV_DEBUG = os.getenv("APEX_INV_DEBUG", "1") == "1"
+
 
 # ----------------------------------------------------------------------------
 # Build the request payload (mirrors what the Apex MO UI sends)
@@ -185,8 +204,159 @@ def fetch_report() -> dict:
     }
 
 
+def _inv_num(v):
+    """Coerce a possibly-stringy numeric value to float, else None."""
+    if v is None or isinstance(v, bool):
+        return None
+    if isinstance(v, (int, float)):
+        return float(v)
+    if isinstance(v, dict):
+        for k in ("value", "amount", "quantity", "qty"):
+            if k in v:
+                return _inv_num(v[k])
+        return None
+    try:
+        s = str(v).replace(",", "").replace("$", "").strip()
+        return float(s) if s not in ("", "-") else None
+    except (TypeError, ValueError):
+        return None
+
+
+def _name_of(v):
+    if isinstance(v, dict):
+        return v.get("name") or v.get("label") or v.get("title") or ""
+    return v or ""
+
+
+def _pick(row, fields):
+    for f in fields:
+        if f in row and row[f] is not None:
+            v = _inv_num(row[f])
+            if v is not None:
+                return v, f
+    return None, None
+
+
+def fetch_inventory(xsrf: str) -> dict:
+    """Pull MO's distributor-scoped inventory:
+        GET /b-api/brand-company/inventory/{DISTRIBUTOR_ID}  (company header).
+    Response shape is unconfirmed, so this captures a debug sample and extracts
+    quantities defensively. Never raises into the sales pull."""
+    headers = {
+        "Accept": "application/json",
+        "Origin": "https://app.apextrading.com",
+        "Referer": "https://app.apextrading.com/reports/brand-distributor-inventory",
+        "User-Agent": ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
+                       "(KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"),
+        "Cookie": COOKIE,
+        "X-XSRF-TOKEN": xsrf,
+        "X-Requested-With": "XMLHttpRequest",
+        "current-company-id": str(COMPANY_ID),
+    }
+    try:
+        resp = requests.get(INVENTORY_URL, headers=headers, timeout=60)
+    except requests.RequestException as e:
+        print(f"  inventory: network error ({e}); skipping.")
+        return {"by_name": {}, "by_sku": {}, "catalog": [], "debug": None}
+    if resp.status_code in (401, 403, 419):
+        print(f"  inventory: status {resp.status_code} (company {COMPANY_ID}, distributor "
+              f"{DISTRIBUTOR_ID}). Check APEX_COMPANY_ID. Skipping (sales unaffected).")
+        return {"by_name": {}, "by_sku": {}, "catalog": [], "debug": None}
+    if resp.status_code != 200:
+        print(f"  inventory: status {resp.status_code}; skipping. {resp.text[:200]}")
+        return {"by_name": {}, "by_sku": {}, "catalog": [], "debug": None}
+    data = resp.json()
+
+    # Locate the product list across plausible shapes.
+    items = data if isinstance(data, list) else None
+    if items is None and isinstance(data, dict):
+        for k in ("data", "inventory", "products", "results", "rows", "items"):
+            v = data.get(k)
+            if isinstance(v, list):
+                items = v
+                break
+            if isinstance(v, dict):
+                for k2 in ("data", "results", "rows", "products"):
+                    if isinstance(v.get(k2), list):
+                        items = v[k2]
+                        break
+                if items is not None:
+                    break
+    items = items or []
+
+    debug = None
+    if INV_DEBUG:
+        debug = {
+            "top_level_type": type(data).__name__,
+            "top_level_keys": sorted(data.keys()) if isinstance(data, dict) else None,
+            "item_count": len(items),
+            "first_item": items[0] if items else None,
+        }
+
+    by_name, by_sku, catalog, seen = {}, {}, [], set()
+    qty_field, hits = None, 0
+    for it in items:
+        if not isinstance(it, dict):
+            continue
+        name = it.get("name") or it.get("product_name") or it.get("product") or ""
+        if isinstance(name, dict):
+            name = name.get("name") or ""
+        sku = str(it.get("product_sku") or it.get("sku") or "").strip()
+        line = (it.get("product_category_short_display_name") or it.get("product_category")
+                or it.get("product_type_name") or it.get("category") or "")
+        qty, qf = _pick(it, INV_QTY_FIELDS)
+        if qf and not qty_field:
+            qty_field = qf
+        listed = bool(it.get("list_to_buyers")) and not bool(it.get("archived")) \
+            if ("list_to_buyers" in it or "archived" in it) else True
+        nbatch = len(it.get("batches")) if isinstance(it.get("batches"), list) else 0
+        if qty is not None:
+            hits += 1
+            if name:
+                by_name[name] = qty
+            if sku:
+                by_sku[sku] = qty
+        key = sku or name
+        if key and key not in seen:
+            seen.add(key)
+            catalog.append({"name": name or "—", "sku": sku, "line": _name_of(line),
+                            "qty": qty, "listed": listed, "batches": nbatch})
+
+    if catalog:
+        print(f"Inventory: {len(items)} rows; {len(catalog)} catalog entries "
+              f"({hits} with qty via '{qty_field}'; company {COMPANY_ID}).")
+        if hits == 0:
+            print(f"  WARNING: no quantity field matched {INV_QTY_FIELDS}. "
+                  f"See _inventory_debug.first_item to set APEX_INV_QTY_FIELDS.")
+    else:
+        print(f"  inventory: no products parsed (company {COMPANY_ID}). See _inventory_debug.")
+    return {"by_name": by_name, "by_sku": by_sku, "catalog": catalog, "debug": debug}
+
+
 def main():
     payload = fetch_report()
+
+    if PULL_INVENTORY:
+        print("Pulling current inventory...")
+        try:
+            inv = fetch_inventory(extract_xsrf_token(COOKIE))
+        except Exception as e:
+            print(f"  inventory pull errored ({e}); continuing without it.")
+            inv = {"by_name": {}, "by_sku": {}, "catalog": [], "debug": None}
+        # MO sales rows have product_name (no sku), so stamp by name best-effort.
+        by_name = inv["by_name"]
+        if by_name:
+            stamped = 0
+            for r in payload["rows"]:
+                nm = r.get("product_name") or ""
+                if nm and nm in by_name:
+                    r["current_inventory"] = by_name[nm]
+                    stamped += 1
+            print(f"  Stamped current_inventory on {stamped} of {len(payload['rows'])} rows (by name).")
+        payload["inventory"] = inv["catalog"]
+        if INV_DEBUG and inv.get("debug"):
+            payload["_inventory_debug"] = inv["debug"]
+
     OUTPUT_FILE.write_text(json.dumps(payload, indent=2, default=str))
     print(f"Saved → {OUTPUT_FILE}")
 
