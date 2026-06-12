@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-06-12T12:15:34.547644+00:00",
+  "fetched_at": "2026-06-12T12:44:11.051584+00:00",
   "distributor_id": 6267,
   "statuses": [
     "Open",
@@ -24,7 +24,7 @@
       "unit_of_measure": "Case",
       "unit_size_weight": "500 Mg",
       "order_price": 47250,
-      "order_status": "Order Approved",
+      "order_status": "Delivered",
       "payment_status": "unpaid",
       "order_date": "06-08-2026",
       "delivery_date": "06-11-2026",
@@ -45,7 +45,7 @@
       "unit_of_measure": "Case",
       "unit_size_weight": "500 Mg",
       "order_price": 1,
-      "order_status": "Order Approved",
+      "order_status": "Delivered",
       "payment_status": "unpaid",
       "order_date": "06-08-2026",
       "delivery_date": "06-11-2026",
@@ -66,7 +66,7 @@
       "unit_of_measure": "Case",
       "unit_size_weight": "1000 Mg",
       "order_price": 54000,
-      "order_status": "Order Approved",
+      "order_status": "Delivered",
       "payment_status": "unpaid",
       "order_date": "06-08-2026",
       "delivery_date": "06-11-2026",
@@ -87,7 +87,7 @@
       "unit_of_measure": "Case",
       "unit_size_weight": "1100 Mg",
       "order_price": 54000,
-      "order_status": "Order Approved",
+      "order_status": "Delivered",
       "payment_status": "unpaid",
       "order_date": "06-08-2026",
       "delivery_date": "06-11-2026",
@@ -108,7 +108,7 @@
       "unit_of_measure": "Case",
       "unit_size_weight": "1100 Mg",
       "order_price": 54000,
-      "order_status": "Order Approved",
+      "order_status": "Delivered",
       "payment_status": "unpaid",
       "order_date": "06-08-2026",
       "delivery_date": "06-11-2026",
@@ -129,7 +129,7 @@
       "unit_of_measure": "Case",
       "unit_size_weight": "1000 Mg",
       "order_price": 54000,
-      "order_status": "Order Approved",
+      "order_status": "Delivered",
       "payment_status": "unpaid",
       "order_date": "06-08-2026",
       "delivery_date": "06-11-2026",
@@ -150,7 +150,7 @@
       "unit_of_measure": "Case",
       "unit_size_weight": "200 Mg",
       "order_price": 42000,
-      "order_status": "Order Approved",
+      "order_status": "Delivered",
       "payment_status": "unpaid",
       "order_date": "06-09-2026",
       "delivery_date": "06-11-2026",
@@ -171,7 +171,7 @@
       "unit_of_measure": "Case",
       "unit_size_weight": "250 Mg",
       "order_price": 42000,
-      "order_status": "Order Approved",
+      "order_status": "Delivered",
       "payment_status": "unpaid",
       "order_date": "06-09-2026",
       "delivery_date": "06-11-2026",
@@ -192,7 +192,7 @@
       "unit_of_measure": "Case",
       "unit_size_weight": "250 Mg",
       "order_price": 27000,
-      "order_status": "Order Approved",
+      "order_status": "Delivered",
       "payment_status": "unpaid",
       "order_date": "06-09-2026",
       "delivery_date": "06-11-2026",
@@ -213,7 +213,7 @@
       "unit_of_measure": "Case",
       "unit_size_weight": "500 Mg",
       "order_price": 42000,
-      "order_status": "Order Approved",
+      "order_status": "Delivered",
       "payment_status": "unpaid",
       "order_date": "06-09-2026",
       "delivery_date": "06-11-2026",
@@ -234,7 +234,7 @@
       "unit_of_measure": "Case",
       "unit_size_weight": "250 Mg",
       "order_price": 27000,
-      "order_status": "Order Approved",
+      "order_status": "Delivered",
       "payment_status": "unpaid",
       "order_date": "06-09-2026",
       "delivery_date": "06-11-2026",
@@ -255,7 +255,7 @@
       "unit_of_measure": "Case",
       "unit_size_weight": "250 Mg",
       "order_price": 27000,
-      "order_status": "Order Approved",
+      "order_status": "Delivered",
       "payment_status": "unpaid",
       "order_date": "06-09-2026",
       "delivery_date": "06-11-2026",
@@ -276,7 +276,7 @@
       "unit_of_measure": "Case",
       "unit_size_weight": "500 Mg",
       "order_price": 42000,
-      "order_status": "Order Approved",
+      "order_status": "Delivered",
       "payment_status": "unpaid",
       "order_date": "06-09-2026",
       "delivery_date": "06-11-2026",
@@ -297,7 +297,7 @@
       "unit_of_measure": "Case",
       "unit_size_weight": "500 Mg",
       "order_price": 52500,
-      "order_status": "Order Approved",
+      "order_status": "Delivered",
       "payment_status": "unpaid",
       "order_date": "06-09-2026",
       "delivery_date": "06-11-2026",
@@ -318,7 +318,7 @@
       "unit_of_measure": "Case",
       "unit_size_weight": "500 Mg",
       "order_price": 52500,
-      "order_status": "Order Approved",
+      "order_status": "Delivered",
       "payment_status": "unpaid",
       "order_date": "06-09-2026",
       "delivery_date": "06-11-2026",
@@ -339,7 +339,7 @@
       "unit_of_measure": "Case",
       "unit_size_weight": "200 Mg",
       "order_price": 52500,
-      "order_status": "Order Approved",
+      "order_status": "Delivered",
       "payment_status": "unpaid",
       "order_date": "06-09-2026",
       "delivery_date": "06-11-2026",
@@ -356,17 +356,17 @@
       "batch_name": "1A40C0300000E12000242840",
       "potency": "",
       "predominate_canabinoid": "THC",
-      "quantity": 1,
+      "quantity": 3,
       "unit_of_measure": "Unit",
       "unit_size_weight": "2000 Mg",
-      "order_price": 0,
-      "order_status": "Order Approved",
+      "order_price": 1,
+      "order_status": "Delivered",
       "payment_status": "unpaid",
       "order_date": "06-09-2026",
       "delivery_date": "06-11-2026",
       "buyer_name": "Shangri-La Columbia, LLC-DIS000167",
       "buyer_license": "DIS000167",
-      "current_inventory": 528.0
+      "current_inventory": 525.0
     },
     {
       "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
@@ -1332,7 +1332,7 @@
       "delivery_date": "12-10-2025",
       "buyer_name": "Clovr Dispensary - Kansas City - Wornall-DIS000057",
       "buyer_license": "DIS000057",
-      "current_inventory": 528.0
+      "current_inventory": 525.0
     },
     {
       "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
@@ -3033,7 +3033,7 @@
       "delivery_date": "12-18-2025",
       "buyer_name": "Key Cannabis - Kansas City_Front St-DIS000078",
       "buyer_license": "DIS000078",
-      "current_inventory": 528.0
+      "current_inventory": 525.0
     },
     {
       "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
@@ -8157,7 +8157,7 @@
       "delivery_date": "04-07-2026",
       "buyer_name": "Heartland Greenway, LLC dba The Dispensary-DIS000093",
       "buyer_license": "DIS000093",
-      "current_inventory": 528.0
+      "current_inventory": 525.0
     },
     {
       "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
@@ -8514,7 +8514,7 @@
       "delivery_date": "04-16-2026",
       "buyer_name": "Verts Neighborhood Dispensary-Kansas City-DIS000017",
       "buyer_license": "DIS000017",
-      "current_inventory": 528.0
+      "current_inventory": 525.0
     },
     {
       "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
@@ -8913,7 +8913,7 @@
       "delivery_date": "05-12-2026",
       "buyer_name": "Verts Neighborhood Dispensary-Dexter-DIS000128",
       "buyer_license": "DIS000128",
-      "current_inventory": 528.0
+      "current_inventory": 525.0
     },
     {
       "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
@@ -9018,7 +9018,7 @@
       "delivery_date": "05-13-2026",
       "buyer_name": "The Mint-DIS000161",
       "buyer_license": "DIS000161",
-      "current_inventory": 528.0
+      "current_inventory": 525.0
     },
     {
       "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
@@ -9564,7 +9564,7 @@
       "delivery_date": "05-21-2026",
       "buyer_name": "Clovr Dispensary - Kansas City - Wornall-DIS000057",
       "buyer_license": "DIS000057",
-      "current_inventory": 528.0
+      "current_inventory": 525.0
     },
     {
       "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
@@ -11195,7 +11195,7 @@
       "name": "Chill Medicated-ExtremeX-4000mg-THC Body Rub 2000mg THC|2000mg CBD-1ct",
       "sku": "",
       "line": "Topicals & Wellness",
-      "qty": 528.0,
+      "qty": 525.0,
       "listed": true,
       "batches": 0
     },
