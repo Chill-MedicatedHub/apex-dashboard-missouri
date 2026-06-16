@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-06-16T09:00:58.256585+00:00",
+  "fetched_at": "2026-06-16T09:15:49.254348+00:00",
   "distributor_id": 6267,
   "statuses": [
     "Open",
@@ -129,10 +129,10 @@
       "unit_of_measure": "Case",
       "unit_size_weight": "500 Mg",
       "order_price": 49875,
-      "order_status": "Order Submitted",
+      "order_status": "Order Approved",
       "payment_status": "unpaid",
       "order_date": "06-15-2026",
-      "delivery_date": null,
+      "delivery_date": "06-16-2026",
       "buyer_name": "Flora Farms - Hollister-DIS000223",
       "buyer_license": "DIS000223",
       "current_inventory": 386.0
@@ -150,10 +150,10 @@
       "unit_of_measure": "Case",
       "unit_size_weight": "250 Mg",
       "order_price": 49875,
-      "order_status": "Order Submitted",
+      "order_status": "Order Approved",
       "payment_status": "unpaid",
       "order_date": "06-15-2026",
-      "delivery_date": null,
+      "delivery_date": "06-16-2026",
       "buyer_name": "Flora Farms - Hollister-DIS000223",
       "buyer_license": "DIS000223",
       "current_inventory": 109.0
@@ -171,10 +171,10 @@
       "unit_of_measure": "Case",
       "unit_size_weight": "200 Mg",
       "order_price": 49875,
-      "order_status": "Order Submitted",
+      "order_status": "Order Approved",
       "payment_status": "unpaid",
       "order_date": "06-15-2026",
-      "delivery_date": null,
+      "delivery_date": "06-16-2026",
       "buyer_name": "Flora Farms - Hollister-DIS000223",
       "buyer_license": "DIS000223",
       "current_inventory": 128.0
@@ -192,10 +192,10 @@
       "unit_of_measure": "Case",
       "unit_size_weight": "500 Mg",
       "order_price": 49875,
-      "order_status": "Order Submitted",
+      "order_status": "Order Approved",
       "payment_status": "unpaid",
       "order_date": "06-15-2026",
-      "delivery_date": null,
+      "delivery_date": "06-16-2026",
       "buyer_name": "Flora Farms - Ozark-DIS000090",
       "buyer_license": "DIS000090",
       "current_inventory": 386.0
