@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-06-16T13:01:02.057384+00:00",
+  "fetched_at": "2026-06-16T21:27:49.642433+00:00",
   "distributor_id": 6267,
   "statuses": [
     "Open",
@@ -9433,7 +9433,7 @@
       "unit_size_weight": "250 Mg",
       "order_price": 25312,
       "order_status": "Complete",
-      "payment_status": "unpaid",
+      "payment_status": "completed",
       "order_date": "05-21-2026",
       "delivery_date": "05-27-2026",
       "buyer_name": "Codes - Cardwell-DIS000216",
