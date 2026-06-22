@@ -1,37 +1,16 @@
 {
-  "fetched_at": "2026-06-19T21:15:39.378825+00:00",
+  "fetched_at": "2026-06-22T12:58:15.252195+00:00",
   "distributor_id": 6267,
   "statuses": [
     "Open",
     "Completed"
   ],
   "per_status_counts": {
-    "Open": 1,
-    "Completed": 538
+    "Open": 0,
+    "Completed": 539
   },
   "row_count": 539,
   "rows": [
-    {
-      "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
-      "order": "43904",
-      "product_name": "Chill Medicated-Syrup-250mg-1ct-Strawberry",
-      "product_category": "Edibles & Drink",
-      "product_type": "Syrup",
-      "batch_name": "1A40C0300000E12000259595",
-      "potency": "",
-      "predominate_canabinoid": "THC",
-      "quantity": 1,
-      "unit_of_measure": "Case",
-      "unit_size_weight": "250 Mg",
-      "order_price": 25312,
-      "order_status": "Order Approved",
-      "payment_status": "unpaid",
-      "order_date": "06-12-2026",
-      "delivery_date": "06-19-2026",
-      "buyer_name": "Good Day Farm - Kansas City-DIS000067",
-      "buyer_license": "DIS000067",
-      "current_inventory": 9.0
-    },
     {
       "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
       "order": "42309",
@@ -11244,6 +11223,27 @@
       "delivery_date": "06-18-2026",
       "buyer_name": "Good Day Farm - Eagleville-DIS000213",
       "buyer_license": "DIS000213",
+      "current_inventory": 9.0
+    },
+    {
+      "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
+      "order": "43904",
+      "product_name": "Chill Medicated-Syrup-250mg-1ct-Strawberry",
+      "product_category": "Edibles & Drink",
+      "product_type": "Syrup",
+      "batch_name": "1A40C0300000E12000259595",
+      "potency": "",
+      "predominate_canabinoid": "THC",
+      "quantity": 1,
+      "unit_of_measure": "Case",
+      "unit_size_weight": "250 Mg",
+      "order_price": 25312,
+      "order_status": "Complete",
+      "payment_status": "unpaid",
+      "order_date": "06-12-2026",
+      "delivery_date": "06-19-2026",
+      "buyer_name": "Good Day Farm - Kansas City-DIS000067",
+      "buyer_license": "DIS000067",
       "current_inventory": 9.0
     },
     {
