@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-06-26T12:15:33.434862+00:00",
+  "fetched_at": "2026-06-26T12:30:44.845592+00:00",
   "distributor_id": 6267,
   "statuses": [
     "Open",
@@ -24,7 +24,7 @@
       "unit_of_measure": "Unit",
       "unit_size_weight": "250 Mg",
       "order_price": 1,
-      "order_status": "Order Approved",
+      "order_status": "Delivered",
       "payment_status": "unpaid",
       "order_date": "06-22-2026",
       "delivery_date": "06-25-2026",
@@ -44,7 +44,7 @@
       "unit_of_measure": "Unit",
       "unit_size_weight": "250 Mg",
       "order_price": 1,
-      "order_status": "Order Approved",
+      "order_status": "Delivered",
       "payment_status": "unpaid",
       "order_date": "06-22-2026",
       "delivery_date": "06-25-2026",
