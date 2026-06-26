@@ -1,56 +1,16 @@
 {
-  "fetched_at": "2026-06-26T14:00:50.376027+00:00",
+  "fetched_at": "2026-06-26T14:57:16.922512+00:00",
   "distributor_id": 6267,
   "statuses": [
     "Open",
     "Completed"
   ],
   "per_status_counts": {
-    "Open": 2,
-    "Completed": 540
+    "Open": 0,
+    "Completed": 542
   },
   "row_count": 542,
   "rows": [
-    {
-      "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
-      "order": "43975",
-      "product_name": "Chill Medicated-Syrup-250mg-1ct-Grape",
-      "product_category": "Edibles & Drink",
-      "product_type": "Syrup",
-      "batch_name": "1A40C0300000E12000259594",
-      "potency": "",
-      "predominate_canabinoid": "THC",
-      "quantity": 5,
-      "unit_of_measure": "Unit",
-      "unit_size_weight": "250 Mg",
-      "order_price": 1,
-      "order_status": "Delivered",
-      "payment_status": "unpaid",
-      "order_date": "06-22-2026",
-      "delivery_date": "06-25-2026",
-      "buyer_name": "From The Earth - SW Blvd/Westside-DIS000048",
-      "buyer_license": "DIS000048"
-    },
-    {
-      "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
-      "order": "43974",
-      "product_name": "Chill Medicated-Syrup-250mg-1ct-Strawberry",
-      "product_category": "Edibles & Drink",
-      "product_type": "Syrup",
-      "batch_name": "1A40C0300000E12000259595",
-      "potency": "",
-      "predominate_canabinoid": "THC",
-      "quantity": 9,
-      "unit_of_measure": "Unit",
-      "unit_size_weight": "250 Mg",
-      "order_price": 1,
-      "order_status": "Delivered",
-      "payment_status": "unpaid",
-      "order_date": "06-22-2026",
-      "delivery_date": "06-25-2026",
-      "buyer_name": "From The Earth - Raytown-DIS000065",
-      "buyer_license": "DIS000065"
-    },
     {
       "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
       "order": "42309",
@@ -11193,6 +11153,46 @@
       "buyer_name": "Clovr Dispensary - Kansas City - Wornall-DIS000057",
       "buyer_license": "DIS000057",
       "current_inventory": 354.0
+    },
+    {
+      "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
+      "order": "43975",
+      "product_name": "Chill Medicated-Syrup-250mg-1ct-Grape",
+      "product_category": "Edibles & Drink",
+      "product_type": "Syrup",
+      "batch_name": "1A40C0300000E12000259594",
+      "potency": "",
+      "predominate_canabinoid": "THC",
+      "quantity": 5,
+      "unit_of_measure": "Unit",
+      "unit_size_weight": "250 Mg",
+      "order_price": 1,
+      "order_status": "Complete",
+      "payment_status": "unpaid",
+      "order_date": "06-22-2026",
+      "delivery_date": "06-25-2026",
+      "buyer_name": "From The Earth - SW Blvd/Westside-DIS000048",
+      "buyer_license": "DIS000048"
+    },
+    {
+      "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
+      "order": "43974",
+      "product_name": "Chill Medicated-Syrup-250mg-1ct-Strawberry",
+      "product_category": "Edibles & Drink",
+      "product_type": "Syrup",
+      "batch_name": "1A40C0300000E12000259595",
+      "potency": "",
+      "predominate_canabinoid": "THC",
+      "quantity": 9,
+      "unit_of_measure": "Unit",
+      "unit_size_weight": "250 Mg",
+      "order_price": 1,
+      "order_status": "Complete",
+      "payment_status": "unpaid",
+      "order_date": "06-22-2026",
+      "delivery_date": "06-25-2026",
+      "buyer_name": "From The Earth - Raytown-DIS000065",
+      "buyer_license": "DIS000065"
     }
   ],
   "inventory": [
