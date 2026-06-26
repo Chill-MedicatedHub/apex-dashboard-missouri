@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-06-26T15:00:49.235129+00:00",
+  "fetched_at": "2026-06-26T15:30:47.629765+00:00",
   "distributor_id": 6267,
   "statuses": [
     "Open",
@@ -3922,7 +3922,7 @@
       "unit_size_weight": "200 Mg",
       "order_price": 52500,
       "order_status": "Complete",
-      "payment_status": "unpaid",
+      "payment_status": "completed",
       "order_date": "01-26-2026",
       "delivery_date": "01-29-2026",
       "buyer_name": "Fresh Karma - Columbia-DIS000191",
@@ -3943,7 +3943,7 @@
       "unit_size_weight": "250 Mg",
       "order_price": 52500,
       "order_status": "Complete",
-      "payment_status": "unpaid",
+      "payment_status": "completed",
       "order_date": "01-26-2026",
       "delivery_date": "01-29-2026",
       "buyer_name": "Fresh Karma - Columbia-DIS000191",
@@ -3964,7 +3964,7 @@
       "unit_size_weight": "500 Mg",
       "order_price": 45000,
       "order_status": "Complete",
-      "payment_status": "unpaid",
+      "payment_status": "completed",
       "order_date": "01-26-2026",
       "delivery_date": "01-29-2026",
       "buyer_name": "Fresh Karma - Columbia-DIS000191",
