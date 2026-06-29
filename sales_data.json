@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-06-29T14:30:39.975848+00:00",
+  "fetched_at": "2026-06-29T14:45:34.615465+00:00",
   "distributor_id": 6267,
   "statuses": [
     "Open",
@@ -9554,7 +9554,7 @@
       "unit_size_weight": "1000 Mg",
       "order_price": 67500,
       "order_status": "Complete",
-      "payment_status": "unpaid",
+      "payment_status": "completed",
       "order_date": "06-04-2026",
       "delivery_date": "06-10-2026",
       "buyer_name": "Kind Goods - St Peters-DIS000159",
