@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-06-29T15:15:33.926277+00:00",
+  "fetched_at": "2026-06-29T15:59:16.789257+00:00",
   "distributor_id": 6267,
   "statuses": [
     "Open",
@@ -24,10 +24,10 @@
       "unit_of_measure": "Case",
       "unit_size_weight": "200 Mg",
       "order_price": 42000,
-      "order_status": "Order Submitted",
+      "order_status": "Order Approved",
       "payment_status": "unpaid",
       "order_date": "06-29-2026",
-      "delivery_date": null,
+      "delivery_date": "06-30-2026",
       "buyer_name": "Proper  Cannabis - Cape Girardeau-DIS000111",
       "buyer_license": "DIS000111",
       "current_inventory": 588.0
@@ -45,10 +45,10 @@
       "unit_of_measure": "Case",
       "unit_size_weight": "250 Mg",
       "order_price": 42000,
-      "order_status": "Order Submitted",
+      "order_status": "Order Approved",
       "payment_status": "unpaid",
       "order_date": "06-29-2026",
-      "delivery_date": null,
+      "delivery_date": "06-30-2026",
       "buyer_name": "Proper  Cannabis - Cape Girardeau-DIS000111",
       "buyer_license": "DIS000111",
       "current_inventory": 94.0
@@ -66,10 +66,10 @@
       "unit_of_measure": "Case",
       "unit_size_weight": "500 Mg",
       "order_price": 42000,
-      "order_status": "Order Submitted",
+      "order_status": "Order Approved",
       "payment_status": "unpaid",
       "order_date": "06-29-2026",
-      "delivery_date": null,
+      "delivery_date": "06-30-2026",
       "buyer_name": "Proper  Cannabis - Cape Girardeau-DIS000111",
       "buyer_license": "DIS000111",
       "current_inventory": 507.0
@@ -87,10 +87,10 @@
       "unit_of_measure": "Case",
       "unit_size_weight": "500 Mg",
       "order_price": 42000,
-      "order_status": "Order Submitted",
+      "order_status": "Order Approved",
       "payment_status": "unpaid",
       "order_date": "06-29-2026",
-      "delivery_date": null,
+      "delivery_date": "06-30-2026",
       "buyer_name": "Proper  Cannabis - Cape Girardeau-DIS000111",
       "buyer_license": "DIS000111",
       "current_inventory": 339.0
