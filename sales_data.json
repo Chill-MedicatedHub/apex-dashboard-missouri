@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-07-01T13:45:38.727114+00:00",
+  "fetched_at": "2026-07-01T17:02:47.501815+00:00",
   "distributor_id": 6267,
   "statuses": [
     "Open",
@@ -8883,7 +8883,7 @@
       "unit_size_weight": "250 Mg",
       "order_price": 25312,
       "order_status": "Complete",
-      "payment_status": "unpaid",
+      "payment_status": "completed",
       "order_date": "05-14-2026",
       "delivery_date": "05-19-2026",
       "buyer_name": "Good Day Farm - Campbell-DIS000082",
@@ -8923,7 +8923,7 @@
       "unit_size_weight": "250 Mg",
       "order_price": 25312,
       "order_status": "Complete",
-      "payment_status": "unpaid",
+      "payment_status": "completed",
       "order_date": "05-14-2026",
       "delivery_date": "05-20-2026",
       "buyer_name": "Good Day Farm - St. Charles-DIS000174",
