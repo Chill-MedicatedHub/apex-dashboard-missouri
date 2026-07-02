@@ -959,7 +959,7 @@ function Dashboard({
     delivery_date_raw: r.delivery_date_raw || '',
     buyer_state: normalizeState(r.buyer_state),
     // Use order_number as the invoice/order identifier — Apex's real data doesn't have order_id at the line level
-    order_id: r.order_id || r.order_number || null,
+    order_id: r.order_id || r.order_number || r.order || null,
     // Computed fields
     _date: parseDate(r.order_date_utc_raw || r.order_date_localized_raw || r.order_date_raw || r.order_date_utc || r.order_date),
     _delivery: parseDate(r.delivery_date_raw || r.delivery_date),
@@ -1198,7 +1198,7 @@ function Dashboard({
   };
   const topProducts = useMemo(() => groupSum('product_name'), [filtered]);
   const topBuyers = useMemo(() => groupSum('buyer_name'), [filtered]);
-  const byRep = useMemo(() => groupSum('sales_rep', 20), [filtered]);
+  const byRep = useMemo(() => groupSum('distributor_name', 20), [filtered]);
   const byCategory = useMemo(() => groupSum(['product_category','product_type']), [filtered]);
   const byState = useMemo(() => groupSum('buyer_state', 15), [filtered]);
 
@@ -1836,9 +1836,9 @@ function Dashboard({
     className: "section-header"
   }, /*#__PURE__*/React.createElement("h2", {
     className: "section-title"
-  }, "Sales ", /*#__PURE__*/React.createElement("em", null, "by rep")), /*#__PURE__*/React.createElement("span", {
+  }, "Sales ", /*#__PURE__*/React.createElement("em", null, "by distributor")), /*#__PURE__*/React.createElement("span", {
     className: "section-meta"
-  }, byRep.length, " reps")), /*#__PURE__*/React.createElement("div", {
+  }, byRep.length, " distributors")), /*#__PURE__*/React.createElement("div", {
     className: "card",
     style: {
       height: 360
@@ -1941,7 +1941,7 @@ function Dashboard({
       fontFamily: 'JetBrains Mono',
       color: '#9aa39c'
     }
-  }))))))), /*#__PURE__*/React.createElement("section", {
+  }))))))), (byState.length ? /*#__PURE__*/React.createElement("section", {
     className: "section"
   }, /*#__PURE__*/React.createElement("div", {
     className: "section-header"
@@ -1953,7 +1953,7 @@ function Dashboard({
     className: "card"
   }, /*#__PURE__*/React.createElement(RankList, {
     data: byState
-  }))), /*#__PURE__*/React.createElement("section", {
+  }))) : null), /*#__PURE__*/React.createElement("section", {
     className: "section"
   }, /*#__PURE__*/React.createElement("div", {
     className: "section-header"
