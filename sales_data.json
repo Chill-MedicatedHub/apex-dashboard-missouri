@@ -1,15 +1,15 @@
 {
-  "fetched_at": "2026-07-03T10:00:47.613287+00:00",
+  "fetched_at": "2026-07-03T10:15:29.919278+00:00",
   "distributor_id": 6267,
   "statuses": [
     "Open",
     "Completed"
   ],
   "per_status_counts": {
-    "Open": 6,
+    "Open": 7,
     "Completed": 542
   },
-  "row_count": 548,
+  "row_count": 549,
   "rows": [
     {
       "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
@@ -136,6 +136,27 @@
       "buyer_name": "Viola- Olive St-DIS000043",
       "buyer_license": "DIS000043",
       "current_inventory": 735.0
+    },
+    {
+      "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
+      "order": "44098",
+      "product_name": "Chill Medicated-Zero Sugar Syrup-500mg-1ct-Lemon Lime",
+      "product_category": "Edibles & Drink",
+      "product_type": "Syrup",
+      "batch_name": "1A40C0300000E12000230440",
+      "potency": "",
+      "predominate_canabinoid": "THC",
+      "quantity": 1,
+      "unit_of_measure": "Case",
+      "unit_size_weight": "500 Mg",
+      "order_price": 52500,
+      "order_status": "Order Submitted",
+      "payment_status": "unpaid",
+      "order_date": "07-03-2026",
+      "delivery_date": null,
+      "buyer_name": "Shangri-La Jefferson, LLC-DIS000162",
+      "buyer_license": "DIS000162",
+      "current_inventory": 507.0
     },
     {
       "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
@@ -11342,7 +11363,7 @@
       "name": "Chill Medicated-Zero Sugar Syrup-500mg-1ct-Lemon Lime",
       "sku": "",
       "line": "Edibles & Drink",
-      "qty": 150.0,
+      "qty": 135.0,
       "listed": true,
       "batches": 0
     },
