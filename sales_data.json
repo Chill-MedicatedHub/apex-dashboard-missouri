@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-07-03T12:15:32.722248+00:00",
+  "fetched_at": "2026-07-03T12:26:33.016269+00:00",
   "distributor_id": 6267,
   "statuses": [
     "Open",
@@ -27,7 +27,7 @@
       "order_status": "Order Approved",
       "payment_status": "unpaid",
       "order_date": "06-29-2026",
-      "delivery_date": "07-02-2026",
+      "delivery_date": "07-03-2026",
       "buyer_name": "Key Cannabis Elevate - Cape Girardeau-DIS000111",
       "buyer_license": "DIS000111",
       "current_inventory": 588.0
@@ -48,7 +48,7 @@
       "order_status": "Order Approved",
       "payment_status": "unpaid",
       "order_date": "06-29-2026",
-      "delivery_date": "07-02-2026",
+      "delivery_date": "07-03-2026",
       "buyer_name": "Key Cannabis Elevate - Cape Girardeau-DIS000111",
       "buyer_license": "DIS000111",
       "current_inventory": 94.0
@@ -69,7 +69,7 @@
       "order_status": "Order Approved",
       "payment_status": "unpaid",
       "order_date": "06-29-2026",
-      "delivery_date": "07-02-2026",
+      "delivery_date": "07-03-2026",
       "buyer_name": "Key Cannabis Elevate - Cape Girardeau-DIS000111",
       "buyer_license": "DIS000111",
       "current_inventory": 507.0
@@ -90,7 +90,7 @@
       "order_status": "Order Approved",
       "payment_status": "unpaid",
       "order_date": "06-29-2026",
-      "delivery_date": "07-02-2026",
+      "delivery_date": "07-03-2026",
       "buyer_name": "Key Cannabis Elevate - Cape Girardeau-DIS000111",
       "buyer_license": "DIS000111",
       "current_inventory": 339.0
