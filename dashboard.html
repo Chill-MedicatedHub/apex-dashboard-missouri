@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Chill Medicated · Sales Intelligence</title>
+<title>Chill Medicated · Missouri · Sales Intelligence</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,22 +17,21 @@
 
 <style>
   :root {
-    /* Chill Medicated · Blue Gradient palette
-       Near-black base → logo green accent, matching the Chill Medicated mark. */
-    --bg: #0d100a;            /* near-black with a faint green cast */
-    --bg-elev: #161a11;        /* panel — same hue, raised */
-    --bg-elev-2: #20281a;      /* second-level surface */
-    --border: #2b3422;
-    --border-soft: #1f271a;
-    --text: #e9ede2;           /* warm off-white */
-    --text-dim: #9ba98e;       /* muted sage */
-    --text-faint: #616d52;     /* faint olive */
-    --accent: #81b340;         /* Chill logo green */
-    --accent-dim: #5d8a2f;     /* darker green for borders/lines */
-    --accent-deep: #34501b;    /* deep green, gradient endpoint */
-    --warm: #f0a868;           /* soft amber (warnings) */
-    --cool: #b3d182;           /* secondary light green */
-    --rose: #e07594;           /* soft rose (errors / negative) */
+    /* Light theme · shared base + per-state accent */
+    --bg: #eef1f5;
+    --bg-elev: #ffffff;
+    --bg-elev-2: #f3f6f9;
+    --border: #dce3ec;
+    --border-soft: #e9eef4;
+    --text: #1a2230;
+    --text-dim: #566274;
+    --text-faint: #93a0b0;
+    --accent: #4f7d24;
+    --accent-dim: #6fa03a;
+    --accent-deep: #34501b;
+    --warm: #c07d18;
+    --cool: #5b8fb0;
+    --rose: #d6455f;
   }
 
   * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -369,6 +368,29 @@
     .kpi-grid { grid-template-columns: repeat(2, 1fr); }
     .grid-2, .grid-3, .grid-half { grid-template-columns: 1fr; }
   }
+
+  /* ===== Light theme polish ===== */
+  body { background: var(--bg); background-image: none; }
+  .card { box-shadow: 0 1px 2px rgba(20,35,60,0.05), 0 8px 24px rgba(20,35,60,0.05); border-radius: 12px; border-color: var(--border); }
+  .kpi { box-shadow: 0 1px 2px rgba(20,35,60,0.05); border-radius: 12px; transition: box-shadow .15s ease, transform .15s ease; }
+  .kpi:hover { box-shadow: 0 4px 18px rgba(20,35,60,0.10); transform: translateY(-1px); background: var(--bg-elev); }
+  .filters { box-shadow: 0 1px 2px rgba(20,35,60,0.05); border-radius: 12px; }
+  .filter-input, .filter-select { background: #ffffff; border-radius: 8px; }
+  .filter-input:focus, .filter-select:focus { box-shadow: 0 0 0 3px rgba(20,90,160,0.10); }
+  .date-preset { background: #ffffff; }
+  .date-preset:hover { background: var(--bg-elev-2); }
+  .data-table thead th { background: var(--bg-elev-2); }
+  .data-table tr:hover td { background: var(--bg-elev-2); }
+  .pill-completed, .pill-pending, .pill-overdue { background: var(--bg-elev-2); }
+  ::-webkit-scrollbar { width: 10px; height: 10px; }
+  ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 8px; }
+  ::-webkit-scrollbar-thumb:hover { background: #b6c2d1; }
+  ::-webkit-scrollbar-track { background: transparent; }
+
+  /* ===== Loading spinner ===== */
+  .spinner { width: 44px; height: 44px; border: 3px solid var(--border); border-top-color: var(--accent); border-radius: 50%; animation: spin 0.8s linear infinite; margin: 0 auto 14px; }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  .loading-label { font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--text-faint); }
 </style>
 </head>
 <body>
@@ -384,10 +406,10 @@ const {
 // Guard against CDN failure — show a clear message instead of going blank
 if (typeof Recharts === 'undefined') {
   document.getElementById('root').innerHTML = `
-    <div style="max-width:600px;margin:80px auto;padding:32px;background:#161a17;border:1px solid #262c28;border-radius:4px;color:#e8ebe7;font-family:sans-serif">
+    <div style="max-width:600px;margin:80px auto;padding:32px;background:#ffffff;border:1px solid #e7ecf2;border-radius:4px;color:#1a2230;font-family:sans-serif">
       <h2 style="font-family:Fraunces,serif;font-weight:400;font-style:italic;margin-bottom:12px">Charts library didn't load</h2>
-      <p style="color:#9aa39c;line-height:1.6">The Recharts library failed to load from the CDN. This usually means:</p>
-      <ul style="color:#9aa39c;line-height:1.8;margin-top:8px;padding-left:20px">
+      <p style="color:#566274;line-height:1.6">The Recharts library failed to load from the CDN. This usually means:</p>
+      <ul style="color:#566274;line-height:1.8;margin-top:8px;padding-left:20px">
         <li>You're offline or behind a firewall blocking CDNs</li>
         <li>An ad blocker / privacy extension is blocking jsdelivr.net or unpkg.com</li>
         <li>Slow network — try refreshing</li>
@@ -699,26 +721,26 @@ function RevenueOverTime({ rows }) {
   const colorFor = y => YEAR_COLORS[years.indexOf(y) % YEAR_COLORS.length];
   const axisTick = { fontSize: 11, fontFamily: 'JetBrains Mono' };
   const tooltip = fmt => e(Tooltip, {
-    contentStyle: { background: '#161a17', border: '1px solid #262c28', borderRadius: 4, fontSize: 12 },
-    labelStyle: { color: '#9aa39c', fontFamily: 'JetBrains Mono', fontSize: 11 },
-    itemStyle: { color: '#e8ebe7' }, formatter: fmt
+    contentStyle: { background: '#ffffff', border: '1px solid #e7ecf2', borderRadius: 4, fontSize: 12 },
+    labelStyle: { color: '#566274', fontFamily: 'JetBrains Mono', fontSize: 11 },
+    itemStyle: { color: '#1a2230' }, formatter: fmt
   });
 
   const btn = (id, label) => e('button', {
     key: id, onClick: () => setView(id),
     style: {
       padding: '4px 12px', fontSize: 11, fontFamily: 'JetBrains Mono', cursor: 'pointer', borderRadius: 4,
-      border: '1px solid ' + (view === id ? '#81b340' : '#262c28'),
-      background: view === id ? 'rgba(129,179,64,0.12)' : '#161a17',
-      color: view === id ? '#81b340' : '#9aa39c'
+      border: '1px solid ' + (view === id ? '#81b340' : '#e7ecf2'),
+      background: view === id ? 'rgba(129,179,64,0.12)' : '#ffffff',
+      color: view === id ? '#81b340' : '#566274'
     }
   }, label);
 
   const chart = view === 'month'
     ? e(LineChart, { data: monthData, margin: { top: 12, right: 12, left: 0, bottom: 0 } },
-        e(CartesianGrid, { stroke: '#262c28', strokeDasharray: '2 2', vertical: false }),
-        e(XAxis, { dataKey: 'month', stroke: '#5d6660', tick: axisTick, tickLine: false, axisLine: { stroke: '#262c28' } }),
-        e(YAxis, { stroke: '#5d6660', tick: axisTick, tickLine: false, axisLine: false, tickFormatter: fmtMoney }),
+        e(CartesianGrid, { stroke: '#e7ecf2', strokeDasharray: '2 2', vertical: false }),
+        e(XAxis, { dataKey: 'month', stroke: '#a7b2c0', tick: axisTick, tickLine: false, axisLine: { stroke: '#e7ecf2' } }),
+        e(YAxis, { stroke: '#a7b2c0', tick: axisTick, tickLine: false, axisLine: false, tickFormatter: fmtMoney }),
         tooltip((v, n) => [fmtMoneyFull(v), n]),
         e(Legend, { wrapperStyle: { fontSize: 11, fontFamily: 'JetBrains Mono' } }),
         ...years.map(y => e(Line, {
@@ -727,11 +749,11 @@ function RevenueOverTime({ rows }) {
         }))
       )
     : e(LineChart, { data: yearData, margin: { top: 12, right: 12, left: 0, bottom: 0 } },
-        e(CartesianGrid, { stroke: '#262c28', strokeDasharray: '2 2', vertical: false }),
-        e(XAxis, { dataKey: 'year', stroke: '#5d6660', tick: axisTick, tickLine: false, axisLine: { stroke: '#262c28' } }),
-        e(YAxis, { stroke: '#5d6660', tick: axisTick, tickLine: false, axisLine: false, tickFormatter: fmtMoney }),
+        e(CartesianGrid, { stroke: '#e7ecf2', strokeDasharray: '2 2', vertical: false }),
+        e(XAxis, { dataKey: 'year', stroke: '#a7b2c0', tick: axisTick, tickLine: false, axisLine: { stroke: '#e7ecf2' } }),
+        e(YAxis, { stroke: '#a7b2c0', tick: axisTick, tickLine: false, axisLine: false, tickFormatter: fmtMoney }),
         tooltip(v => [fmtMoneyFull(v), 'Revenue']),
-        e(Line, { type: 'monotone', dataKey: 'revenue', name: 'Revenue', stroke: '#81b340', strokeWidth: 2, dot: { r: 3 }, activeDot: { r: 5 } })
+        e(Line, { type: 'monotone', dataKey: 'revenue', name: 'Revenue', stroke: '#4f7d24', strokeWidth: 2, dot: { r: 3 }, activeDot: { r: 5 } })
       );
 
   const meta = view === 'month'
@@ -979,7 +1001,7 @@ function App() {
       className: "app"
     }, /*#__PURE__*/React.createElement("div", {
       className: "empty"
-    }, /*#__PURE__*/React.createElement("div", { className: "spinner" }), /*#__PURE__*/React.createElement("h2", null, "Loading\u2026")));
+    }, /*#__PURE__*/React.createElement("div", { className: "spinner" }), /*#__PURE__*/React.createElement("div", { className: "spinner" }), /*#__PURE__*/React.createElement("div", { className: "loading-label" }, "Loading")));
   }
   return /*#__PURE__*/React.createElement(Dashboard, {
     data: data,
@@ -1952,12 +1974,12 @@ function Dashboard({
       bottom: 8
     }
   }, /*#__PURE__*/React.createElement(CartesianGrid, {
-    stroke: "#262c28",
+    stroke: "#e7ecf2",
     strokeDasharray: "2 2",
     horizontal: false
   }), /*#__PURE__*/React.createElement(XAxis, {
     type: "number",
-    stroke: "#5d6660",
+    stroke: "#a7b2c0",
     tick: {
       fontSize: 11,
       fontFamily: 'JetBrains Mono'
@@ -1968,7 +1990,7 @@ function Dashboard({
   }), /*#__PURE__*/React.createElement(YAxis, {
     type: "category",
     dataKey: "name",
-    stroke: "#5d6660",
+    stroke: "#a7b2c0",
     tick: {
       fontSize: 11
     },
@@ -1977,8 +1999,8 @@ function Dashboard({
     tickLine: false
   }), /*#__PURE__*/React.createElement(Tooltip, {
     contentStyle: {
-      background: '#161a17',
-      border: '1px solid #262c28',
+      background: '#ffffff',
+      border: '1px solid #e7ecf2',
       borderRadius: 4,
       fontSize: 12
     },
@@ -2016,15 +2038,15 @@ function Dashboard({
     stroke: "#0f1210",
     strokeWidth: 2
   }, byCategory.map((_, i) => {
-    const colors = ['#81b340', '#5d8a2f', '#b3d182', '#f0a868', '#e07594', '#9aa39c', '#5d6660'];
+    const colors = ['#81b340', '#5d8a2f', '#b3d182', '#f0a868', '#e07594', '#566274', '#a7b2c0'];
     return /*#__PURE__*/React.createElement(Cell, {
       key: i,
       fill: colors[i % colors.length]
     });
   })), /*#__PURE__*/React.createElement(Tooltip, {
     contentStyle: {
-      background: '#161a17',
-      border: '1px solid #262c28',
+      background: '#ffffff',
+      border: '1px solid #e7ecf2',
       borderRadius: 4,
       fontSize: 12
     },
@@ -2035,7 +2057,7 @@ function Dashboard({
     wrapperStyle: {
       fontSize: 11,
       fontFamily: 'JetBrains Mono',
-      color: '#9aa39c'
+      color: '#566274'
     }
   }))))))), (byState.length ? /*#__PURE__*/React.createElement("section", {
     className: "section"
@@ -2200,7 +2222,7 @@ function Topbar({
     }
   }, /*#__PURE__*/React.createElement("span", {
     style: {
-      background: 'linear-gradient(90deg, #81b340 0%, #34501b 100%)',
+      background: 'linear-gradient(90deg, #4f7d24 0%, #34501b 100%)',
       WebkitBackgroundClip: 'text',
       WebkitTextFillColor: 'transparent',
       backgroundClip: 'text'
@@ -2277,9 +2299,9 @@ function FilterBar({
       onClick: onReset,
       style: {
         marginLeft: 16, alignSelf: 'flex-end',
-        background: 'var(--accent)', color: '#0d0f0e', border: 'none',
+        background: 'var(--accent)', color: '#ffffff', border: 'none',
         fontWeight: 700, padding: '10px 22px', borderRadius: 6,
-        boxShadow: '0 2px 12px rgba(129,179,64,0.45)', cursor: 'pointer',
+        boxShadow: '0 3px 12px rgba(20,35,60,0.16)', cursor: 'pointer',
         letterSpacing: '0.05em', textTransform: 'uppercase', fontSize: 12
       }
     }, "Reset"));
@@ -2374,9 +2396,9 @@ ReactDOM.createRoot(document.getElementById('root')).render(/*#__PURE__*/React.c
       ? 'These library files did not load: <b>' + missing.join(', ') + '</b>. Make sure react.production.min.js, react-dom.production.min.js, prop-types.min.js and Recharts.js were uploaded into the same folder as dashboard.html.'
       : 'The libraries loaded but the app did not render. A hard refresh usually clears this.';
     root.innerHTML =
-      '<div style="max-width:680px;margin:80px auto;padding:28px;background:var(--bg-elev,#161a17);border:1px solid var(--border,#262c28);border-left:3px solid var(--warm,#e0a85a);border-radius:10px;color:var(--text,#e8ebe7);font-family:Inter,system-ui,sans-serif">'
+      '<div style="max-width:680px;margin:80px auto;padding:28px;background:var(--bg-elev,#ffffff);border:1px solid var(--border,#e7ecf2);border-left:3px solid var(--warm,#e0a85a);border-radius:10px;color:var(--text,#1a2230);font-family:Inter,system-ui,sans-serif">'
       + '<div style="font-family:Fraunces,serif;font-size:22px;font-style:italic;margin-bottom:10px">Dashboard didn\u2019t load</div>'
-      + '<p style="color:var(--text-dim,#9aa39c);line-height:1.7;font-size:14px;margin:0 0 12px">' + why + '</p>'
+      + '<p style="color:var(--text-dim,#566274);line-height:1.7;font-size:14px;margin:0 0 12px">' + why + '</p>'
       + '<button onclick="location.reload()" style="background:var(--accent,#81b340);border:none;color:var(--bg,#0a1220);font-weight:600;padding:9px 16px;border-radius:7px;cursor:pointer;font-family:JetBrains Mono,monospace;font-size:12px">Reload</button>'
       + '</div>';
   }
