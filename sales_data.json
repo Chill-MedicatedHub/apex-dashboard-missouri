@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-07-06T20:15:34.180820+00:00",
+  "fetched_at": "2026-07-06T20:53:22.327937+00:00",
   "distributor_id": 6267,
   "statuses": [
     "Open",
@@ -23,7 +23,7 @@
       "quantity": 1,
       "unit_of_measure": "Case",
       "unit_size_weight": "300 Mg",
-      "order_price": 33750,
+      "order_price": 27000,
       "order_status": "Order Approved",
       "payment_status": "unpaid",
       "order_date": "07-02-2026",
@@ -44,7 +44,7 @@
       "quantity": 1,
       "unit_of_measure": "Case",
       "unit_size_weight": 300,
-      "order_price": 33750,
+      "order_price": 27000,
       "order_status": "Order Approved",
       "payment_status": "unpaid",
       "order_date": "07-02-2026",
