@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-07-17T19:45:37.325576+00:00",
+  "fetched_at": "2026-07-20T13:11:14.622110+00:00",
   "distributor_id": 6267,
   "statuses": [
     "Open",
@@ -24,10 +24,10 @@
       "unit_of_measure": "Case",
       "unit_size_weight": "1100 Mg",
       "order_price": 60750,
-      "order_status": "Order Submitted",
+      "order_status": "Order Approved",
       "payment_status": "unpaid",
       "order_date": "07-15-2026",
-      "delivery_date": null,
+      "delivery_date": "07-21-2026",
       "buyer_name": "High Profile - Branson-DIS000211",
       "buyer_license": "DIS000211",
       "current_inventory": 65.0
@@ -45,10 +45,10 @@
       "unit_of_measure": "Case",
       "unit_size_weight": "1100 Mg",
       "order_price": 60750,
-      "order_status": "Order Submitted",
+      "order_status": "Order Approved",
       "payment_status": "unpaid",
       "order_date": "07-15-2026",
-      "delivery_date": null,
+      "delivery_date": "07-21-2026",
       "buyer_name": "High Profile - Pineville-DIS000101",
       "buyer_license": "DIS000101",
       "current_inventory": 65.0
