@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-07-22T09:30:37.583927+00:00",
+  "fetched_at": "2026-07-22T09:44:24.813930+00:00",
   "distributor_id": 6267,
   "statuses": [
     "Open",
@@ -87,10 +87,10 @@
       "unit_of_measure": "Unit",
       "unit_size_weight": "500 Mg",
       "order_price": 1,
-      "order_status": "Order Submitted",
+      "order_status": "Order Approved",
       "payment_status": "unpaid",
       "order_date": "07-21-2026",
-      "delivery_date": null,
+      "delivery_date": "07-23-2026",
       "buyer_name": "Riverside Wellness-DIS000019",
       "buyer_license": "DIS000019",
       "current_inventory": 308.0
@@ -108,10 +108,10 @@
       "unit_of_measure": "Unit",
       "unit_size_weight": "450 Mg",
       "order_price": 1,
-      "order_status": "Order Submitted",
+      "order_status": "Order Approved",
       "payment_status": "unpaid",
       "order_date": "07-21-2026",
-      "delivery_date": null,
+      "delivery_date": "07-23-2026",
       "buyer_name": "Riverside Wellness-DIS000019",
       "buyer_license": "DIS000019",
       "current_inventory": 872.0
