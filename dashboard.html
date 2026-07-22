@@ -1201,7 +1201,7 @@ function App() {
   useEffect(() => {
     const load = () => {
       Promise.all([
-        fetch('sales_data.json?t=' + Date.now()).then(r => {
+        fetch('https://raw.githubusercontent.com/chill-medicatedhub/apex-dashboard-missouri/refs/heads/main/sales_data.json?t=' + Date.now()).then(r => {
           if (!r.ok) throw new Error('Could not load sales_data.json');
           return r.json();
         }),
