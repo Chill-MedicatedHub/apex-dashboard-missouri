@@ -1207,7 +1207,7 @@ function App() {
         }),
         // Historical backfill (2024 LeafLink). Optional: if the file is missing
         // or fails to parse, fall back to live-only instead of breaking.
-        fetch('historical_data.json?t=' + Date.now())
+        fetch('https://raw.githubusercontent.com/chill-medicatedhub/apex-dashboard-missouri/refs/heads/main/historical_data.json?t=' + Date.now())
           .then(r => r.ok ? r.json() : { rows: [] })
           .catch(() => ({ rows: [] }))
       ]).then(([live, hist]) => {
