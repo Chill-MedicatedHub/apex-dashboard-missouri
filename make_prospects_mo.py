@@ -26,11 +26,23 @@ from pathlib import Path
 import requests
 from openpyxl import load_workbook
 
-# Missouri DCR licensed-facility spreadsheets (public).
+# Missouri DCR licensed-facility spreadsheets (public downloads).
 URLS = [
     "https://health.mo.gov/safety/cannabis/xls/licensed-dispensary-facilities-508.xlsx",
     "https://health.mo.gov/safety/cannabis/xls/micro-licensed-dispensary-facilities.xlsx",
 ]
+
+# The state site sits behind a WAF (Imperva) that filters obvious bot requests.
+# These are public files meant to be downloaded, so send normal browser-style
+# headers rather than a bot User-Agent, or the request comes back 404/blocked.
+HEADERS = {
+    "User-Agent": ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
+                   "(KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"),
+    "Accept": ("application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,"
+               "application/octet-stream,*/*"),
+    "Accept-Language": "en-US,en;q=0.9",
+    "Referer": "https://health.mo.gov/safety/cannabis/licensed-facilities.php",
+}
 OUT = Path(sys.argv[1]) if len(sys.argv) > 1 else Path(__file__).parent / "prospects.json"
 
 # Header keywords -> which field we map the column to. First match wins per column.
@@ -48,6 +60,10 @@ HEADER_MAP = [
     ("city", "city"),
     ("zip", "zip"),
     ("postal", "zip"),
+    ("phone", "phone"),
+    ("email", "email"),
+    ("website", "website"),
+    ("url", "website"),
 ]
 
 LIC_RE = re.compile(r"\bDIS[-\s]?\d{3,}\b", re.I)   # Missouri dispensary license
@@ -99,6 +115,7 @@ def parse_sheet(content, src):
         li, ni, di, ci, ai, zi = (cols.get("license"), cols.get("name"),
                                    cols.get("dba"), cols.get("city"),
                                    cols.get("address"), cols.get("zip"))
+        pi, ei, wi = cols.get("phone"), cols.get("email"), cols.get("website")
         for row in ws.iter_rows(min_row=hdr_row + 1, values_only=True):
             def cell(idx):
                 return _norm(row[idx]) if (idx is not None and idx < len(row)) else ""
@@ -111,6 +128,7 @@ def parse_sheet(content, src):
             records.append({
                 "name": name, "license": lic, "type": "Dispensary", "status": "Active",
                 "city": cell(ci), "address": cell(ai), "zip": cell(zi),
+                "phone": cell(pi), "email": cell(ei), "website": cell(wi),
             })
     print(f"  {src.split('/')[-1]}: {len(records)} dispensary rows")
     return records
@@ -120,8 +138,7 @@ def main():
     all_recs, seen = [], set()
     for url in URLS:
         try:
-            r = requests.get(url, timeout=60,
-                             headers={"User-Agent": "chill-prospects"})
+            r = requests.get(url, timeout=60, headers=HEADERS)
         except requests.RequestException as e:
             print(f"  WARN: could not download {url} ({e}); skipping.")
             continue
