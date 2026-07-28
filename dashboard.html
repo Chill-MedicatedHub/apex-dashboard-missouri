@@ -1736,6 +1736,9 @@ function Dashboard({
     // eaches. inventory_quantity is the Total Unit Quantity (always "Unit"), the
     // true physical-units measure, so we use it and fall back only if absent.
     _quantity: parseFloat(r.inventory_quantity != null ? r.inventory_quantity : r.quantity_raw != null ? r.quantity_raw : r.quantity) || 0,
+    // Order's unit of measure — mostly "Case", some "Unit" (eaches). We keep the
+    // native quantity above and surface this so unit lines can be flagged.
+    _uom: /unit|each/i.test(String(r.unit_of_measure || '')) ? 'Unit' : 'Case',
     // DISCOUNT FIELD — using `discounts` (per-line) only. Apex also has
     // `additional_discounts` (invoice-level), but it's not consistently reflected
     // in the Apex UI, so we don't trust it as real discount activity. Line-level
@@ -2066,15 +2069,21 @@ function Dashboard({
           // Credit applied to this invoice. The payments-text field repeats on every
           // line item, so we only capture it once per order (first line wins).
           credit: r._creditFromPayments || 0,
-          creditEntries: r._creditEntries || []
+          creditEntries: r._creditEntries || [],
+          uomSet: new Set()
         };
       }
       map[id].lineItems += 1;
       map[id].units += r._quantity;
+      if (r._uom) map[id].uomSet.add(r._uom);
       map[id].revenue += r._revenue;
       map[id].discount += r._lineDiscount;
     });
-    return Object.values(map).sort((a, b) => (b._date?.getTime() || 0) - (a._date?.getTime() || 0));
+    return Object.values(map).map(o => {
+      const u = [...o.uomSet];
+      o.uom = u.length === 0 ? '' : u.length === 1 ? u[0] : 'Mixed';
+      return o;
+    }).sort((a, b) => (b._date?.getTime() || 0) - (a._date?.getTime() || 0));
   }, [filtered]);
 
   // Payment status
@@ -2408,17 +2417,17 @@ function Dashboard({
     value: fmtNum(kpis.orders),
     sub: `${fmtMoney(kpis.avgOrder)} avg order`
   }), /*#__PURE__*/React.createElement(Kpi, {
-    label: "Units Sold",
+    label: "Cases Sold",
     value: fmtNum(Math.round(kpis.units)),
-    sub: `${fmtNum(kpis.lineItems)} line items`
+    sub: `${fmtNum(kpis.lineItems)} line items · cases (some unit lines)`
   })), /*#__PURE__*/React.createElement("div", {
     className: "kpi-grid"
   }, /*#__PURE__*/React.createElement(Kpi, {
-    label: "Avg Unit Price",
+    label: "Avg Case Price",
     value: fmtMoneyFull(kpis.avgUnitPrice),
-    sub: "revenue \xF7 units"
+    sub: "revenue \xF7 cases"
   }), /*#__PURE__*/React.createElement(Kpi, {
-    label: "Avg Units / Invoice",
+    label: "Avg Cases / Invoice",
     value: kpis.avgUnitsPerInvoice.toFixed(1),
     sub: `across ${fmtNum(kpis.orders)} invoices`
   }), /*#__PURE__*/React.createElement(Kpi, {
@@ -2548,7 +2557,7 @@ function Dashboard({
     className: "dim"
   }, r.product_name || '—'), /*#__PURE__*/React.createElement("td", null, r.sales_rep || '—'), /*#__PURE__*/React.createElement("td", {
     className: "num"
-  }, fmtNum(r._quantity)), /*#__PURE__*/React.createElement("td", {
+  }, fmtNum(r._quantity), r._uom === 'Unit' ? /*#__PURE__*/React.createElement("span", { style: { color: 'var(--rose)', fontSize: 10, marginLeft: 4 }, title: "Sold in units, not cases" }, "un") : /*#__PURE__*/React.createElement("span", { style: { color: 'var(--text-faint)', fontSize: 10, marginLeft: 4 } }, "cs")), /*#__PURE__*/React.createElement("td", {
     className: "num"
   }, fmtMoneyFull(r._revenue)), /*#__PURE__*/React.createElement("td", null, /*#__PURE__*/React.createElement(StatusPill, {
     status: r.payment_status
@@ -2576,7 +2585,7 @@ function Dashboard({
     style: { minWidth: 820 }
   }, /*#__PURE__*/React.createElement("thead", null, /*#__PURE__*/React.createElement("tr", null, /*#__PURE__*/React.createElement("th", null, "Product"), /*#__PURE__*/React.createElement("th", null, "Line"), /*#__PURE__*/React.createElement("th", {
     className: "num"
-  }, "Units Sold"), /*#__PURE__*/React.createElement("th", {
+  }, "Cases Sold"), /*#__PURE__*/React.createElement("th", {
     className: "num"
   }, "Gross Sales"), /*#__PURE__*/React.createElement("th", {
     className: "num"
@@ -2584,7 +2593,7 @@ function Dashboard({
     className: "num"
   }, "Net Sales"), /*#__PURE__*/React.createElement("th", {
     className: "num"
-  }, "Avg Unit $"), /*#__PURE__*/React.createElement("th", {
+  }, "Avg Case $"), /*#__PURE__*/React.createElement("th", {
     className: "num"
   }, "Listed $"), /*#__PURE__*/React.createElement("th", {
     className: "num"
