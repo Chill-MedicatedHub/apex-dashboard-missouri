@@ -1787,7 +1787,7 @@ function Dashboard({
     if (filters.productLine && r.product_type !== filters.productLine) return false;
     if (filters.excludeSamples && r._isSample) return false;
     if (filters.invoice) {
-      const q = filters.invoice.toLowerCase();
+      const q = filters.invoice.toLowerCase().replace(/^#/, '').trim();
       const inv = String(r.order_number || r.order_id || '').toLowerCase();
       if (!inv.includes(q)) return false;
     }
