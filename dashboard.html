@@ -600,7 +600,7 @@ function InventoryTable({ list }) {
       e("table", { className: "data-table" },
         e("thead", null, e("tr", null,
           e("th", null, "Product"), e("th", null, "Line"), e("th", null, "SKU"),
-          e("th", { className: "num" }, "Units Sold"),
+          e("th", { className: "num" }, "Cases Sold"),
           e("th", { className: "num" }, "On Hand"),
           e("th", { className: "num", title: "Estimated days until this SKU runs out, based on units sold in the last 30 days" }, "Days Left"),
           e("th", { className: "num" }, "Value"),
@@ -1148,8 +1148,8 @@ function InventoryView({ data }) {
     e('button', { className: 'filter-reset', onClick: () => { setQ(''); setLineSel(''); }, style: { marginLeft: 'auto', alignSelf: 'flex-end', background: 'var(--accent)', color: '#fff', border: 'none', fontWeight: 700, padding: '10px 22px', borderRadius: 6, cursor: 'pointer', letterSpacing: '0.05em', textTransform: 'uppercase', fontSize: 12 } }, 'Reset'));
 
   const kpis = e('div', { className: 'kpi-grid' },
-    e(Kpi, { label: 'Units On Hand', value: fmtNum(Math.round(onHandTotal)), sub: fmtNum(skus) + ' SKUs · ' + fmtMoney(onHandValue), accent: true }),
-    e(Kpi, { label: 'On-Hand Value', value: fmtMoney(onHandValue), sub: fmtNum(listedN) + ' listed' }),
+    e(Kpi, { label: 'Cases On Hand', value: fmtNum(Math.round(onHandTotal)), sub: fmtNum(skus) + ' SKUs · ' + fmtMoney(onHandValue), accent: true }),
+    e(Kpi, { label: 'On-Hand Value', value: fmtMoney(onHandValue), sub: fmtNum(listedN) + ' listed · at avg case price' }),
     e(Kpi, { label: 'Out of Stock', value: fmtNum(outN), sub: 'SKUs · 0 on hand' }),
     e(Kpi, { label: 'Low Stock', value: fmtNum(lowN), sub: '< 14 days of supply' }));
 
@@ -1189,7 +1189,7 @@ function InventoryView({ data }) {
         e('table', { className: 'data-table' },
           e('thead', null, e('tr', null,
             e('th', null, 'Product'), e('th', null, 'Line'), e('th', null, 'SKU'),
-            e('th', { className: 'num' }, 'Units Sold'), e('th', { className: 'num' }, 'Batches'), e('th', null, 'Status'))),
+            e('th', { className: 'num' }, 'Cases Sold'), e('th', { className: 'num' }, 'Batches'), e('th', null, 'Status'))),
           e('tbody', null,
             oos.length === 0
               ? e('tr', null, e('td', { colSpan: 6, style: { padding: 20, color: 'var(--text-faint)', textAlign: 'center' } }, 'Nothing out of stock — every SKU has units on hand'))
