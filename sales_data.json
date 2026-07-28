@@ -1,13 +1,13 @@
 {
-  "fetched_at": "2026-07-28T13:30:36.533944+00:00",
+  "fetched_at": "2026-07-28T13:45:41.353853+00:00",
   "distributor_id": 6267,
   "statuses": [
     "Open",
     "Completed"
   ],
   "per_status_counts": {
-    "Open": 5,
-    "Completed": 565
+    "Open": 3,
+    "Completed": 567
   },
   "row_count": 570,
   "rows": [
@@ -73,48 +73,6 @@
       "buyer_name": "GRD Liberty-DIS000039",
       "buyer_license": "DIS000039",
       "current_inventory": 855.0
-    },
-    {
-      "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
-      "order": "44261",
-      "product_name": "Chill Medicated-Syrup-650mg-1ct-Grape",
-      "product_category": "Edibles & Drink",
-      "product_type": "Syrup",
-      "batch_name": "1A40C0300000E12000243569",
-      "potency": "",
-      "predominate_canabinoid": "THC",
-      "quantity": 1,
-      "unit_of_measure": "Case",
-      "unit_size_weight": "650 Mg",
-      "order_price": 47250,
-      "order_status": "Delivered",
-      "payment_status": "unpaid",
-      "order_date": "07-27-2026",
-      "delivery_date": "07-27-2026",
-      "buyer_name": "Clovr Dispensary - Kansas City - Wornall-DIS000057",
-      "buyer_license": "DIS000057",
-      "current_inventory": 731.0
-    },
-    {
-      "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
-      "order": "44261",
-      "product_name": "Chill Medicated-Relax-1000mg-THC Body Rub 500mg THC|500mg CBD-1ct",
-      "product_category": "Topicals & Wellness",
-      "product_type": "Lotion",
-      "batch_name": "1A40C0300000E12000259598",
-      "potency": "",
-      "predominate_canabinoid": "THC",
-      "quantity": 1,
-      "unit_of_measure": "Case",
-      "unit_size_weight": "500 Mg",
-      "order_price": 40500,
-      "order_status": "Delivered",
-      "payment_status": "unpaid",
-      "order_date": "07-27-2026",
-      "delivery_date": "07-27-2026",
-      "buyer_name": "Clovr Dispensary - Kansas City - Wornall-DIS000057",
-      "buyer_license": "DIS000057",
-      "current_inventory": 364.0
     },
     {
       "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
@@ -11740,6 +11698,48 @@
       "buyer_name": "Riverside Wellness-DIS000019",
       "buyer_license": "DIS000019",
       "current_inventory": 855.0
+    },
+    {
+      "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
+      "order": "44261",
+      "product_name": "Chill Medicated-Syrup-650mg-1ct-Grape",
+      "product_category": "Edibles & Drink",
+      "product_type": "Syrup",
+      "batch_name": "1A40C0300000E12000243569",
+      "potency": "",
+      "predominate_canabinoid": "THC",
+      "quantity": 1,
+      "unit_of_measure": "Case",
+      "unit_size_weight": "650 Mg",
+      "order_price": 47250,
+      "order_status": "Complete",
+      "payment_status": "unpaid",
+      "order_date": "07-27-2026",
+      "delivery_date": "07-27-2026",
+      "buyer_name": "Clovr Dispensary - Kansas City - Wornall-DIS000057",
+      "buyer_license": "DIS000057",
+      "current_inventory": 731.0
+    },
+    {
+      "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
+      "order": "44261",
+      "product_name": "Chill Medicated-Relax-1000mg-THC Body Rub 500mg THC|500mg CBD-1ct",
+      "product_category": "Topicals & Wellness",
+      "product_type": "Lotion",
+      "batch_name": "1A40C0300000E12000259598",
+      "potency": "",
+      "predominate_canabinoid": "THC",
+      "quantity": 1,
+      "unit_of_measure": "Case",
+      "unit_size_weight": "500 Mg",
+      "order_price": 40500,
+      "order_status": "Complete",
+      "payment_status": "unpaid",
+      "order_date": "07-27-2026",
+      "delivery_date": "07-27-2026",
+      "buyer_name": "Clovr Dispensary - Kansas City - Wornall-DIS000057",
+      "buyer_license": "DIS000057",
+      "current_inventory": 364.0
     }
   ],
   "inventory": [
