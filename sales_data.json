@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-05T12:00:44.621744+00:00",
+  "fetched_at": "2026-08-05T12:15:37.408368+00:00",
   "distributor_id": 6267,
   "statuses": [
     "Open",
@@ -45,7 +45,7 @@
       "unit_of_measure": "Case",
       "unit_size_weight": "1100 Mg",
       "order_price": 67500,
-      "order_status": "Order Approved",
+      "order_status": "Delivered",
       "payment_status": "unpaid",
       "order_date": "08-03-2026",
       "delivery_date": "08-04-2026",
