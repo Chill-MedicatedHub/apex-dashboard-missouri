@@ -1,13 +1,13 @@
 {
-  "fetched_at": "2026-08-05T14:30:37.639180+00:00",
+  "fetched_at": "2026-08-05T14:45:27.352096+00:00",
   "distributor_id": 6267,
   "statuses": [
     "Open",
     "Completed"
   ],
   "per_status_counts": {
-    "Open": 4,
-    "Completed": 570
+    "Open": 3,
+    "Completed": 571
   },
   "row_count": 574,
   "rows": [
@@ -31,27 +31,6 @@
       "buyer_name": "Viola- Olive St-DIS000043",
       "buyer_license": "DIS000043",
       "current_inventory": 675.0
-    },
-    {
-      "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
-      "order": "44316",
-      "product_name": "Chill Medicated-Subzero Roll on-2100mg-THC Body Rub 1100mg THC|1000mg CBD",
-      "product_category": "Topicals & Wellness",
-      "product_type": "Balm",
-      "batch_name": "1A40C0300000E12000243570",
-      "potency": "",
-      "predominate_canabinoid": "THC",
-      "quantity": 1,
-      "unit_of_measure": "Case",
-      "unit_size_weight": "1100 Mg",
-      "order_price": 67500,
-      "order_status": "Delivered",
-      "payment_status": "unpaid",
-      "order_date": "08-03-2026",
-      "delivery_date": "08-04-2026",
-      "buyer_name": "Latitude Dispensary - Osage Beach-DIS000164",
-      "buyer_license": "DIS000164",
-      "current_inventory": 50.0
     },
     {
       "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
@@ -11824,6 +11803,27 @@
       "buyer_name": "Clovr Dispensary - Kansas City - Wornall-DIS000057",
       "buyer_license": "DIS000057",
       "current_inventory": 364.0
+    },
+    {
+      "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
+      "order": "44316",
+      "product_name": "Chill Medicated-Subzero Roll on-2100mg-THC Body Rub 1100mg THC|1000mg CBD",
+      "product_category": "Topicals & Wellness",
+      "product_type": "Balm",
+      "batch_name": "1A40C0300000E12000243570",
+      "potency": "",
+      "predominate_canabinoid": "THC",
+      "quantity": 1,
+      "unit_of_measure": "Case",
+      "unit_size_weight": "1100 Mg",
+      "order_price": 67500,
+      "order_status": "Complete",
+      "payment_status": "unpaid",
+      "order_date": "08-03-2026",
+      "delivery_date": "08-04-2026",
+      "buyer_name": "Latitude Dispensary - Osage Beach-DIS000164",
+      "buyer_license": "DIS000164",
+      "current_inventory": 50.0
     }
   ],
   "inventory": [
