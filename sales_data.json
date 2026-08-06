@@ -1,37 +1,16 @@
 {
-  "fetched_at": "2026-08-06T14:30:41.102286+00:00",
+  "fetched_at": "2026-08-06T14:45:30.292414+00:00",
   "distributor_id": 6267,
   "statuses": [
     "Open",
     "Completed"
   ],
   "per_status_counts": {
-    "Open": 3,
-    "Completed": 571
+    "Open": 2,
+    "Completed": 572
   },
   "row_count": 574,
   "rows": [
-    {
-      "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
-      "order": "44296",
-      "product_name": "Chill Medicated- Zero Sugar Syrup-300mg-1ct-Blue Razz",
-      "product_category": "Edibles & Drink",
-      "product_type": "Syrup",
-      "batch_name": "1A40C0300000E12000243567",
-      "potency": "",
-      "predominate_canabinoid": "THC",
-      "quantity": 1,
-      "unit_of_measure": "Case",
-      "unit_size_weight": 300,
-      "order_price": 33750,
-      "order_status": "Delivered",
-      "payment_status": "unpaid",
-      "order_date": "08-03-2026",
-      "delivery_date": "08-05-2026",
-      "buyer_name": "Viola- Olive St-DIS000043",
-      "buyer_license": "DIS000043",
-      "current_inventory": 675.0
-    },
     {
       "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
       "order": "44323",
@@ -11803,6 +11782,27 @@
       "buyer_name": "Clovr Dispensary - Kansas City - Wornall-DIS000057",
       "buyer_license": "DIS000057",
       "current_inventory": 364.0
+    },
+    {
+      "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
+      "order": "44296",
+      "product_name": "Chill Medicated- Zero Sugar Syrup-300mg-1ct-Blue Razz",
+      "product_category": "Edibles & Drink",
+      "product_type": "Syrup",
+      "batch_name": "1A40C0300000E12000243567",
+      "potency": "",
+      "predominate_canabinoid": "THC",
+      "quantity": 1,
+      "unit_of_measure": "Case",
+      "unit_size_weight": 300,
+      "order_price": 33750,
+      "order_status": "Complete",
+      "payment_status": "unpaid",
+      "order_date": "08-03-2026",
+      "delivery_date": "08-05-2026",
+      "buyer_name": "Viola- Olive St-DIS000043",
+      "buyer_license": "DIS000043",
+      "current_inventory": 675.0
     },
     {
       "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
