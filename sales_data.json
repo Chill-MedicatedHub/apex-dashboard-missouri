@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-11T09:15:29.768679+00:00",
+  "fetched_at": "2026-08-11T09:30:38.248528+00:00",
   "distributor_id": 6267,
   "statuses": [
     "Open",
@@ -87,10 +87,10 @@
       "unit_of_measure": "Case",
       "unit_size_weight": "1100 Mg",
       "order_price": 60750,
-      "order_status": "Order Submitted",
+      "order_status": "Order Approved",
       "payment_status": "unpaid",
       "order_date": "08-11-2026",
-      "delivery_date": null,
+      "delivery_date": "08-11-2026",
       "buyer_name": "High Profile - Pineville-DIS000101",
       "buyer_license": "DIS000101",
       "current_inventory": 35.0
