@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-24T14:15:33.111915+00:00",
+  "fetched_at": "2026-08-24T14:23:47.319516+00:00",
   "distributor_id": 6267,
   "statuses": [
     "Open",
@@ -11587,7 +11587,7 @@
       "unit_size_weight": "1100 Mg",
       "order_price": 60750,
       "order_status": "Complete",
-      "payment_status": "unpaid",
+      "payment_status": "completed",
       "order_date": "07-15-2026",
       "delivery_date": "07-21-2026",
       "buyer_name": "High Profile - Branson-DIS000211",
@@ -11608,7 +11608,7 @@
       "unit_size_weight": "1100 Mg",
       "order_price": 60750,
       "order_status": "Complete",
-      "payment_status": "unpaid",
+      "payment_status": "completed",
       "order_date": "07-15-2026",
       "delivery_date": "07-21-2026",
       "buyer_name": "High Profile - Pineville-DIS000101",
