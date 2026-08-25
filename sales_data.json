@@ -1,15 +1,15 @@
 {
-  "fetched_at": "2026-08-25T20:45:29.766426+00:00",
+  "fetched_at": "2026-08-25T20:51:53.428529+00:00",
   "distributor_id": 6267,
   "statuses": [
     "Open",
     "Completed"
   ],
   "per_status_counts": {
-    "Open": 3,
+    "Open": 5,
     "Completed": 578
   },
-  "row_count": 581,
+  "row_count": 583,
   "rows": [
     {
       "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
@@ -72,7 +72,49 @@
       "delivery_date": "08-27-2026",
       "buyer_name": "Fresh Karma - Warrensburg-DIS000229",
       "buyer_license": "DIS000229",
-      "current_inventory": 645.0
+      "current_inventory": 630.0
+    },
+    {
+      "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
+      "order": "44494",
+      "product_name": "Chill Medicated- Zero Sugar Syrup-300mg-1ct-Blue Razz",
+      "product_category": "Edibles & Drink",
+      "product_type": "Syrup",
+      "batch_name": "1A40C0300000E12000243567",
+      "potency": "",
+      "predominate_canabinoid": "THC",
+      "quantity": 1,
+      "unit_of_measure": "Case",
+      "unit_size_weight": 300,
+      "order_price": 30375,
+      "order_status": "Order Submitted",
+      "payment_status": "unpaid",
+      "order_date": "08-25-2026",
+      "delivery_date": null,
+      "buyer_name": "Verts Neighborhood Dispensary-Joplin-DIS000091",
+      "buyer_license": "DIS000091",
+      "current_inventory": 630.0
+    },
+    {
+      "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
+      "order": "44494",
+      "product_name": "Chill Medicated-Syrup-650mg-1ct-Grape",
+      "product_category": "Edibles & Drink",
+      "product_type": "Syrup",
+      "batch_name": "1A40C0300000E12000243569",
+      "potency": "",
+      "predominate_canabinoid": "THC",
+      "quantity": 1,
+      "unit_of_measure": "Case",
+      "unit_size_weight": "650 Mg",
+      "order_price": 47250,
+      "order_status": "Order Submitted",
+      "payment_status": "unpaid",
+      "order_date": "08-25-2026",
+      "delivery_date": null,
+      "buyer_name": "Verts Neighborhood Dispensary-Joplin-DIS000091",
+      "buyer_license": "DIS000091",
+      "current_inventory": 716.0
     },
     {
       "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
@@ -4554,7 +4596,7 @@
       "delivery_date": "02-13-2026",
       "buyer_name": "MOHW - Washington-DIS000145",
       "buyer_license": "DIS000145",
-      "current_inventory": 645.0
+      "current_inventory": 630.0
     },
     {
       "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
@@ -4924,7 +4966,7 @@
       "delivery_date": "02-27-2026",
       "buyer_name": "Hippos Chesterfield-DIS000129",
       "buyer_license": "DIS000129",
-      "current_inventory": 645.0
+      "current_inventory": 630.0
     },
     {
       "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
@@ -5008,7 +5050,7 @@
       "delivery_date": "02-27-2026",
       "buyer_name": "Hippos Springfield-DIS000087",
       "buyer_license": "DIS000087",
-      "current_inventory": 731.0
+      "current_inventory": 716.0
     },
     {
       "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
@@ -5071,7 +5113,7 @@
       "delivery_date": "02-26-2026",
       "buyer_name": "Clovr Dispensary - Kansas City - Wornall-DIS000057",
       "buyer_license": "DIS000057",
-      "current_inventory": 731.0
+      "current_inventory": 716.0
     },
     {
       "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
@@ -5340,7 +5382,7 @@
       "delivery_date": "03-06-2026",
       "buyer_name": "Verts Neighborhood Dispensary-Kansas City-DIS000017",
       "buyer_license": "DIS000017",
-      "current_inventory": 731.0
+      "current_inventory": 716.0
     },
     {
       "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
@@ -5422,7 +5464,7 @@
       "delivery_date": "03-06-2026",
       "buyer_name": "Verts Neighborhood Dispensary-Joplin-DIS000091",
       "buyer_license": "DIS000091",
-      "current_inventory": 731.0
+      "current_inventory": 716.0
     },
     {
       "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
@@ -5504,7 +5546,7 @@
       "delivery_date": "03-06-2026",
       "buyer_name": "Verts Neighborhood Dispensary-Pacific-DIS000181",
       "buyer_license": "DIS000181",
-      "current_inventory": 731.0
+      "current_inventory": 716.0
     },
     {
       "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
@@ -5646,7 +5688,7 @@
       "delivery_date": "03-10-2026",
       "buyer_name": "Verts Neighborhood Dispensary-Dexter-DIS000128",
       "buyer_license": "DIS000128",
-      "current_inventory": 731.0
+      "current_inventory": 716.0
     },
     {
       "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
@@ -7049,7 +7091,7 @@
       "delivery_date": "03-26-2026",
       "buyer_name": "Clovr Dispensary - Kansas City - Wornall-DIS000057",
       "buyer_license": "DIS000057",
-      "current_inventory": 645.0
+      "current_inventory": 630.0
     },
     {
       "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
@@ -7274,7 +7316,7 @@
       "delivery_date": "03-30-2026",
       "buyer_name": "Clovr Dispensary - Kansas City - Wornall-DIS000057",
       "buyer_license": "DIS000057",
-      "current_inventory": 731.0
+      "current_inventory": 716.0
     },
     {
       "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
@@ -7644,7 +7686,7 @@
       "delivery_date": "04-08-2026",
       "buyer_name": "Luxury Leaf Dispensary-DIS000060",
       "buyer_license": "DIS000060",
-      "current_inventory": 645.0
+      "current_inventory": 630.0
     },
     {
       "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
@@ -7789,7 +7831,7 @@
       "delivery_date": "04-16-2026",
       "buyer_name": "Vertical Enterprise-DIS000011",
       "buyer_license": "Dis000011",
-      "current_inventory": 645.0
+      "current_inventory": 630.0
     },
     {
       "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
@@ -7975,7 +8017,7 @@
       "delivery_date": "04-16-2026",
       "buyer_name": "Verts Neighborhood Dispensary-Kansas City-DIS000017",
       "buyer_license": "DIS000017",
-      "current_inventory": 645.0
+      "current_inventory": 630.0
     },
     {
       "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
@@ -8016,7 +8058,7 @@
       "delivery_date": "04-16-2026",
       "buyer_name": "Verts Neighborhood Dispensary-Kansas City-DIS000017",
       "buyer_license": "DIS000017",
-      "current_inventory": 731.0
+      "current_inventory": 716.0
     },
     {
       "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
@@ -9322,7 +9364,7 @@
       "delivery_date": "05-29-2026",
       "buyer_name": "GRD Liberty-DIS000039",
       "buyer_license": "DIS000039",
-      "current_inventory": 731.0
+      "current_inventory": 716.0
     },
     {
       "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
@@ -9448,7 +9490,7 @@
       "delivery_date": "06-03-2026",
       "buyer_name": "Hi-Pointe - St. Louis-DIS000210",
       "buyer_license": "DIS000210",
-      "current_inventory": 731.0
+      "current_inventory": 716.0
     },
     {
       "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
@@ -9570,7 +9612,7 @@
       "delivery_date": "06-09-2026",
       "buyer_name": "Verts Neighborhood Dispensary-Joplin-DIS000091",
       "buyer_license": "DIS000091",
-      "current_inventory": 731.0
+      "current_inventory": 716.0
     },
     {
       "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
@@ -11340,7 +11382,7 @@
       "delivery_date": "07-08-2026",
       "buyer_name": "Viola- Olive St-DIS000043",
       "buyer_license": "DIS000043",
-      "current_inventory": 645.0
+      "current_inventory": 630.0
     },
     {
       "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
@@ -11466,7 +11508,7 @@
       "delivery_date": "07-16-2026",
       "buyer_name": "GRD Lee's Summit-DIS000201",
       "buyer_license": "DIS000201",
-      "current_inventory": 645.0
+      "current_inventory": 630.0
     },
     {
       "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
@@ -11508,7 +11550,7 @@
       "delivery_date": "07-14-2026",
       "buyer_name": "GRD Nevada-DIS000163",
       "buyer_license": "DIS000163",
-      "current_inventory": 645.0
+      "current_inventory": 630.0
     },
     {
       "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
@@ -11781,7 +11823,7 @@
       "delivery_date": "07-27-2026",
       "buyer_name": "Clovr Dispensary - Kansas City - Wornall-DIS000057",
       "buyer_license": "DIS000057",
-      "current_inventory": 731.0
+      "current_inventory": 716.0
     },
     {
       "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
@@ -11823,7 +11865,7 @@
       "delivery_date": "08-05-2026",
       "buyer_name": "Viola- Olive St-DIS000043",
       "buyer_license": "DIS000043",
-      "current_inventory": 645.0
+      "current_inventory": 630.0
     },
     {
       "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
@@ -11886,7 +11928,7 @@
       "delivery_date": "08-06-2026",
       "buyer_name": "Riverside Wellness-DIS000019",
       "buyer_license": "DIS000019",
-      "current_inventory": 645.0
+      "current_inventory": 630.0
     },
     {
       "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
@@ -11949,7 +11991,7 @@
       "delivery_date": "08-11-2026",
       "buyer_name": "GRD Columbia-DIS000160",
       "buyer_license": "DIS000160",
-      "current_inventory": 645.0
+      "current_inventory": 630.0
     },
     {
       "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
@@ -12050,7 +12092,7 @@
       "name": "Chill Medicated- Zero Sugar Syrup-300mg-1ct-Blue Razz",
       "sku": "",
       "line": "Edibles & Drink",
-      "qty": 645.0,
+      "qty": 630.0,
       "listed": true,
       "batches": 0
     },
@@ -12058,7 +12100,7 @@
       "name": "Chill Medicated-Syrup-650mg-1ct-Grape",
       "sku": "",
       "line": "Edibles & Drink",
-      "qty": 731.0,
+      "qty": 716.0,
       "listed": true,
       "batches": 0
     }
