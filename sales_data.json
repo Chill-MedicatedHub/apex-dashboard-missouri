@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-26T11:30:38.699360+00:00",
+  "fetched_at": "2026-08-26T11:45:33.293123+00:00",
   "distributor_id": 6267,
   "statuses": [
     "Open",
@@ -129,10 +129,10 @@
       "unit_of_measure": "Unit",
       "unit_size_weight": "1100 Mg",
       "order_price": 45000,
-      "order_status": "Order Submitted",
+      "order_status": "Order Approved",
       "payment_status": "unpaid",
       "order_date": "08-25-2026",
-      "delivery_date": null,
+      "delivery_date": "08-27-2026",
       "buyer_name": "MOHW - Kirksville-DIS000006",
       "buyer_license": "DIS000006",
       "current_inventory": 1.0
@@ -150,10 +150,10 @@
       "unit_of_measure": "Unit",
       "unit_size_weight": "1100 Mg",
       "order_price": 22500,
-      "order_status": "Order Submitted",
+      "order_status": "Order Approved",
       "payment_status": "unpaid",
       "order_date": "08-25-2026",
-      "delivery_date": null,
+      "delivery_date": "08-27-2026",
       "buyer_name": "MOHW - Jeff City-DIS000147",
       "buyer_license": "DIS000147",
       "current_inventory": 1.0
