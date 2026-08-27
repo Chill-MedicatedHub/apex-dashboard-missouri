@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-27T10:15:28.736513+00:00",
+  "fetched_at": "2026-08-27T10:30:39.011548+00:00",
   "distributor_id": 6267,
   "statuses": [
     "Open",
@@ -318,10 +318,10 @@
       "unit_of_measure": "Case",
       "unit_size_weight": "500 Mg",
       "order_price": 36000,
-      "order_status": "Order Submitted",
+      "order_status": "Order Approved",
       "payment_status": "unpaid",
       "order_date": "08-26-2026",
-      "delivery_date": null,
+      "delivery_date": "08-27-2026",
       "buyer_name": "Key Cannabis - Cameron-DIS000007",
       "buyer_license": "DIS000007",
       "current_inventory": 199.0
@@ -360,10 +360,10 @@
       "unit_of_measure": "Case",
       "unit_size_weight": "500 Mg",
       "order_price": 36000,
-      "order_status": "Order Submitted",
+      "order_status": "Order Approved",
       "payment_status": "unpaid",
       "order_date": "08-26-2026",
-      "delivery_date": null,
+      "delivery_date": "08-27-2026",
       "buyer_name": "Key Cannabis - Kansas City_Vivion Rd-DIS000204",
       "buyer_license": "DIS000204",
       "current_inventory": 199.0
@@ -402,10 +402,10 @@
       "unit_of_measure": "Case",
       "unit_size_weight": "500 Mg",
       "order_price": 36000,
-      "order_status": "Order Submitted",
+      "order_status": "Order Approved",
       "payment_status": "unpaid",
       "order_date": "08-26-2026",
-      "delivery_date": null,
+      "delivery_date": "08-27-2026",
       "buyer_name": "Key Cannabis - Kirksville-DIS000024",
       "buyer_license": "DIS000024",
       "current_inventory": 199.0
