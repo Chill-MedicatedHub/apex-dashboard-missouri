@@ -1,37 +1,16 @@
 {
-  "fetched_at": "2026-08-28T14:30:43.351657+00:00",
+  "fetched_at": "2026-08-28T14:45:30.385441+00:00",
   "distributor_id": 6267,
   "statuses": [
     "Open",
     "Completed"
   ],
   "per_status_counts": {
-    "Open": 5,
-    "Completed": 591
+    "Open": 4,
+    "Completed": 592
   },
   "row_count": 596,
   "rows": [
-    {
-      "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
-      "order": "44469",
-      "product_name": "Chill Medicated-Relax-1000mg-THC Body Rub 500mg THC|500mg CBD-1ct",
-      "product_category": "Topicals & Wellness",
-      "product_type": "Lotion",
-      "batch_name": "1A40C0300000E12000259598",
-      "potency": "",
-      "predominate_canabinoid": "THC",
-      "quantity": 1,
-      "unit_of_measure": "Case",
-      "unit_size_weight": "500 Mg",
-      "order_price": 40500,
-      "order_status": "Delivered",
-      "payment_status": "unpaid",
-      "order_date": "08-24-2026",
-      "delivery_date": "08-20-2026",
-      "buyer_name": "Clovr Dispensary - Kansas City - Wornall-DIS000057",
-      "buyer_license": "DIS000057",
-      "current_inventory": 199.0
-    },
     {
       "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
       "order": "44494",
@@ -12013,6 +11992,27 @@
       "buyer_name": "High Profile - Pineville-DIS000101",
       "buyer_license": "DIS000101",
       "current_inventory": 5.0
+    },
+    {
+      "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
+      "order": "44469",
+      "product_name": "Chill Medicated-Relax-1000mg-THC Body Rub 500mg THC|500mg CBD-1ct",
+      "product_category": "Topicals & Wellness",
+      "product_type": "Lotion",
+      "batch_name": "1A40C0300000E12000259598",
+      "potency": "",
+      "predominate_canabinoid": "THC",
+      "quantity": 1,
+      "unit_of_measure": "Case",
+      "unit_size_weight": "500 Mg",
+      "order_price": 40500,
+      "order_status": "Complete",
+      "payment_status": "unpaid",
+      "order_date": "08-24-2026",
+      "delivery_date": "08-20-2026",
+      "buyer_name": "Clovr Dispensary - Kansas City - Wornall-DIS000057",
+      "buyer_license": "DIS000057",
+      "current_inventory": 199.0
     },
     {
       "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
