@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-01T09:15:31.288523+00:00",
+  "fetched_at": "2026-09-01T09:30:38.309564+00:00",
   "distributor_id": 6267,
   "statuses": [
     "Open",
@@ -171,10 +171,10 @@
       "unit_of_measure": "Case",
       "unit_size_weight": "500 Mg",
       "order_price": 36000,
-      "order_status": "Order Submitted",
+      "order_status": "Order Approved",
       "payment_status": "unpaid",
       "order_date": "08-31-2026",
-      "delivery_date": null,
+      "delivery_date": "09-01-2026",
       "buyer_name": "Key Cannabis - Springfield-DIS000102",
       "buyer_license": "DIS000102",
       "current_inventory": 124.0
@@ -192,10 +192,10 @@
       "unit_of_measure": "Case",
       "unit_size_weight": "500 Mg",
       "order_price": 36000,
-      "order_status": "Order Submitted",
+      "order_status": "Order Approved",
       "payment_status": "unpaid",
       "order_date": "08-31-2026",
-      "delivery_date": null,
+      "delivery_date": "09-01-2026",
       "buyer_name": "Key Cannabis - St. James-DIS000133",
       "buyer_license": "DIS000133",
       "current_inventory": 124.0
