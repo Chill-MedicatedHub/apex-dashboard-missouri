@@ -1,37 +1,16 @@
 {
-  "fetched_at": "2026-09-03T14:30:40.130623+00:00",
+  "fetched_at": "2026-09-03T14:43:14.923808+00:00",
   "distributor_id": 6267,
   "statuses": [
     "Open",
     "Completed"
   ],
   "per_status_counts": {
-    "Open": 1,
-    "Completed": 599
+    "Open": 0,
+    "Completed": 600
   },
   "row_count": 600,
   "rows": [
-    {
-      "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
-      "order": "44531",
-      "product_name": "Chill Medicated-Relax-1000mg-THC Body Rub 500mg THC|500mg CBD-1ct",
-      "product_category": "Topicals & Wellness",
-      "product_type": "Lotion",
-      "batch_name": "1A40C0300000E12000259598",
-      "potency": "",
-      "predominate_canabinoid": "THC",
-      "quantity": 1,
-      "unit_of_measure": "Case",
-      "unit_size_weight": "500 Mg",
-      "order_price": 36000,
-      "order_status": "Delivered",
-      "payment_status": "unpaid",
-      "order_date": "08-31-2026",
-      "delivery_date": "09-02-2026",
-      "buyer_name": "Key Cannabis - Desloge-DIS000125",
-      "buyer_license": "DIS000125",
-      "current_inventory": 139.0
-    },
     {
       "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
       "order": "42309",
@@ -12306,6 +12285,27 @@
       "delivery_date": "08-27-2026",
       "buyer_name": "Key Cannabis - Kirksville-DIS000024",
       "buyer_license": "DIS000024",
+      "current_inventory": 139.0
+    },
+    {
+      "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
+      "order": "44531",
+      "product_name": "Chill Medicated-Relax-1000mg-THC Body Rub 500mg THC|500mg CBD-1ct",
+      "product_category": "Topicals & Wellness",
+      "product_type": "Lotion",
+      "batch_name": "1A40C0300000E12000259598",
+      "potency": "",
+      "predominate_canabinoid": "THC",
+      "quantity": 1,
+      "unit_of_measure": "Case",
+      "unit_size_weight": "500 Mg",
+      "order_price": 36000,
+      "order_status": "Complete",
+      "payment_status": "unpaid",
+      "order_date": "08-31-2026",
+      "delivery_date": "09-02-2026",
+      "buyer_name": "Key Cannabis - Desloge-DIS000125",
+      "buyer_license": "DIS000125",
       "current_inventory": 139.0
     },
     {
