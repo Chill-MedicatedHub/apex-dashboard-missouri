@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-10T15:30:41.007514+00:00",
+  "fetched_at": "2026-09-10T15:45:32.356285+00:00",
   "distributor_id": 6267,
   "statuses": [
     "Open",
@@ -27,7 +27,7 @@
       "order_status": "Order Approved",
       "payment_status": "unpaid",
       "order_date": "09-03-2026",
-      "delivery_date": "09-11-2026",
+      "delivery_date": "09-10-2026",
       "buyer_name": "Riverside Wellness-DIS000019",
       "buyer_license": "DIS000019",
       "current_inventory": 690.0
@@ -48,7 +48,7 @@
       "order_status": "Order Approved",
       "payment_status": "unpaid",
       "order_date": "09-03-2026",
-      "delivery_date": "09-11-2026",
+      "delivery_date": "09-10-2026",
       "buyer_name": "Riverside Wellness-DIS000019",
       "buyer_license": "DIS000019",
       "current_inventory": 630.0
