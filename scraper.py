@@ -427,6 +427,7 @@ def main():
 
     OUTPUT_FILE.write_text(json.dumps(payload, indent=2, default=str))
     print(f"Saved → {OUTPUT_FILE}")
+    push_to_chill(payload)
 
 
 if __name__ == "__main__":
