@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-14T15:30:40.505858+00:00",
+  "fetched_at": "2026-09-14T15:45:28.745092+00:00",
   "distributor_id": 6267,
   "statuses": [
     "Open",
@@ -1061,7 +1061,7 @@
       "payment_status": "completed",
       "order_date": "12-08-2025",
       "delivery_date": "12-10-2025",
-      "buyer_name": "Key Cannabis - Kansas City_Vivion Rd-DIS000204",
+      "buyer_name": "Key Cannabis - KC North - Vivion Rd-DIS000204",
       "buyer_license": "DIS000204"
     },
     {
@@ -1081,7 +1081,7 @@
       "payment_status": "completed",
       "order_date": "12-08-2025",
       "delivery_date": "12-10-2025",
-      "buyer_name": "Key Cannabis - Kansas City_Vivion Rd-DIS000204",
+      "buyer_name": "Key Cannabis - KC North - Vivion Rd-DIS000204",
       "buyer_license": "DIS000204",
       "current_inventory": 139.0
     },
@@ -9729,7 +9729,7 @@
       "payment_status": "completed",
       "order_date": "06-08-2026",
       "delivery_date": "06-11-2026",
-      "buyer_name": "Key Cannabis - Kansas City_Vivion Rd-DIS000204",
+      "buyer_name": "Key Cannabis - KC North - Vivion Rd-DIS000204",
       "buyer_license": "DIS000204",
       "current_inventory": 5.0
     },
@@ -12241,7 +12241,7 @@
       "payment_status": "unpaid",
       "order_date": "08-26-2026",
       "delivery_date": "08-27-2026",
-      "buyer_name": "Key Cannabis - Kansas City_Vivion Rd-DIS000204",
+      "buyer_name": "Key Cannabis - KC North - Vivion Rd-DIS000204",
       "buyer_license": "DIS000204",
       "current_inventory": 139.0
     },
