@@ -1,15 +1,15 @@
 {
-  "fetched_at": "2026-09-14T21:30:35.974114+00:00",
+  "fetched_at": "2026-09-14T21:45:28.123661+00:00",
   "distributor_id": 6267,
   "statuses": [
     "Open",
     "Completed"
   ],
   "per_status_counts": {
-    "Open": 1,
+    "Open": 2,
     "Completed": 604
   },
-  "row_count": 605,
+  "row_count": 606,
   "rows": [
     {
       "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
@@ -31,6 +31,27 @@
       "buyer_name": "Feel State - St. Louis-DIS000055",
       "buyer_license": "DIS000055",
       "current_inventory": 120.0
+    },
+    {
+      "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
+      "order": "44639",
+      "product_name": "Chill Medicated-Zero Sugar Snooze Syrup-200mg-1ct-Dreamberry",
+      "product_category": "Edibles & Drink",
+      "product_type": "Syrup",
+      "batch_name": "1A40C0300000E12000230532",
+      "potency": "",
+      "predominate_canabinoid": "THC",
+      "quantity": 1,
+      "unit_of_measure": "Case",
+      "unit_size_weight": "200 Mg",
+      "order_price": 47250,
+      "order_status": "Order Submitted",
+      "payment_status": "unpaid",
+      "order_date": "09-14-2026",
+      "delivery_date": null,
+      "buyer_name": "North Dispensary - Hillsboro-DIS000136",
+      "buyer_license": "DIS000136",
+      "current_inventory": 588.0
     },
     {
       "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
@@ -12506,7 +12527,7 @@
       "name": "Chill Medicated-Zero Sugar Snooze Syrup-200mg-1ct-Dreamberry",
       "sku": "",
       "line": "Edibles & Drink",
-      "qty": 98.0,
+      "qty": 83.0,
       "listed": true,
       "batches": 0
     },
