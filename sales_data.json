@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-14T16:00:43.689019+00:00",
+  "fetched_at": "2026-09-14T16:15:29.830434+00:00",
   "distributor_id": 6267,
   "statuses": [
     "Open",
@@ -1102,7 +1102,7 @@
       "payment_status": "completed",
       "order_date": "12-08-2025",
       "delivery_date": "12-10-2025",
-      "buyer_name": "Key Cannabis - St Charles-DIS000064",
+      "buyer_name": "Key Cannabis - O'Fallon-DIS000064",
       "buyer_license": "DIS000064"
     },
     {
@@ -7456,7 +7456,7 @@
       "payment_status": "completed",
       "order_date": "03-30-2026",
       "delivery_date": "04-01-2026",
-      "buyer_name": "Key Cannabis - St Charles-DIS000064",
+      "buyer_name": "Key Cannabis - O'Fallon-DIS000064",
       "buyer_license": "DIS000064",
       "current_inventory": 5.0
     },
@@ -12094,7 +12094,7 @@
       "payment_status": "unpaid",
       "order_date": "08-25-2026",
       "delivery_date": "08-26-2026",
-      "buyer_name": "Key Cannabis - St Charles-DIS000064",
+      "buyer_name": "Key Cannabis - O'Fallon-DIS000064",
       "buyer_license": "DIS000064",
       "current_inventory": 139.0
     },
