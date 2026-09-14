@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-14T15:15:32.598048+00:00",
+  "fetched_at": "2026-09-14T15:30:40.505858+00:00",
   "distributor_id": 6267,
   "statuses": [
     "Open",
@@ -2584,7 +2584,7 @@
       "payment_status": "completed",
       "order_date": "12-17-2025",
       "delivery_date": "12-18-2025",
-      "buyer_name": "Key Cannabis - Kansas City_Front St-DIS000078",
+      "buyer_name": "Key Cannabis - KC East - Front St-DIS000078",
       "buyer_license": "DIS000078"
     },
     {
@@ -2604,7 +2604,7 @@
       "payment_status": "completed",
       "order_date": "12-17-2025",
       "delivery_date": "12-18-2025",
-      "buyer_name": "Key Cannabis - Kansas City_Front St-DIS000078",
+      "buyer_name": "Key Cannabis - KC East - Front St-DIS000078",
       "buyer_license": "DIS000078",
       "current_inventory": 139.0
     },
@@ -2625,7 +2625,7 @@
       "payment_status": "completed",
       "order_date": "12-17-2025",
       "delivery_date": "12-18-2025",
-      "buyer_name": "Key Cannabis - Kansas City_Front St-DIS000078",
+      "buyer_name": "Key Cannabis - KC East - Front St-DIS000078",
       "buyer_license": "DIS000078",
       "current_inventory": 510.0
     },
@@ -7312,7 +7312,7 @@
       "payment_status": "completed",
       "order_date": "03-30-2026",
       "delivery_date": "04-02-2026",
-      "buyer_name": "Key Cannabis - Kansas City_Front St-DIS000078",
+      "buyer_name": "Key Cannabis - KC East - Front St-DIS000078",
       "buyer_license": "DIS000078"
     },
     {
@@ -7332,7 +7332,7 @@
       "payment_status": "completed",
       "order_date": "03-30-2026",
       "delivery_date": "04-02-2026",
-      "buyer_name": "Key Cannabis - Kansas City_Front St-DIS000078",
+      "buyer_name": "Key Cannabis - KC East - Front St-DIS000078",
       "buyer_license": "DIS000078",
       "current_inventory": 5.0
     },
@@ -12220,7 +12220,7 @@
       "payment_status": "unpaid",
       "order_date": "08-26-2026",
       "delivery_date": "08-27-2026",
-      "buyer_name": "Key Cannabis - Kansas City_Front St-DIS000078",
+      "buyer_name": "Key Cannabis - KC East - Front St-DIS000078",
       "buyer_license": "DIS000078",
       "current_inventory": 139.0
     },
