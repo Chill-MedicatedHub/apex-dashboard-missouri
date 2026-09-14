@@ -1,16 +1,37 @@
 {
-  "fetched_at": "2026-09-14T18:45:38.821502+00:00",
+  "fetched_at": "2026-09-14T19:01:27.020707+00:00",
   "distributor_id": 6267,
   "statuses": [
     "Open",
     "Completed"
   ],
   "per_status_counts": {
-    "Open": 0,
+    "Open": 1,
     "Completed": 604
   },
-  "row_count": 604,
+  "row_count": 605,
   "rows": [
+    {
+      "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
+      "order": "44632",
+      "product_name": "Chill Medicated-Zero Sugar Sunrise Syrup-250mg-1ct-Orange Cr\u00e8me",
+      "product_category": "Edibles & Drink",
+      "product_type": "Syrup",
+      "batch_name": "1A40C0300000E12000230436",
+      "potency": "",
+      "predominate_canabinoid": "THC",
+      "quantity": 1,
+      "unit_of_measure": "Case",
+      "unit_size_weight": "250 Mg",
+      "order_price": 47250,
+      "order_status": "Order Submitted",
+      "payment_status": "unpaid",
+      "order_date": "09-14-2026",
+      "delivery_date": null,
+      "buyer_name": "Feel State - St. Louis-DIS000055",
+      "buyer_license": "DIS000055",
+      "current_inventory": 120.0
+    },
     {
       "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
       "order": "42309",
@@ -12469,7 +12490,7 @@
       "name": "Chill Medicated-Zero Sugar Sunrise Syrup-250mg-1ct-Orange Cr\u00e8me",
       "sku": "",
       "line": "Edibles & Drink",
-      "qty": 90.0,
+      "qty": 75.0,
       "listed": true,
       "batches": 0
     },
