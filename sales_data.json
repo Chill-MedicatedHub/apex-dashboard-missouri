@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-14T15:45:28.745092+00:00",
+  "fetched_at": "2026-09-14T16:00:43.689019+00:00",
   "distributor_id": 6267,
   "statuses": [
     "Open",
@@ -7353,7 +7353,7 @@
       "payment_status": "completed",
       "order_date": "03-30-2026",
       "delivery_date": "04-02-2026",
-      "buyer_name": "Key Cannabis - Kansas City_Prospect Ave-DIS000050",
+      "buyer_name": "Key Cannabis - KC South - Prospect Ave-DIS000050",
       "buyer_license": "DIS000050",
       "current_inventory": 5.0
     },
@@ -7374,7 +7374,7 @@
       "payment_status": "completed",
       "order_date": "03-30-2026",
       "delivery_date": "04-02-2026",
-      "buyer_name": "Key Cannabis - Kansas City_Prospect Ave-DIS000050",
+      "buyer_name": "Key Cannabis - KC South - Prospect Ave-DIS000050",
       "buyer_license": "DIS000050"
     },
     {
@@ -12262,7 +12262,7 @@
       "payment_status": "unpaid",
       "order_date": "08-26-2026",
       "delivery_date": "08-27-2026",
-      "buyer_name": "Key Cannabis - Kansas City_Prospect Ave-DIS000050",
+      "buyer_name": "Key Cannabis - KC South - Prospect Ave-DIS000050",
       "buyer_license": "DIS000050",
       "current_inventory": 139.0
     },
