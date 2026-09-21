@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-21T13:19:27.165729+00:00",
+  "fetched_at": "2026-09-21T13:30:47.577626+00:00",
   "distributor_id": 6267,
   "statuses": [
     "Open",
@@ -24,10 +24,10 @@
       "unit_of_measure": "Case",
       "unit_size_weight": "2000 Mg",
       "order_price": 105000,
-      "order_status": "Order Submitted",
+      "order_status": "Order Approved",
       "payment_status": "unpaid",
       "order_date": "09-20-2026",
-      "delivery_date": null,
+      "delivery_date": "09-22-2026",
       "buyer_name": "Latitude Dispensary - Osage Beach-DIS000164",
       "buyer_license": "DIS000164",
       "current_inventory": 495.0
@@ -45,10 +45,10 @@
       "unit_of_measure": "Case",
       "unit_size_weight": "500 Mg",
       "order_price": 45000,
-      "order_status": "Order Submitted",
+      "order_status": "Order Approved",
       "payment_status": "unpaid",
       "order_date": "09-20-2026",
-      "delivery_date": null,
+      "delivery_date": "09-22-2026",
       "buyer_name": "Latitude Dispensary - Osage Beach-DIS000164",
       "buyer_license": "DIS000164",
       "current_inventory": 124.0
