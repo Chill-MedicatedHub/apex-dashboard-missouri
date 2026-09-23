@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-23T09:00:41.534687+00:00",
+  "fetched_at": "2026-09-23T09:15:30.652077+00:00",
   "distributor_id": 6267,
   "statuses": [
     "Open",
@@ -66,10 +66,10 @@
       "unit_of_measure": "Case",
       "unit_size_weight": "650 Mg",
       "order_price": 47250,
-      "order_status": "Order Submitted",
+      "order_status": "Order Approved",
       "payment_status": "unpaid",
       "order_date": "09-22-2026",
-      "delivery_date": null,
+      "delivery_date": "09-23-2026",
       "buyer_name": "Verts Neighborhood Dispensary-Pacific-DIS000181",
       "buyer_license": "DIS000181",
       "current_inventory": 716.0
