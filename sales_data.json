@@ -1,37 +1,16 @@
 {
-  "fetched_at": "2026-09-24T14:15:30.013502+00:00",
+  "fetched_at": "2026-09-24T14:45:30.339433+00:00",
   "distributor_id": 6267,
   "statuses": [
     "Open",
     "Completed"
   ],
   "per_status_counts": {
-    "Open": 1,
-    "Completed": 611
+    "Open": 0,
+    "Completed": 612
   },
   "row_count": 612,
   "rows": [
-    {
-      "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
-      "order": "44707",
-      "product_name": "Chill Medicated-Syrup-650mg-1ct-Grape",
-      "product_category": "Edibles & Drink",
-      "product_type": "Syrup",
-      "batch_name": "1A40C0300000E12000243569",
-      "potency": "",
-      "predominate_canabinoid": "THC",
-      "quantity": 1,
-      "unit_of_measure": "Case",
-      "unit_size_weight": "650 Mg",
-      "order_price": 47250,
-      "order_status": "Delivered",
-      "payment_status": "unpaid",
-      "order_date": "09-22-2026",
-      "delivery_date": "09-23-2026",
-      "buyer_name": "Verts Neighborhood Dispensary-Pacific-DIS000181",
-      "buyer_license": "DIS000181",
-      "current_inventory": 716.0
-    },
     {
       "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
       "order": "42309",
@@ -12821,6 +12800,27 @@
       "buyer_name": "Latitude Dispensary - Osage Beach-DIS000164",
       "buyer_license": "DIS000164",
       "current_inventory": 124.0
+    },
+    {
+      "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
+      "order": "44707",
+      "product_name": "Chill Medicated-Syrup-650mg-1ct-Grape",
+      "product_category": "Edibles & Drink",
+      "product_type": "Syrup",
+      "batch_name": "1A40C0300000E12000243569",
+      "potency": "",
+      "predominate_canabinoid": "THC",
+      "quantity": 1,
+      "unit_of_measure": "Case",
+      "unit_size_weight": "650 Mg",
+      "order_price": 47250,
+      "order_status": "Complete",
+      "payment_status": "unpaid",
+      "order_date": "09-22-2026",
+      "delivery_date": "09-23-2026",
+      "buyer_name": "Verts Neighborhood Dispensary-Pacific-DIS000181",
+      "buyer_license": "DIS000181",
+      "current_inventory": 716.0
     }
   ],
   "inventory": [
