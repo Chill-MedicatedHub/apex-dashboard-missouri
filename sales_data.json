@@ -1,15 +1,15 @@
 {
-  "fetched_at": "2026-09-30T17:30:37.741683+00:00",
+  "fetched_at": "2026-09-30T17:45:27.283943+00:00",
   "distributor_id": 6267,
   "statuses": [
     "Open",
     "Completed"
   ],
   "per_status_counts": {
-    "Open": 9,
+    "Open": 10,
     "Completed": 623
   },
-  "row_count": 632,
+  "row_count": 633,
   "rows": [
     {
       "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
@@ -199,6 +199,27 @@
       "buyer_name": "Clovr Dispensary - Kansas City - Wornall-DIS000057",
       "buyer_license": "DIS000057",
       "current_inventory": 671.0
+    },
+    {
+      "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
+      "order": "44795",
+      "product_name": "Chill Medicated-ExtremeX-4000mg-THC Body Rub 2000mg THC|2000mg CBD-1ct",
+      "product_category": "Topicals & Wellness",
+      "product_type": "Lotion",
+      "batch_name": "1A40C0300000E12000242840",
+      "potency": "",
+      "predominate_canabinoid": "THC",
+      "quantity": 1,
+      "unit_of_measure": "Case",
+      "unit_size_weight": "2000 Mg",
+      "order_price": 105000,
+      "order_status": "Order Submitted",
+      "payment_status": "unpaid",
+      "order_date": "09-30-2026",
+      "delivery_date": null,
+      "buyer_name": "Fresh Karma - Warrensburg-DIS000229",
+      "buyer_license": "DIS000229",
+      "current_inventory": 480.0
     },
     {
       "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
@@ -1164,7 +1185,7 @@
       "delivery_date": "12-10-2025",
       "buyer_name": "Clovr Dispensary - Kansas City - Wornall-DIS000057",
       "buyer_license": "DIS000057",
-      "current_inventory": 495.0
+      "current_inventory": 480.0
     },
     {
       "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
@@ -2854,7 +2875,7 @@
       "delivery_date": "12-18-2025",
       "buyer_name": "Key Cannabis - KC East - Front St-DIS000078",
       "buyer_license": "DIS000078",
-      "current_inventory": 495.0
+      "current_inventory": 480.0
     },
     {
       "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
@@ -7960,7 +7981,7 @@
       "delivery_date": "04-07-2026",
       "buyer_name": "Heartland Greenway, LLC dba The Dispensary-DIS000093",
       "buyer_license": "DIS000093",
-      "current_inventory": 495.0
+      "current_inventory": 480.0
     },
     {
       "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
@@ -8317,7 +8338,7 @@
       "delivery_date": "04-16-2026",
       "buyer_name": "Verts Neighborhood Dispensary-Kansas City-DIS000017",
       "buyer_license": "DIS000017",
-      "current_inventory": 495.0
+      "current_inventory": 480.0
     },
     {
       "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
@@ -8716,7 +8737,7 @@
       "delivery_date": "05-12-2026",
       "buyer_name": "Verts Neighborhood Dispensary-Dexter-DIS000128",
       "buyer_license": "DIS000128",
-      "current_inventory": 495.0
+      "current_inventory": 480.0
     },
     {
       "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
@@ -8820,7 +8841,7 @@
       "delivery_date": "05-13-2026",
       "buyer_name": "The Mint-DIS000161",
       "buyer_license": "DIS000161",
-      "current_inventory": 495.0
+      "current_inventory": 480.0
     },
     {
       "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
@@ -9365,7 +9386,7 @@
       "delivery_date": "05-21-2026",
       "buyer_name": "Clovr Dispensary - Kansas City - Wornall-DIS000057",
       "buyer_license": "DIS000057",
-      "current_inventory": 495.0
+      "current_inventory": 480.0
     },
     {
       "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
@@ -11287,7 +11308,7 @@
       "delivery_date": "06-11-2026",
       "buyer_name": "Shangri-La Columbia, LLC-DIS000167",
       "buyer_license": "DIS000167",
-      "current_inventory": 495.0
+      "current_inventory": 480.0
     },
     {
       "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
@@ -11728,7 +11749,7 @@
       "delivery_date": "07-07-2026",
       "buyer_name": "Latitude Dispensary - Osage Beach-DIS000164",
       "buyer_license": "DIS000164",
-      "current_inventory": 495.0
+      "current_inventory": 480.0
     },
     {
       "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
@@ -12967,7 +12988,7 @@
       "delivery_date": "09-22-2026",
       "buyer_name": "Latitude Dispensary - Osage Beach-DIS000164",
       "buyer_license": "DIS000164",
-      "current_inventory": 495.0
+      "current_inventory": 480.0
     },
     {
       "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
@@ -13296,7 +13317,7 @@
       "name": "Chill Medicated-ExtremeX-4000mg-THC Body Rub 2000mg THC|2000mg CBD-1ct",
       "sku": "",
       "line": "Topicals & Wellness",
-      "qty": 495.0,
+      "qty": 480.0,
       "listed": true,
       "batches": 0
     },
