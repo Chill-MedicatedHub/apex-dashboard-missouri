@@ -1,13 +1,13 @@
 {
-  "fetched_at": "2026-10-01T14:00:48.012254+00:00",
+  "fetched_at": "2026-10-01T14:15:34.291277+00:00",
   "distributor_id": 6267,
   "statuses": [
     "Open",
     "Completed"
   ],
   "per_status_counts": {
-    "Open": 11,
-    "Completed": 623
+    "Open": 10,
+    "Completed": 624
   },
   "row_count": 634,
   "rows": [
@@ -93,27 +93,6 @@
       "delivery_date": "10-01-2026",
       "buyer_name": "Good Day Farm - Independence-DIS000054",
       "buyer_license": "DIS000054",
-      "current_inventory": 671.0
-    },
-    {
-      "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
-      "order": "44759",
-      "product_name": "Chill Medicated-Syrup-250mg-1ct-Strawberry",
-      "product_category": "Edibles & Drink",
-      "product_type": "Syrup",
-      "batch_name": "1A40C0300000E12000282435",
-      "potency": "",
-      "predominate_canabinoid": "THC",
-      "quantity": 1,
-      "unit_of_measure": "Case",
-      "unit_size_weight": "250 Mg",
-      "order_price": 25312,
-      "order_status": "Delivered",
-      "payment_status": "unpaid",
-      "order_date": "09-24-2026",
-      "delivery_date": "09-30-2026",
-      "buyer_name": "Good Day Farm - St. Charles-DIS000174",
-      "buyer_license": "DIS000174",
       "current_inventory": 671.0
     },
     {
@@ -13240,6 +13219,27 @@
       "delivery_date": "09-29-2026",
       "buyer_name": "Good Day Farm - Sunshine West-Springfield-DIS000096",
       "buyer_license": "DIS000096",
+      "current_inventory": 671.0
+    },
+    {
+      "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
+      "order": "44759",
+      "product_name": "Chill Medicated-Syrup-250mg-1ct-Strawberry",
+      "product_category": "Edibles & Drink",
+      "product_type": "Syrup",
+      "batch_name": "1A40C0300000E12000282435",
+      "potency": "",
+      "predominate_canabinoid": "THC",
+      "quantity": 1,
+      "unit_of_measure": "Case",
+      "unit_size_weight": "250 Mg",
+      "order_price": 25312,
+      "order_status": "Complete",
+      "payment_status": "unpaid",
+      "order_date": "09-24-2026",
+      "delivery_date": "09-30-2026",
+      "buyer_name": "Good Day Farm - St. Charles-DIS000174",
+      "buyer_license": "DIS000174",
       "current_inventory": 671.0
     },
     {
