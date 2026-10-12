@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-10-12T17:53:28.548132+00:00",
+  "fetched_at": "2026-10-12T18:00:47.666266+00:00",
   "distributor_id": 6267,
   "statuses": [
     "Open",
@@ -23,7 +23,7 @@
       "quantity": 1,
       "unit_of_measure": "Case",
       "unit_size_weight": "200 Mg",
-      "order_price": 52500,
+      "order_price": 42000,
       "order_status": "Order Approved",
       "payment_status": "unpaid",
       "order_date": "10-11-2026",
