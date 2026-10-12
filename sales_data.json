@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-10-12T14:45:34.531953+00:00",
+  "fetched_at": "2026-10-12T15:03:39.662927+00:00",
   "distributor_id": 6267,
   "statuses": [
     "Open",
@@ -24,10 +24,10 @@
       "unit_of_measure": "Case",
       "unit_size_weight": "200 Mg",
       "order_price": 52500,
-      "order_status": "Order Submitted",
+      "order_status": "Order Approved",
       "payment_status": "unpaid",
       "order_date": "10-11-2026",
-      "delivery_date": null,
+      "delivery_date": "10-14-2026",
       "buyer_name": "VIBE City",
       "buyer_license": "DIS000230",
       "current_inventory": 588.0
