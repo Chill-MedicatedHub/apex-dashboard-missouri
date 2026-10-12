@@ -1,16 +1,37 @@
 {
-  "fetched_at": "2026-10-12T01:45:58.124650+00:00",
+  "fetched_at": "2026-10-12T02:00:40.372490+00:00",
   "distributor_id": 6267,
   "statuses": [
     "Open",
     "Completed"
   ],
   "per_status_counts": {
-    "Open": 0,
+    "Open": 1,
     "Completed": 636
   },
-  "row_count": 636,
+  "row_count": 637,
   "rows": [
+    {
+      "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
+      "order": "44851",
+      "product_name": "Chill Medicated-Zero Sugar Snooze Syrup-200mg-1ct-Dreamberry",
+      "product_category": "Edibles & Drink",
+      "product_type": "Syrup",
+      "batch_name": "1A40C0300000E12000230532",
+      "potency": "",
+      "predominate_cannabinoid": "THC",
+      "quantity": 1,
+      "unit_of_measure": "Case",
+      "unit_size_weight": "200 Mg",
+      "order_price": 52500,
+      "order_status": "Order Submitted",
+      "payment_status": "unpaid",
+      "order_date": "10-11-2026",
+      "delivery_date": null,
+      "buyer_name": null,
+      "buyer_license": "DIS000230",
+      "current_inventory": 588.0
+    },
     {
       "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
       "order": "42309",
@@ -13372,7 +13393,7 @@
       "name": "Chill Medicated-Zero Sugar Snooze Syrup-200mg-1ct-Dreamberry",
       "sku": "",
       "line": "Edibles & Drink",
-      "qty": 68.0,
+      "qty": 53.0,
       "listed": true,
       "batches": 0
     },
