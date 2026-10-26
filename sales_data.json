@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-10-26T13:45:29.241582+00:00",
+  "fetched_at": "2026-10-26T14:00:47.075857+00:00",
   "distributor_id": 6267,
   "statuses": [
     "Open",
@@ -24,10 +24,10 @@
       "unit_of_measure": "Case",
       "unit_size_weight": "200 Mg",
       "order_price": 52500,
-      "order_status": "Order Submitted",
+      "order_status": "Order Approved",
       "payment_status": "unpaid",
       "order_date": "10-23-2026",
-      "delivery_date": null,
+      "delivery_date": "10-27-2026",
       "buyer_name": "Shangri-La Jefferson, LLC-DIS000162",
       "buyer_license": "DIS000162",
       "current_inventory": 588.0
