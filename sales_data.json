@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-10-27T09:15:28.486447+00:00",
+  "fetched_at": "2026-10-27T09:30:41.938950+00:00",
   "distributor_id": 6267,
   "statuses": [
     "Open",
@@ -45,10 +45,10 @@
       "unit_of_measure": "Case",
       "unit_size_weight": "500 Mg",
       "order_price": 36000,
-      "order_status": "Order Submitted",
+      "order_status": "Order Approved",
       "payment_status": "unpaid",
       "order_date": "10-26-2026",
-      "delivery_date": null,
+      "delivery_date": "10-27-2026",
       "buyer_name": "Key Cannabis - Rolla-DIS000127",
       "buyer_license": "DIS000127",
       "current_inventory": 49.0
