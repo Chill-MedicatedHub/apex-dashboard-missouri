@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-10-27T10:45:36.486209+00:00",
+  "fetched_at": "2026-10-27T11:00:46.090896+00:00",
   "distributor_id": 6267,
   "statuses": [
     "Open",
@@ -66,10 +66,10 @@
       "unit_of_measure": "Case",
       "unit_size_weight": "500 Mg",
       "order_price": 36000,
-      "order_status": "Order Submitted",
+      "order_status": "Order Approved",
       "payment_status": "unpaid",
       "order_date": "10-26-2026",
-      "delivery_date": null,
+      "delivery_date": "10-29-2026",
       "buyer_name": "Key Cannabis - Cameron-DIS000007",
       "buyer_license": "DIS000007",
       "current_inventory": 49.0
@@ -108,10 +108,10 @@
       "unit_of_measure": "Case",
       "unit_size_weight": "500 Mg",
       "order_price": 36000,
-      "order_status": "Order Submitted",
+      "order_status": "Order Approved",
       "payment_status": "unpaid",
       "order_date": "10-26-2026",
-      "delivery_date": null,
+      "delivery_date": "10-29-2026",
       "buyer_name": "Key Cannabis - KC East - Front St-DIS000078",
       "buyer_license": "DIS000078",
       "current_inventory": 49.0
