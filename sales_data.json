@@ -1,37 +1,16 @@
 {
-  "fetched_at": "2026-10-28T14:15:34.646707+00:00",
+  "fetched_at": "2026-10-28T14:29:51.690925+00:00",
   "distributor_id": 6267,
   "statuses": [
     "Open",
     "Completed"
   ],
   "per_status_counts": {
-    "Open": 4,
-    "Completed": 654
+    "Open": 3,
+    "Completed": 655
   },
   "row_count": 658,
   "rows": [
-    {
-      "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
-      "order": "44947",
-      "product_name": "Chill Medicated-Zero Sugar Snooze Syrup-200mg-1ct-Dreamberry",
-      "product_category": "Edibles & Drink",
-      "product_type": "Syrup",
-      "batch_name": "1A40C0300000E12000230532",
-      "potency": "",
-      "predominate_cannabinoid": "THC",
-      "quantity": 1,
-      "unit_of_measure": "Case",
-      "unit_size_weight": "200 Mg",
-      "order_price": 52500,
-      "order_status": "Delivered",
-      "payment_status": "unpaid",
-      "order_date": "10-23-2026",
-      "delivery_date": "10-27-2026",
-      "buyer_name": "Shangri-La Jefferson, LLC-DIS000162",
-      "buyer_license": "DIS000162",
-      "current_inventory": 588.0
-    },
     {
       "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
       "order": "44973",
@@ -13766,6 +13745,27 @@
       "buyer_name": "GRD Mexico-DIS000157",
       "buyer_license": "DIS000157",
       "current_inventory": 536.0
+    },
+    {
+      "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
+      "order": "44947",
+      "product_name": "Chill Medicated-Zero Sugar Snooze Syrup-200mg-1ct-Dreamberry",
+      "product_category": "Edibles & Drink",
+      "product_type": "Syrup",
+      "batch_name": "1A40C0300000E12000230532",
+      "potency": "",
+      "predominate_cannabinoid": "THC",
+      "quantity": 1,
+      "unit_of_measure": "Case",
+      "unit_size_weight": "200 Mg",
+      "order_price": 52500,
+      "order_status": "Complete",
+      "payment_status": "unpaid",
+      "order_date": "10-23-2026",
+      "delivery_date": "10-27-2026",
+      "buyer_name": "Shangri-La Jefferson, LLC-DIS000162",
+      "buyer_license": "DIS000162",
+      "current_inventory": 588.0
     },
     {
       "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
