@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-11-03T15:30:44.485502+00:00",
+  "fetched_at": "2026-11-03T15:34:01.896088+00:00",
   "distributor_id": 6267,
   "statuses": [
     "Open",
@@ -4023,7 +4023,7 @@
       "unit_size_weight": "500 Mg",
       "order_price": 52500,
       "order_status": "Complete",
-      "payment_status": "unpaid",
+      "payment_status": "completed",
       "order_date": "01-15-2026",
       "delivery_date": "01-15-2026",
       "buyer_name": "Shangri-La Jefferson, LLC-DIS000162",
