@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-11-04T23:00:46.395907+00:00",
+  "fetched_at": "2026-11-04T23:15:31.174128+00:00",
   "distributor_id": 6267,
   "statuses": [
     "Open",
@@ -423,10 +423,10 @@
       "unit_of_measure": "Case",
       "unit_size_weight": "500 Mg",
       "order_price": 45000,
-      "order_status": "Order Submitted",
+      "order_status": "Order Approved",
       "payment_status": "unpaid",
       "order_date": "11-04-2026",
-      "delivery_date": null,
+      "delivery_date": "11-05-2026",
       "buyer_name": "From The Earth - Brookside-DIS000045",
       "buyer_license": "DIS000045",
       "current_inventory": 34.0
