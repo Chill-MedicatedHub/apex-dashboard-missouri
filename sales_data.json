@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-11-10T15:15:33.501789+00:00",
+  "fetched_at": "2026-11-10T15:30:41.301465+00:00",
   "distributor_id": 6267,
   "statuses": [
     "Open",
@@ -8039,7 +8039,7 @@
       "unit_size_weight": "250 Mg",
       "order_price": 33750,
       "order_status": "Complete",
-      "payment_status": "unpaid",
+      "payment_status": "completed",
       "order_date": "04-09-2026",
       "delivery_date": "04-14-2026",
       "buyer_name": "Shangri-La Jefferson, LLC-DIS000162",
@@ -8732,7 +8732,7 @@
       "unit_size_weight": "250 Mg",
       "order_price": 33750,
       "order_status": "Complete",
-      "payment_status": "unpaid",
+      "payment_status": "completed",
       "order_date": "04-24-2026",
       "delivery_date": "04-28-2026",
       "buyer_name": "Shangri-La Columbia, LLC-DIS000167",
@@ -8899,7 +8899,7 @@
       "unit_size_weight": "500 Mg",
       "order_price": 52500,
       "order_status": "Complete",
-      "payment_status": "unpaid",
+      "payment_status": "completed",
       "order_date": "05-11-2026",
       "delivery_date": "05-14-2026",
       "buyer_name": "Shangri-La Columbia, LLC-DIS000167",
