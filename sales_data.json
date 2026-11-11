@@ -1,13 +1,13 @@
 {
-  "fetched_at": "2026-11-11T15:15:32.162231+00:00",
+  "fetched_at": "2026-11-11T15:30:43.146627+00:00",
   "distributor_id": 6267,
   "statuses": [
     "Open",
     "Completed"
   ],
   "per_status_counts": {
-    "Open": 16,
-    "Completed": 684
+    "Open": 15,
+    "Completed": 685
   },
   "row_count": 700,
   "rows": [
@@ -156,27 +156,6 @@
       "delivery_date": "11-12-2026",
       "buyer_name": "Good Day Farm - Kansas City-DIS000067",
       "buyer_license": "DIS000067",
-      "current_inventory": 601.0
-    },
-    {
-      "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
-      "order": "45092",
-      "product_name": "Chill Medicated-Syrup-250mg-1ct-Grape",
-      "product_category": "Edibles & Drink",
-      "product_type": "Syrup",
-      "batch_name": "1A40C0300000E12000282429",
-      "potency": "",
-      "predominate_cannabinoid": "THC",
-      "quantity": 1,
-      "unit_of_measure": "Case",
-      "unit_size_weight": "250 Mg",
-      "order_price": 25312,
-      "order_status": "Delivered",
-      "payment_status": "unpaid",
-      "order_date": "11-05-2026",
-      "delivery_date": "11-10-2026",
-      "buyer_name": "Good Day Farm - Kennett-DIS000135",
-      "buyer_license": "DIS000135",
       "current_inventory": 601.0
     },
     {
@@ -14669,6 +14648,27 @@
       "buyer_name": "From The Earth - Brookside-DIS000045",
       "buyer_license": "DIS000045",
       "current_inventory": 4.0
+    },
+    {
+      "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
+      "order": "45092",
+      "product_name": "Chill Medicated-Syrup-250mg-1ct-Grape",
+      "product_category": "Edibles & Drink",
+      "product_type": "Syrup",
+      "batch_name": "1A40C0300000E12000282429",
+      "potency": "",
+      "predominate_cannabinoid": "THC",
+      "quantity": 1,
+      "unit_of_measure": "Case",
+      "unit_size_weight": "250 Mg",
+      "order_price": 25312,
+      "order_status": "Complete",
+      "payment_status": "unpaid",
+      "order_date": "11-05-2026",
+      "delivery_date": "11-10-2026",
+      "buyer_name": "Good Day Farm - Kennett-DIS000135",
+      "buyer_license": "DIS000135",
+      "current_inventory": 601.0
     }
   ],
   "inventory": [
