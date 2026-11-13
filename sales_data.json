@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-11-13T19:30:39.871732+00:00",
+  "fetched_at": "2026-11-13T19:45:32.144086+00:00",
   "distributor_id": 6267,
   "statuses": [
     "Open",
@@ -12272,7 +12272,7 @@
       "payment_status": "completed",
       "order_date": "08-25-2026",
       "delivery_date": "08-27-2026",
-      "buyer_name": "MOHW - Jeff City-DIS000147",
+      "buyer_name": "MOHW - Jefferson City-DIS000147",
       "buyer_license": "DIS000147",
       "current_inventory": 1.0
     },
