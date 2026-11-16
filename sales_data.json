@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-11-16T14:00:49.872038+00:00",
+  "fetched_at": "2026-11-16T14:15:30.479505+00:00",
   "distributor_id": 6267,
   "statuses": [
     "Open",
@@ -24,10 +24,10 @@
       "unit_of_measure": "Case",
       "unit_size_weight": "500 Mg",
       "order_price": 75000,
-      "order_status": "Order Submitted",
+      "order_status": "Order Approved",
       "payment_status": "unpaid",
       "order_date": "11-12-2026",
-      "delivery_date": null,
+      "delivery_date": "11-18-2026",
       "buyer_name": "Shangri-La Columbia South, LLC-DIS000172",
       "buyer_license": "DIS000172",
       "current_inventory": 712.0
