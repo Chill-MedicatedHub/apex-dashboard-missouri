@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-11-16T16:01:09.513199+00:00",
+  "fetched_at": "2026-11-16T16:30:42.269903+00:00",
   "distributor_id": 6267,
   "statuses": [
     "Open",
@@ -45,10 +45,10 @@
       "unit_of_measure": "Case",
       "unit_size_weight": "650 Mg",
       "order_price": 33750,
-      "order_status": "Order Submitted",
+      "order_status": "Order Approved",
       "payment_status": "unpaid",
       "order_date": "11-16-2026",
-      "delivery_date": null,
+      "delivery_date": "11-19-2026",
       "buyer_name": "Clovr Dispensary - Kansas City - Wornall-DIS000057",
       "buyer_license": "DIS000057",
       "current_inventory": 641.0
