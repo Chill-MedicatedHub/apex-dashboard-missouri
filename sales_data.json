@@ -1,37 +1,16 @@
 {
-  "fetched_at": "2026-11-19T15:45:31.105218+00:00",
+  "fetched_at": "2026-11-19T16:00:46.250129+00:00",
   "distributor_id": 6267,
   "statuses": [
     "Open",
     "Completed"
   ],
   "per_status_counts": {
-    "Open": 6,
-    "Completed": 700
+    "Open": 4,
+    "Completed": 702
   },
   "row_count": 706,
   "rows": [
-    {
-      "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
-      "order": "45140",
-      "product_name": "Chill Medicated-Zero Sugar Syrup-500mg-1ct-Lemon Lime",
-      "product_category": "Edibles & Drink",
-      "product_type": "Syrup",
-      "batch_name": "1A40C0300000E12000230440",
-      "potency": "",
-      "predominate_cannabinoid": "THC",
-      "quantity": 2,
-      "unit_of_measure": "Case",
-      "unit_size_weight": "500 Mg",
-      "order_price": 75000,
-      "order_status": "Delivered",
-      "payment_status": "unpaid",
-      "order_date": "11-12-2026",
-      "delivery_date": "11-18-2026",
-      "buyer_name": "Shangri-La Columbia South, LLC-DIS000172",
-      "buyer_license": "DIS000172",
-      "current_inventory": 712.0
-    },
     {
       "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
       "order": "45170",
@@ -115,26 +94,6 @@
       "buyer_name": "Riverside Wellness-DIS000019",
       "buyer_license": "DIS000019",
       "current_inventory": 660.0
-    },
-    {
-      "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
-      "order": "45140",
-      "product_name": "Chill Medicated-Relax-1000mg-THC Body Rub 500mg THC|500mg CBD-1ct",
-      "product_category": "Topicals & Wellness",
-      "product_type": "Lotion",
-      "batch_name": "1A40C0300000E12000259598",
-      "potency": "",
-      "predominate_cannabinoid": "THC",
-      "quantity": 3,
-      "unit_of_measure": "Unit",
-      "unit_size_weight": "500 Mg",
-      "order_price": 1,
-      "order_status": "Delivered",
-      "payment_status": "unpaid",
-      "order_date": "11-12-2026",
-      "delivery_date": "11-18-2026",
-      "buyer_name": "Shangri-La Columbia South, LLC-DIS000172",
-      "buyer_license": "DIS000172"
     },
     {
       "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
@@ -14733,6 +14692,47 @@
       "delivery_date": "11-11-2026",
       "buyer_name": "North Dispensary - Pevely-DIS000165",
       "buyer_license": "DIS000165"
+    },
+    {
+      "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
+      "order": "45140",
+      "product_name": "Chill Medicated-Zero Sugar Syrup-500mg-1ct-Lemon Lime",
+      "product_category": "Edibles & Drink",
+      "product_type": "Syrup",
+      "batch_name": "1A40C0300000E12000230440",
+      "potency": "",
+      "predominate_cannabinoid": "THC",
+      "quantity": 2,
+      "unit_of_measure": "Case",
+      "unit_size_weight": "500 Mg",
+      "order_price": 75000,
+      "order_status": "Complete",
+      "payment_status": "unpaid",
+      "order_date": "11-12-2026",
+      "delivery_date": "11-18-2026",
+      "buyer_name": "Shangri-La Columbia South, LLC-DIS000172",
+      "buyer_license": "DIS000172",
+      "current_inventory": 712.0
+    },
+    {
+      "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
+      "order": "45140",
+      "product_name": "Chill Medicated-Relax-1000mg-THC Body Rub 500mg THC|500mg CBD-1ct",
+      "product_category": "Topicals & Wellness",
+      "product_type": "Lotion",
+      "batch_name": "1A40C0300000E12000259598",
+      "potency": "",
+      "predominate_cannabinoid": "THC",
+      "quantity": 3,
+      "unit_of_measure": "Unit",
+      "unit_size_weight": "500 Mg",
+      "order_price": 1,
+      "order_status": "Complete",
+      "payment_status": "unpaid",
+      "order_date": "11-12-2026",
+      "delivery_date": "11-18-2026",
+      "buyer_name": "Shangri-La Columbia South, LLC-DIS000172",
+      "buyer_license": "DIS000172"
     }
   ],
   "inventory": [
