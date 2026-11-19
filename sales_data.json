@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-11-19T13:15:34.558357+00:00",
+  "fetched_at": "2026-11-19T13:30:45.958870+00:00",
   "distributor_id": 6267,
   "statuses": [
     "Open",
@@ -24,7 +24,7 @@
       "unit_of_measure": "Case",
       "unit_size_weight": "500 Mg",
       "order_price": 75000,
-      "order_status": "Order Approved",
+      "order_status": "Delivered",
       "payment_status": "unpaid",
       "order_date": "11-12-2026",
       "delivery_date": "11-18-2026",
@@ -52,27 +52,6 @@
       "buyer_name": "Clovr Dispensary - Kansas City - Wornall-DIS000057",
       "buyer_license": "DIS000057",
       "current_inventory": 641.0
-    },
-    {
-      "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
-      "order": "45140",
-      "product_name": "Chill Medicated-Relax-1000mg-THC Body Rub 500mg THC|500mg CBD-1ct",
-      "product_category": "Topicals & Wellness",
-      "product_type": "Lotion",
-      "batch_name": "1A40C0300000E12000259598",
-      "potency": "",
-      "predominate_cannabinoid": "THC",
-      "quantity": 1,
-      "unit_of_measure": "Unit",
-      "unit_size_weight": "500 Mg",
-      "order_price": 0,
-      "order_status": "Order Approved",
-      "payment_status": "unpaid",
-      "order_date": "11-12-2026",
-      "delivery_date": "11-18-2026",
-      "buyer_name": "Shangri-La Columbia South, LLC-DIS000172",
-      "buyer_license": "DIS000172",
-      "current_inventory": 3.0
     },
     {
       "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
@@ -136,6 +115,26 @@
       "buyer_name": "Riverside Wellness-DIS000019",
       "buyer_license": "DIS000019",
       "current_inventory": 660.0
+    },
+    {
+      "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
+      "order": "45140",
+      "product_name": "Chill Medicated-Relax-1000mg-THC Body Rub 500mg THC|500mg CBD-1ct",
+      "product_category": "Topicals & Wellness",
+      "product_type": "Lotion",
+      "batch_name": "1A40C0300000E12000259598",
+      "potency": "",
+      "predominate_cannabinoid": "THC",
+      "quantity": 3,
+      "unit_of_measure": "Unit",
+      "unit_size_weight": "500 Mg",
+      "order_price": 1,
+      "order_status": "Delivered",
+      "payment_status": "unpaid",
+      "order_date": "11-12-2026",
+      "delivery_date": "11-18-2026",
+      "buyer_name": "Shangri-La Columbia South, LLC-DIS000172",
+      "buyer_license": "DIS000172"
     },
     {
       "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
@@ -1141,8 +1140,7 @@
       "order_date": "12-05-2025",
       "delivery_date": "12-10-2025",
       "buyer_name": "Clovr Dispensary - Kansas City - Wornall-DIS000057",
-      "buyer_license": "DIS000057",
-      "current_inventory": 3.0
+      "buyer_license": "DIS000057"
     },
     {
       "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
@@ -1182,8 +1180,7 @@
       "order_date": "12-08-2025",
       "delivery_date": "12-10-2025",
       "buyer_name": "Key Cannabis - Cameron-DIS000007",
-      "buyer_license": "DIS000007",
-      "current_inventory": 3.0
+      "buyer_license": "DIS000007"
     },
     {
       "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
@@ -1223,8 +1220,7 @@
       "order_date": "12-08-2025",
       "delivery_date": "12-10-2025",
       "buyer_name": "Key Cannabis - KC North - Vivion Rd-DIS000204",
-      "buyer_license": "DIS000204",
-      "current_inventory": 3.0
+      "buyer_license": "DIS000204"
     },
     {
       "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
@@ -1389,8 +1385,7 @@
       "order_date": "12-08-2025",
       "delivery_date": "12-10-2025",
       "buyer_name": "Nature Med MO - Gladstone-DIS000056",
-      "buyer_license": "DIS000056",
-      "current_inventory": 3.0
+      "buyer_license": "DIS000056"
     },
     {
       "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
@@ -1535,8 +1530,7 @@
       "order_date": "12-08-2025",
       "delivery_date": "12-10-2025",
       "buyer_name": "Nature Med MO - Independence-DIS000059",
-      "buyer_license": "DIS000059",
-      "current_inventory": 3.0
+      "buyer_license": "DIS000059"
     },
     {
       "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
@@ -1576,8 +1570,7 @@
       "order_date": "12-08-2025",
       "delivery_date": "12-10-2025",
       "buyer_name": "Nature Med MO - Kansas City-DIS000072",
-      "buyer_license": "DIS000072",
-      "current_inventory": 3.0
+      "buyer_license": "DIS000072"
     },
     {
       "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
@@ -1722,8 +1715,7 @@
       "order_date": "12-08-2025",
       "delivery_date": "12-10-2025",
       "buyer_name": "Nature Med MO - O'Fallon-DIS000152",
-      "buyer_license": "DIS000152",
-      "current_inventory": 3.0
+      "buyer_license": "DIS000152"
     },
     {
       "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
@@ -1763,8 +1755,7 @@
       "order_date": "12-08-2025",
       "delivery_date": "12-10-2025",
       "buyer_name": "Nature Med MO - Kingston-DIS000088",
-      "buyer_license": "DIS000088",
-      "current_inventory": 3.0
+      "buyer_license": "DIS000088"
     },
     {
       "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
@@ -2769,8 +2760,7 @@
       "order_date": "12-17-2025",
       "delivery_date": "12-18-2025",
       "buyer_name": "Key Cannabis - KC East - Front St-DIS000078",
-      "buyer_license": "DIS000078",
-      "current_inventory": 3.0
+      "buyer_license": "DIS000078"
     },
     {
       "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
@@ -2874,8 +2864,7 @@
       "order_date": "12-22-2025",
       "delivery_date": "12-24-2025",
       "buyer_name": "Latitude Dispensary - Osage Beach-DIS000164",
-      "buyer_license": "DIS000164",
-      "current_inventory": 3.0
+      "buyer_license": "DIS000164"
     },
     {
       "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
@@ -3378,8 +3367,7 @@
       "order_date": "01-04-2026",
       "delivery_date": "01-08-2026",
       "buyer_name": "Fresh Karma - Columbia-DIS000191",
-      "buyer_license": "DIS000229",
-      "current_inventory": 3.0
+      "buyer_license": "DIS000229"
     },
     {
       "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
@@ -3461,8 +3449,7 @@
       "order_date": "01-07-2026",
       "delivery_date": "01-08-2026",
       "buyer_name": "Key Cannabis - Cameron-DIS000007",
-      "buyer_license": "DIS000007",
-      "current_inventory": 3.0
+      "buyer_license": "DIS000007"
     },
     {
       "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
@@ -3482,8 +3469,7 @@
       "order_date": "01-13-2026",
       "delivery_date": "01-15-2026",
       "buyer_name": "Good Day Farm | Greenlight - Bannister-DIS000069",
-      "buyer_license": "DIS000069",
-      "current_inventory": 3.0
+      "buyer_license": "DIS000069"
     },
     {
       "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
@@ -3503,8 +3489,7 @@
       "order_date": "01-13-2026",
       "delivery_date": "01-13-2026",
       "buyer_name": "Good Day Farm | Greenlight - Branson-DIS000092",
-      "buyer_license": "DIS000092",
-      "current_inventory": 3.0
+      "buyer_license": "DIS000092"
     },
     {
       "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
@@ -3524,8 +3509,7 @@
       "order_date": "01-13-2026",
       "delivery_date": "01-16-2026",
       "buyer_name": "Good Day Farm | Greenlight - Harrisonville-DIS000175",
-      "buyer_license": "DIS000175",
-      "current_inventory": 3.0
+      "buyer_license": "DIS000175"
     },
     {
       "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
@@ -3545,8 +3529,7 @@
       "order_date": "01-13-2026",
       "delivery_date": "01-15-2026",
       "buyer_name": "Good Day Farm | Greenlight - Independence-DIS000061",
-      "buyer_license": "DIS000061",
-      "current_inventory": 3.0
+      "buyer_license": "DIS000061"
     },
     {
       "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
@@ -3566,8 +3549,7 @@
       "order_date": "01-13-2026",
       "delivery_date": "01-15-2026",
       "buyer_name": "Good Day Farm | Greenlight - Joplin-DIS000108",
-      "buyer_license": "DIS000108",
-      "current_inventory": 3.0
+      "buyer_license": "DIS000108"
     },
     {
       "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
@@ -3587,8 +3569,7 @@
       "order_date": "01-13-2026",
       "delivery_date": "01-15-2026",
       "buyer_name": "Good Day Farm | Greenlight - Ward Parkway-DIS000225",
-      "buyer_license": "DIS000225",
-      "current_inventory": 3.0
+      "buyer_license": "DIS000225"
     },
     {
       "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
@@ -3608,8 +3589,7 @@
       "order_date": "01-13-2026",
       "delivery_date": "01-15-2026",
       "buyer_name": "Good Day Farm | Greenlight - Rock Port-DIS000224",
-      "buyer_license": "DIS000224",
-      "current_inventory": 3.0
+      "buyer_license": "DIS000224"
     },
     {
       "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
@@ -3629,8 +3609,7 @@
       "order_date": "01-13-2026",
       "delivery_date": "01-15-2026",
       "buyer_name": "Good Day Farm | Greenlight - Springfield-DIS000107",
-      "buyer_license": "DIS000107",
-      "current_inventory": 3.0
+      "buyer_license": "DIS000107"
     },
     {
       "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
@@ -3650,8 +3629,7 @@
       "order_date": "01-13-2026",
       "delivery_date": "01-16-2026",
       "buyer_name": "Good Day Farm | Greenlight - Stateline-DIS000063",
-      "buyer_license": "DIS000063",
-      "current_inventory": 3.0
+      "buyer_license": "DIS000063"
     },
     {
       "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
@@ -3671,8 +3649,7 @@
       "order_date": "01-13-2026",
       "delivery_date": "01-15-2026",
       "buyer_name": "Good Day Farm | Greenlight - Noel-DIS000227",
-      "buyer_license": "DIS000227",
-      "current_inventory": 3.0
+      "buyer_license": "DIS000227"
     },
     {
       "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
@@ -3881,8 +3858,7 @@
       "order_date": "01-24-2026",
       "delivery_date": "01-26-2026",
       "buyer_name": "From The Earth - SW Blvd/Westside-DIS000048",
-      "buyer_license": "DIS000048",
-      "current_inventory": 3.0
+      "buyer_license": "DIS000048"
     },
     {
       "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
@@ -3986,8 +3962,7 @@
       "order_date": "01-25-2026",
       "delivery_date": "01-26-2026",
       "buyer_name": "GRD Lee's Summit-DIS000201",
-      "buyer_license": "DIS000201",
-      "current_inventory": 3.0
+      "buyer_license": "DIS000201"
     },
     {
       "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
@@ -4049,8 +4024,7 @@
       "order_date": "01-26-2026",
       "delivery_date": "01-28-2026",
       "buyer_name": "GRD Troy-DIS000154",
-      "buyer_license": "DIS000154",
-      "current_inventory": 3.0
+      "buyer_license": "DIS000154"
     },
     {
       "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
@@ -4133,8 +4107,7 @@
       "order_date": "01-26-2026",
       "delivery_date": "01-29-2026",
       "buyer_name": "Fresh Karma - Columbia-DIS000191",
-      "buyer_license": "DIS000191",
-      "current_inventory": 3.0
+      "buyer_license": "DIS000191"
     },
     {
       "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
@@ -4826,8 +4799,7 @@
       "order_date": "02-23-2026",
       "delivery_date": "02-26-2026",
       "buyer_name": "Clovr Dispensary - Kansas City - Wornall-DIS000057",
-      "buyer_license": "DIS000057",
-      "current_inventory": 3.0
+      "buyer_license": "DIS000057"
     },
     {
       "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
@@ -4888,8 +4860,7 @@
       "order_date": "02-24-2026",
       "delivery_date": "03-03-2026",
       "buyer_name": "Key Cannabis Elevate - Cape Girardeau-DIS000111",
-      "buyer_license": "DIS000111",
-      "current_inventory": 3.0
+      "buyer_license": "DIS000111"
     },
     {
       "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
@@ -4929,8 +4900,7 @@
       "order_date": "02-24-2026",
       "delivery_date": "02-27-2026",
       "buyer_name": "Key Cannabis - Belton-DIS000180",
-      "buyer_license": "DIS000180",
-      "current_inventory": 3.0
+      "buyer_license": "DIS000180"
     },
     {
       "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
@@ -5454,8 +5424,7 @@
       "order_date": "03-05-2026",
       "delivery_date": "03-05-2026",
       "buyer_name": "Clovr Dispensary - Kansas City - Wornall-DIS000057",
-      "buyer_license": "DIS000057",
-      "current_inventory": 3.0
+      "buyer_license": "DIS000057"
     },
     {
       "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
@@ -6840,8 +6809,7 @@
       "order_date": "03-09-2026",
       "delivery_date": "03-10-2026",
       "buyer_name": "Clovr Dispensary - Kansas City - Wornall-DIS000057",
-      "buyer_license": "DIS000057",
-      "current_inventory": 3.0
+      "buyer_license": "DIS000057"
     },
     {
       "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
@@ -8589,8 +8557,7 @@
       "order_date": "04-22-2026",
       "delivery_date": "04-24-2026",
       "buyer_name": "Feel State - St. Louis-DIS000055",
-      "buyer_license": "DIS000055",
-      "current_inventory": 3.0
+      "buyer_license": "DIS000055"
     },
     {
       "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
@@ -8715,8 +8682,7 @@
       "order_date": "05-08-2026",
       "delivery_date": "05-13-2026",
       "buyer_name": "The Mint-DIS000161",
-      "buyer_license": "DIS000161",
-      "current_inventory": 3.0
+      "buyer_license": "DIS000161"
     },
     {
       "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
@@ -9967,8 +9933,7 @@
       "order_date": "06-08-2026",
       "delivery_date": "06-11-2026",
       "buyer_name": "Clovr Dispensary - Kansas City - Wornall-DIS000057",
-      "buyer_license": "DIS000057",
-      "current_inventory": 3.0
+      "buyer_license": "DIS000057"
     },
     {
       "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
@@ -11685,8 +11650,7 @@
       "order_date": "07-06-2026",
       "delivery_date": "07-07-2026",
       "buyer_name": "Latitude Dispensary - Osage Beach-DIS000164",
-      "buyer_license": "DIS000164",
-      "current_inventory": 3.0
+      "buyer_license": "DIS000164"
     },
     {
       "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
@@ -11937,8 +11901,7 @@
       "order_date": "07-20-2026",
       "delivery_date": "07-23-2026",
       "buyer_name": "Clovr Dispensary - Kansas City - Wornall-DIS000057",
-      "buyer_license": "DIS000057",
-      "current_inventory": 3.0
+      "buyer_license": "DIS000057"
     },
     {
       "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
@@ -12063,8 +12026,7 @@
       "order_date": "07-27-2026",
       "delivery_date": "07-27-2026",
       "buyer_name": "Clovr Dispensary - Kansas City - Wornall-DIS000057",
-      "buyer_license": "DIS000057",
-      "current_inventory": 3.0
+      "buyer_license": "DIS000057"
     },
     {
       "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
@@ -12168,8 +12130,7 @@
       "order_date": "08-10-2026",
       "delivery_date": "08-13-2026",
       "buyer_name": "Clovr Dispensary - Kansas City - Wornall-DIS000057",
-      "buyer_license": "DIS000057",
-      "current_inventory": 3.0
+      "buyer_license": "DIS000057"
     },
     {
       "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
@@ -12252,8 +12213,7 @@
       "order_date": "08-24-2026",
       "delivery_date": "08-20-2026",
       "buyer_name": "Clovr Dispensary - Kansas City - Wornall-DIS000057",
-      "buyer_license": "DIS000057",
-      "current_inventory": 3.0
+      "buyer_license": "DIS000057"
     },
     {
       "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
@@ -12399,8 +12359,7 @@
       "order_date": "08-25-2026",
       "delivery_date": "08-26-2026",
       "buyer_name": "Key Cannabis - Cottleville-DIS000200",
-      "buyer_license": "DIS000200",
-      "current_inventory": 3.0
+      "buyer_license": "DIS000200"
     },
     {
       "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
@@ -12420,8 +12379,7 @@
       "order_date": "08-25-2026",
       "delivery_date": "08-26-2026",
       "buyer_name": "Key Cannabis - O'Fallon-DIS000064",
-      "buyer_license": "DIS000064",
-      "current_inventory": 3.0
+      "buyer_license": "DIS000064"
     },
     {
       "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
@@ -12441,8 +12399,7 @@
       "order_date": "08-25-2026",
       "delivery_date": "08-26-2026",
       "buyer_name": "Key Cannabis - Richmond Heights-DIS000114",
-      "buyer_license": "DIS000114",
-      "current_inventory": 3.0
+      "buyer_license": "DIS000114"
     },
     {
       "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
@@ -12504,8 +12461,7 @@
       "order_date": "08-26-2026",
       "delivery_date": "08-27-2026",
       "buyer_name": "Key Cannabis - Belton-DIS000180",
-      "buyer_license": "DIS000180",
-      "current_inventory": 3.0
+      "buyer_license": "DIS000180"
     },
     {
       "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
@@ -12525,8 +12481,7 @@
       "order_date": "08-26-2026",
       "delivery_date": "08-27-2026",
       "buyer_name": "Key Cannabis - Cameron-DIS000007",
-      "buyer_license": "DIS000007",
-      "current_inventory": 3.0
+      "buyer_license": "DIS000007"
     },
     {
       "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
@@ -12546,8 +12501,7 @@
       "order_date": "08-26-2026",
       "delivery_date": "08-27-2026",
       "buyer_name": "Key Cannabis - KC East - Front St-DIS000078",
-      "buyer_license": "DIS000078",
-      "current_inventory": 3.0
+      "buyer_license": "DIS000078"
     },
     {
       "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
@@ -12567,8 +12521,7 @@
       "order_date": "08-26-2026",
       "delivery_date": "08-27-2026",
       "buyer_name": "Key Cannabis - KC North - Vivion Rd-DIS000204",
-      "buyer_license": "DIS000204",
-      "current_inventory": 3.0
+      "buyer_license": "DIS000204"
     },
     {
       "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
@@ -12588,8 +12541,7 @@
       "order_date": "08-26-2026",
       "delivery_date": "08-27-2026",
       "buyer_name": "Key Cannabis - KC South - Prospect Ave-DIS000050",
-      "buyer_license": "DIS000050",
-      "current_inventory": 3.0
+      "buyer_license": "DIS000050"
     },
     {
       "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
@@ -12609,8 +12561,7 @@
       "order_date": "08-26-2026",
       "delivery_date": "08-27-2026",
       "buyer_name": "Key Cannabis - Kirksville-DIS000024",
-      "buyer_license": "DIS000024",
-      "current_inventory": 3.0
+      "buyer_license": "DIS000024"
     },
     {
       "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
@@ -12630,8 +12581,7 @@
       "order_date": "08-31-2026",
       "delivery_date": "09-02-2026",
       "buyer_name": "Key Cannabis - Desloge-DIS000125",
-      "buyer_license": "DIS000125",
-      "current_inventory": 3.0
+      "buyer_license": "DIS000125"
     },
     {
       "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
@@ -12651,8 +12601,7 @@
       "order_date": "08-31-2026",
       "delivery_date": "09-01-2026",
       "buyer_name": "Key Cannabis - Nixa-DIS000099",
-      "buyer_license": "DIS000099",
-      "current_inventory": 3.0
+      "buyer_license": "DIS000099"
     },
     {
       "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
@@ -12672,8 +12621,7 @@
       "order_date": "08-31-2026",
       "delivery_date": "09-01-2026",
       "buyer_name": "Key Cannabis - Springfield-DIS000102",
-      "buyer_license": "DIS000102",
-      "current_inventory": 3.0
+      "buyer_license": "DIS000102"
     },
     {
       "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
@@ -12693,8 +12641,7 @@
       "order_date": "08-31-2026",
       "delivery_date": "09-01-2026",
       "buyer_name": "Key Cannabis - St. James-DIS000133",
-      "buyer_license": "DIS000133",
-      "current_inventory": 3.0
+      "buyer_license": "DIS000133"
     },
     {
       "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
@@ -12924,8 +12871,7 @@
       "order_date": "09-20-2026",
       "delivery_date": "09-22-2026",
       "buyer_name": "Latitude Dispensary - Osage Beach-DIS000164",
-      "buyer_license": "DIS000164",
-      "current_inventory": 3.0
+      "buyer_license": "DIS000164"
     },
     {
       "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
@@ -13407,8 +13353,7 @@
       "order_date": "09-30-2026",
       "delivery_date": "10-01-2026",
       "buyer_name": "Fresh Karma - Columbia-DIS000191",
-      "buyer_license": "DIS000191",
-      "current_inventory": 3.0
+      "buyer_license": "DIS000191"
     },
     {
       "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
@@ -13848,8 +13793,7 @@
       "order_date": "10-26-2026",
       "delivery_date": "10-27-2026",
       "buyer_name": "Key Cannabis - Rolla-DIS000127",
-      "buyer_license": "DIS000127",
-      "current_inventory": 3.0
+      "buyer_license": "DIS000127"
     },
     {
       "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
@@ -13869,8 +13813,7 @@
       "order_date": "10-26-2026",
       "delivery_date": "10-29-2026",
       "buyer_name": "Key Cannabis - Cameron-DIS000007",
-      "buyer_license": "DIS000007",
-      "current_inventory": 3.0
+      "buyer_license": "DIS000007"
     },
     {
       "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
@@ -13890,8 +13833,7 @@
       "order_date": "10-26-2026",
       "delivery_date": "10-29-2026",
       "buyer_name": "Key Cannabis - Kirksville-DIS000024",
-      "buyer_license": "DIS000024",
-      "current_inventory": 3.0
+      "buyer_license": "DIS000024"
     },
     {
       "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
@@ -13911,8 +13853,7 @@
       "order_date": "10-26-2026",
       "delivery_date": "10-29-2026",
       "buyer_name": "Key Cannabis - KC East - Front St-DIS000078",
-      "buyer_license": "DIS000078",
-      "current_inventory": 3.0
+      "buyer_license": "DIS000078"
     },
     {
       "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
@@ -14457,8 +14398,7 @@
       "order_date": "11-04-2026",
       "delivery_date": "11-05-2026",
       "buyer_name": "From The Earth - Brookside-DIS000045",
-      "buyer_license": "DIS000045",
-      "current_inventory": 3.0
+      "buyer_license": "DIS000045"
     },
     {
       "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
@@ -14751,8 +14691,7 @@
       "order_date": "11-10-2026",
       "delivery_date": "11-11-2026",
       "buyer_name": "North Dispensary - Hillsboro-DIS000136",
-      "buyer_license": "DIS000136",
-      "current_inventory": 3.0
+      "buyer_license": "DIS000136"
     },
     {
       "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
@@ -14793,8 +14732,7 @@
       "order_date": "11-10-2026",
       "delivery_date": "11-11-2026",
       "buyer_name": "North Dispensary - Pevely-DIS000165",
-      "buyer_license": "DIS000165",
-      "current_inventory": 3.0
+      "buyer_license": "DIS000165"
     }
   ],
   "inventory": [
@@ -14855,14 +14793,6 @@
       "batches": 0
     },
     {
-      "name": "Chill Medicated-Relax-1000mg-THC Body Rub 500mg THC|500mg CBD-1ct",
-      "sku": "",
-      "line": "Topicals & Wellness",
-      "qty": 3.0,
-      "listed": true,
-      "batches": 0
-    },
-    {
       "name": "Chill Medicated-Subzero Roll on-2100mg-THC Body Rub 1100mg THC|1000mg CBD",
       "sku": "",
       "line": "Topicals & Wellness",
@@ -14906,7 +14836,7 @@
   "_inventory_debug": {
     "top_level_type": "list",
     "top_level_keys": null,
-    "item_count": 18,
+    "item_count": 17,
     "first_item": {
       "name": "Chill Medicated-Syrup-250mg-1ct-Strawberry",
       "brand": "Chill Medicated",
