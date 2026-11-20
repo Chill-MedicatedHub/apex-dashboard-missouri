@@ -1,37 +1,16 @@
 {
-  "fetched_at": "2026-11-20T16:00:46.763210+00:00",
+  "fetched_at": "2026-11-20T16:15:29.861423+00:00",
   "distributor_id": 6267,
   "statuses": [
     "Open",
     "Completed"
   ],
   "per_status_counts": {
-    "Open": 4,
-    "Completed": 702
+    "Open": 3,
+    "Completed": 703
   },
   "row_count": 706,
   "rows": [
-    {
-      "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
-      "order": "45170",
-      "product_name": "Chill Medicated-Syrup-650mg-1ct-Grape",
-      "product_category": "Edibles & Drink",
-      "product_type": "Syrup",
-      "batch_name": "1A40C0300000E12000243569",
-      "potency": "",
-      "predominate_cannabinoid": "THC",
-      "quantity": 1,
-      "unit_of_measure": "Case",
-      "unit_size_weight": "650 Mg",
-      "order_price": 33750,
-      "order_status": "Delivered",
-      "payment_status": "unpaid",
-      "order_date": "11-16-2026",
-      "delivery_date": "11-19-2026",
-      "buyer_name": "Clovr Dispensary - Kansas City - Wornall-DIS000057",
-      "buyer_license": "DIS000057",
-      "current_inventory": 641.0
-    },
     {
       "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
       "order": "45217",
@@ -14713,6 +14692,27 @@
       "buyer_name": "Shangri-La Columbia South, LLC-DIS000172",
       "buyer_license": "DIS000172",
       "current_inventory": 712.0
+    },
+    {
+      "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
+      "order": "45170",
+      "product_name": "Chill Medicated-Syrup-650mg-1ct-Grape",
+      "product_category": "Edibles & Drink",
+      "product_type": "Syrup",
+      "batch_name": "1A40C0300000E12000243569",
+      "potency": "",
+      "predominate_cannabinoid": "THC",
+      "quantity": 1,
+      "unit_of_measure": "Case",
+      "unit_size_weight": "650 Mg",
+      "order_price": 33750,
+      "order_status": "Complete",
+      "payment_status": "unpaid",
+      "order_date": "11-16-2026",
+      "delivery_date": "11-19-2026",
+      "buyer_name": "Clovr Dispensary - Kansas City - Wornall-DIS000057",
+      "buyer_license": "DIS000057",
+      "current_inventory": 641.0
     },
     {
       "distributor_name": "Green Four Ventures dba CLOVR or Red Dart Ventures dba Cultur",
