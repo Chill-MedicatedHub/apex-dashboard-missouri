@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-11-23T15:15:32.658753+00:00",
+  "fetched_at": "2026-11-23T15:30:45.197982+00:00",
   "distributor_id": 6267,
   "statuses": [
     "Open",
@@ -13140,7 +13140,7 @@
       "unit_size_weight": "250 Mg",
       "order_price": 30375,
       "order_status": "Complete",
-      "payment_status": "unpaid",
+      "payment_status": "completed",
       "order_date": "09-25-2026",
       "delivery_date": "09-29-2026",
       "buyer_name": "GRD Nevada-DIS000163",
@@ -13161,7 +13161,7 @@
       "unit_size_weight": "250 Mg",
       "order_price": 30375,
       "order_status": "Complete",
-      "payment_status": "unpaid",
+      "payment_status": "completed",
       "order_date": "09-25-2026",
       "delivery_date": "09-29-2026",
       "buyer_name": "GRD Nevada-DIS000163",
